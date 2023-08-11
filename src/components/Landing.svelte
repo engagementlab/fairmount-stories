@@ -141,7 +141,7 @@
 	</div>
 	{#if menuOpen}
 		<div
-			class="fixed top-0 left-0 bg-slate-800 w-screen h-screen z-50 flex flex-col justify-center items-center p-10 gap-10 text-slate-400 text-lg"
+			class="fixed top-0 left-0 bg-slate-800 w-screen h-screen flex flex-col justify-center items-center p-10 gap-10 text-slate-400 text-lg z-[9999]"
 			in:slide
 			out:slide
 		>
