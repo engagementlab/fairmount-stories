@@ -1,0 +1,86 @@
+@import "variables.css";
+@import "font.css";
+@import "reset.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+/* colors defined in variables.css */
+:root {
+	/* font */
+	--serif: "Vollkorn", Iowan Old Style, Times New Roman, Times, serif;
+	--header: "Staatliches", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+	--label: "Roboto Slab", Menlo, Consolas, Monaco, monospace;
+	--tooltip: "Open Sans", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+	--quote: "Patrick Hand", Iowan Old Style, Times New Roman, Times, serif;
+	--prompt: "Patrick Hand", Iowan Old Style, Times New Roman, Times, serif;
+	--substance-label: "Rubik Bubbles", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+
+	--mono: Menlo, Consolas, Monaco, monospace;
+
+	/* z-index */
+	--z-bottom: -100;
+	--z-middle: 0;
+	--z-top: 100;
+	--z-overlay: 1000;
+
+	/* presets (used in reset.css) */
+	--border-radius: 2px;
+	--font-body: var(--serif);
+	--font-form: var(--serif);
+	--font-header: var(--header);
+	--font-quote: var(--quote);
+	--font-label: var(--label);
+	--font-tooltip: var(--tooltip);
+	--font-prompt: var(--prompt);
+	--font-substance-label: var(--substance-label);
+	--color-focus: var(--color-red);
+	--color-mark: var(--color-yellow);
+	--color-selection: var(--color-gray-300);
+	--color-placeholder: var(--color-gray-500);
+
+	/* "1" second duration */
+	--1s: 1ms;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+	:root {
+		--1s: 1s;
+	}
+}
+
+h1 {
+	font-size: var(--48px, 48px);
+}
+
+@media screen and (min-width: 640px) {
+	h1 {
+		font-size: var(--64px, 64px);
+	}
+}
+
+h2 {
+	font-size: var(--36px, 36px);
+}
+
+h3 {
+	font-size: var(--28px, 28px);
+}
+
+h4 {
+	font-size: var(--24px, 24px);
+}
+
+h5 {
+	font-size: var(--22px, 22px);
+}
+
+h6 {
+	font-size: var(--20px, 20px);
+}

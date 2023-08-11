@@ -1,0 +1,16 @@
+{
+	"color": {
+		"gray-300": {
+			"value": "rgb(202, 202, 202)"
+		},
+		"gray-500": {
+			"value": "rgb(135, 135, 135)"
+		},
+		"red": {
+			"value": "#ff533d"
+		},
+		"yellow": {
+			"value": "#e5e338"
+		}
+	}
+}
