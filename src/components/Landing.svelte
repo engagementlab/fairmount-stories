@@ -8,6 +8,9 @@
 	const handleMenuOpen = () => {
 		menuOpen = true;
 	};
+	const handleMenuClose = () => {
+		menuOpen = false;
+	};
 </script>
 
 <section
@@ -140,8 +143,13 @@
 		<div
 			class="fixed top-0 left-0 bg-slate-800 w-screen h-screen z-50 flex flex-col justify-center items-center p-10 gap-10 text-slate-400 text-lg"
 			in:slide
+			out:slide
 		>
-			<div class="flex flex-col items-center gap-2">
+			<h1 in:fade={{ duration: 500, delay: 50 }}>MENU</h1>
+			<div
+				class="flex flex-col items-center gap-2"
+				in:fade={{ duration: 500, delay: 75 }}
+			>
 				<p class="font-medium tooltip">Change Language</p>
 				<p>
 					<select
@@ -157,13 +165,22 @@
 				</p>
 			</div>
 
-			<p class="font-medium tooltip transition hover:text-white">
+			<p
+				class="font-medium tooltip transition hover:text-white"
+				in:fade={{ duration: 500, delay: 100 }}
+			>
 				<a href="about">About this site</a>
 			</p>
-			<p class="font-medium tooltip transition hover:text-white">
+			<p
+				class="font-medium tooltip transition hover:text-white"
+				in:fade={{ duration: 500, delay: 125 }}
+			>
 				<a href="mailto:kbeaver@dbedc.org">Contact us</a>
 			</p>
-			<div class="flex flex-col items-center gap-2">
+			<div
+				class="flex flex-col items-center gap-2"
+				in:fade={{ duration: 500, delay: 150 }}
+			>
 				<p class="font-medium tooltip">Got feedback?</p>
 				<p class="font-medium tooltip">
 					<a
@@ -172,6 +189,17 @@
 						target="_blank">Please tell us!</a
 					>
 				</p>
+			</div>
+			<div class="flex mt-10" in:fade={{ duration: 500, delay: 175 }}>
+				<button
+					on:click={handleMenuClose}
+					class="flex items-center gap-1 bg-white/5 transition rounded-full py-2 px-4 text-slate-400 hover:bg-white/30 hover:text-white"
+					in:fade={{ duration: 500, delay: 200 }}
+				>
+					<div>
+						<p class="tooltip text-sm">Close</p>
+					</div>
+				</button>
 			</div>
 		</div>
 	{/if}
