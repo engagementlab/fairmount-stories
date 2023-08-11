@@ -1,4 +1,6 @@
 <script>
+	import scrollY from "$stores/scrollY";
+
 	export let id = "";
 
 	export let textOnTop = false;
@@ -17,17 +19,16 @@
 	let middle = Infinity;
 	let outer;
 	let innerHeight = 0;
-	let scrollY = 0;
 
 	$: if (outer) {
-		top = outer.getBoundingClientRect().top + scrollY;
-		bottom = outer.getBoundingClientRect().bottom + scrollY;
+		top = outer.getBoundingClientRect().top + $scrollY;
+		bottom = outer.getBoundingClientRect().bottom + $scrollY;
 	}
 
 	$: stepHeight = bottom - top;
 	$: minStepHeight = Math.max(minStepHeight, Math.max(stepHeight, innerHeight));
 	$: middle = top + minStepHeight / 2;
-	$: atCenter = scrollY + innerHeight / 2 > middle;
+	$: atCenter = $scrollY + innerHeight / 2 > middle;
 
 	let show;
 	let fixed;
@@ -40,18 +41,18 @@
 		if (sticky == "start") {
 			fixed = atCenter;
 			if (atCenter) {
-				transform = `translate(0, ${(scrollY - stepTop) * scrollRate}px)`;
+				transform = `translate(0, ${($scrollY - stepTop) * scrollRate}px)`;
 			}
 			show = !atCenter || visible;
 		} else if (sticky == "middle") {
 			show = visible;
-			transform = `translate(0, ${(scrollY - stepTop) * scrollRate}px)`;
+			transform = `translate(0, ${($scrollY - stepTop) * scrollRate}px)`;
 			fixed = true;
 		} else if (sticky == "end") {
 			show = visible || atCenter;
 			fixed = !atCenter;
 			if (!atCenter) {
-				transform = `translate(0, ${(scrollY - stepTop) * scrollRate}px)`;
+				transform = `translate(0, ${($scrollY - stepTop) * scrollRate}px)`;
 			}
 		} else {
 			show = true;
@@ -65,7 +66,7 @@
 	}
 </script>
 
-<svelte:window bind:innerHeight bind:innerWidth bind:scrollY />
+<svelte:window bind:innerHeight bind:innerWidth />
 
 <div
 	class="flex min-h-screen w-full"

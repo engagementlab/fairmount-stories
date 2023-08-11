@@ -1,6 +1,7 @@
 <script>
 	import { fly } from "svelte/transition";
 	import { MoveLeft, MoveRight } from "lucide-svelte";
+	import scrollY from "$stores/scrollY";
 
 	import Scrolly from "$components/helpers/Scrolly.svelte";
 
@@ -19,11 +20,10 @@
 		{ title: "Take Action", anchor: "#take-action" }
 	];
 
-	let scrollY;
 	let innerHeight;
 </script>
 
-<svelte:window bind:scrollY bind:innerHeight />
+<svelte:window bind:innerHeight />
 
 <div in:fly={{ y: 20, duration: 500 }}>
 	<div class="h-screen" />
@@ -32,7 +32,7 @@
 	>
 		<div
 			class="hidden sm:flex m-auto items-center p-2 rounded-full gap-2 bg-white/70 transition duration-700 group-hover:bg-white backdrop-blur-sm drop-shadow-xl"
-			class:opacity-0={scrollY < innerHeight}
+			class:opacity-0={$scrollY < innerHeight}
 		>
 			{#each sections as section, i}
 				<a
@@ -52,7 +52,7 @@
 		</div>
 		<div
 			class="sm:hidden m-auto flex items-center p-2 rounded-full gap-2 bg-white/70 transition duration-700 group-hover:bg-white backdrop-blur-sm drop-shadow-xl"
-			class:opacity-0={scrollY < innerHeight}
+			class:opacity-0={$scrollY < innerHeight}
 		>
 			{#if value !== undefined}
 				<a

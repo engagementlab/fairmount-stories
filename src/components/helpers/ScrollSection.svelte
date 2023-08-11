@@ -11,7 +11,6 @@
 	export let steps;
 	export let backgroundColor = "";
 
-	let scrollY;
 	let value = 0;
 
 	let top;
@@ -87,6 +86,7 @@
 						scrollRate={step.fixBackground ? -0.1 : (j + 1) * -0.1}
 						fixBackground={step.fixBackground}
 						stepTop={getBackgroundStepTop(i, step.backgroundSticky)}
+						backgroundSticky={step.backgroundSticky}
 						loadItem={i >= (value || 0) - 1 && i <= (value || 0) + 1}
 						showItem={i == (value || 0)}
 						citationText={step.citationText}

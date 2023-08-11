@@ -1,21 +1,20 @@
 <script>
-	import { onMount } from "svelte";
+	import scrollY from "$stores/scrollY";
 	import EjFeatureQuote from "$components/story/the-future/EJFeatureQuote.svelte";
 	import PromptEjMeanToYou from "./PromptEJMeanToYou.svelte";
 
-	let scrollY;
 	let outer;
 	let top = 0;
 
 	$: if (outer) {
-		top = outer.getBoundingClientRect().top + scrollY;
+		top = outer.getBoundingClientRect().top + $scrollY;
 	}
 
 	let innerWidth;
 	$: mobileSize = innerWidth <= 640;
 </script>
 
-<svelte:window bind:scrollY bind:innerWidth />
+<svelte:window bind:innerWidth />
 
 <section class="bg-gradient-to-b from-white to-lime-200 z-[200] px-5">
 	<div class="flex h-screen sm:-mb-[10vh] z-[200]">
@@ -38,7 +37,7 @@
 			class="sm:basis-1/2 w-full z-[200]"
 			style:transform={mobileSize
 				? ""
-				: `translate(0, calc(${(scrollY - top) * -0.4}px - 20vh)`}
+				: `translate(0, calc(${($scrollY - top) * -0.4}px - 20vh)`}
 		>
 			<div class="flex-col flex gap-12">
 				<EjFeatureQuote
@@ -60,7 +59,7 @@
 			class="sm:basis-1/2 z-[200]"
 			style:transform={mobileSize
 				? ""
-				: `translate(0, calc(${(scrollY - top) * -0.2}px + 10vh)`}
+				: `translate(0, calc(${($scrollY - top) * -0.2}px + 10vh)`}
 		>
 			<div class="flex-col flex gap-12">
 				<EjFeatureQuote
