@@ -1,4 +1,6 @@
 <script>
+	import { onMount } from "svelte";
+	import { createEventDispatcher } from "svelte";
 	import { fly } from "svelte/transition";
 	import { MoveLeft, MoveRight } from "lucide-svelte";
 	import scrollY from "$stores/scrollY";
@@ -10,6 +12,11 @@
 	import History from "$components/story/history/History.svelte";
 	import TheFuture from "$components/story/the-future/TheFuture.svelte";
 	import TakeAction from "$components/take-action/TakeAction.svelte";
+
+	const dispatch = createEventDispatcher();
+	onMount(() => {
+		dispatch("mounted");
+	});
 
 	let value;
 	const sections = [
