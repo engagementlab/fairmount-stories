@@ -17,7 +17,7 @@
 <svelte:window bind:innerWidth />
 
 <div
-	class="bg-white w-full rounded-2xl px-4 py-8 sm:px-8 shadow-xl max-w-screen-md flex flex-col"
+	class="bg-white w-full rounded-2xl px-4 py-8 sm:px-8 shadow-xl max-w-screen-md flex flex-col my-[35vh]"
 	class:z-30={visible}
 	class:mb-10={alignBottom && !mobileSize}
 	class:my-[0vh]={mobileSize}
