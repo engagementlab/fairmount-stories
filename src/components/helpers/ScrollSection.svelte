@@ -40,7 +40,7 @@
 		.filter((item) => item !== undefined);
 
 	const getBackgroundStepTop = (i, sticky) => {
-		if (sticky == "follow") {
+		if (sticky == "middle" || sticky == "end") {
 			let checkIndex = i;
 			while (!stickyBackgroundStarts.includes(checkIndex)) {
 				checkIndex--;
@@ -72,18 +72,19 @@
 	};
 </script>
 
-<section
-	class="flex flex-wrap w-screen pb-[20vh] {backgroundColor}"
-	bind:this={outer}
->
+<section class="flex flex-wrap w-screen pb-[20vh]" bind:this={outer}>
 	<div
-		class="flex-wrap flex-auto h-screen basis-full sticky top-0 -z-50 -mb-[100vh]"
+		class="flex-wrap flex-auto h-screen basis-full sticky top-0 -z-50 -mb-[100vh] {backgroundColor}"
 	>
 		{#each steps as step, i}
 			{#if step.backgroundImages}
 				{#each step.backgroundImages as backgroundImage, j}
 					<BackgroundParallaxItem
-						scrollRate={step.fixBackground ? -0.1 : (j + 1) * -0.1}
+						scrollRate={step.fixBackground
+							? -0.1
+							: step.backgroundImages.length > 1
+							? (j + 1) * -0.01
+							: -0.1}
 						fixBackground={step.fixBackground}
 						stepTop={getBackgroundStepTop(i, step.backgroundSticky)}
 						backgroundSticky={step.backgroundSticky}

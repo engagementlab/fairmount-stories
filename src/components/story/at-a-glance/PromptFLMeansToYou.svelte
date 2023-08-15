@@ -138,7 +138,7 @@
 			<h2 class="m-auto prompt text-center z-50">
 				If you live near the Fairmount Line,<br /> what does it mean to you?
 			</h2>
-			<p class="tooltip">(click!)</p>
+			<p class="tooltip">(click the circles below!)</p>
 		</div>
 		<div
 			class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-9"
@@ -172,7 +172,7 @@
 					</button>
 					<a
 						href="#after-share-prompt"
-						class="bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 drop-shadow-xl transition hover:scale-110 border-0"
+						class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
 					>
 						<h3 class="label text-gray-700">{submitted ? "Next" : "Skip"}</h3>
 					</a>
@@ -192,7 +192,7 @@
 				If you live near the Fairmount Line,<br /> how do you feel about it?
 				<!-- If you live near the Fairmount Line,<br /> what comes to mind when you think of it?? -->
 			</h2>
-			<p class="tooltip">(click!)</p>
+			<p class="tooltip">(click the circles below!)</p>
 		</div>
 		<div
 			class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"

@@ -25,7 +25,9 @@
 	$: if (fixBackground || mobileSize) {
 		transform = "";
 	} else {
-		transform = `translateY(${($scrollY - stepTop) * scrollRate}px)`;
+		transform = `translateY(${
+			($scrollY - stepTop) * scrollRate - scrollRate * 400
+		}px)`;
 	}
 </script>
 
@@ -34,11 +36,14 @@
 <div
 	class="hidden flex-wrap basis-full min-h-screen -mb-[100vh] transition-opacity duration-500 opacity-0"
 	style="will-change: transform, opacity"
+	class:duration-0={backgroundSticky == "start" ||
+		backgroundSticky == "middle" ||
+		backgroundSticky == "end"}
 	class:!flex={loadItem}
-	class:opacity-100={showItem || backgroundSticky == "follow"}
+	class:opacity-100={showItem}
 	bind:this={outer}
 >
-	<div class="flex flex-wrap basis-full" style:transform>
+	<div class="flex flex-wrap basis-full z-[-1000]" style:transform>
 		<slot />
 	</div>
 </div>

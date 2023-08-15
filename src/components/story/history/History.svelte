@@ -1,7 +1,6 @@
 <script>
 	import SectionHeader from "$components/story/SectionHeader.svelte";
 	import ScrollSection from "$components/helpers/ScrollSection.svelte";
-	import TransitEquity from "$components/story/history/TransitEquity.svelte";
 	import PromptHowOften from "$components/story/history/PromptHowOften.svelte";
 
 	const HeaderText = "Building for the Community";
@@ -16,7 +15,7 @@
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
-			backgroundSticky: "follow",
+			backgroundSticky: "middle",
 			sticky: "end",
 			narration:
 				"To actually serve the communities it runs through, we needed more stations to be built along the Line.",
@@ -54,7 +53,11 @@
 		{
 			narration:
 				"The mayor, city officials, and local health leaders came together with community advocates to help get these stops built. Seeing the end result made me feel really good to be a part of making it happen!",
-			narrationImage: "assets/story/narrator-head.png"
+			narrationImage: "assets/story/narrator-head.png",
+			backgroundImages: ["assets/story/blue-hill-stop-open.jpg"],
+			citationText: "Image: Fairmount Indigo Planning Initiative",
+			citationLink:
+				"https://www.bostonplans.org/planning/planning-initiatives/fairmount-indigo-planning-initiative"
 		},
 		{
 			backgroundSticky: "start",
@@ -64,42 +67,42 @@
 			narration:
 				"Every 45 minutes is pretty frequent, and you can plan around that. But you know, they could bring it down to 30 minutes or less. Two times an hour would really make it easier to get in and out of Boston.",
 			narrationImage: "assets/story/narrator-head.png",
-			backgroundImages: ["assets/story/Scene-2020.png"],
+			backgroundImages: ["assets/story/four-corners-station-people-1.jpg"],
 			componentInline: PromptHowOften
 		},
 		{
-			backgroundSticky: "follow",
+			backgroundSticky: "middle",
 			sticky: "start",
 			year: "2022",
 			title: "Ridership Increases",
 			body: "Today, there are significantly more riders on the line than before Covid. <span>Ridership is now at 130% of 2019 levels.</span> <br> <br> Source: <a href='https://www.mbta.com/news/2023-06-02/fairmount-line-ridership-reaches-new-all-time-high-fairmount-ridership-130-pre?utm_campaign=curated-content&utm_content=Fairmount+Line+Ridership+Reaches+New+All-Time+High%2C+Fairmount+Ridership+at+130%25+of+pre-COVID+levels+in+May+2023&utm_medium=sidebar&utm_source=hub&utm_term=commuter-rail' target='_blank'>MBTA</a>",
-			backgroundImages: ["assets/story/Scene-2022-before.png"],
+			backgroundImages: ["assets/story/four-corners-station-people-2.jpg"],
 			id: "after-often-prompt"
 		},
 		{
 			sticky: "end",
-			backgroundSticky: "follow",
+			backgroundSticky: "middle",
 			year: "2022",
 			title: "Ridership Increases",
 			body: "Today, there are significantly more riders on the line than before Covid. <span>Ridership is now at 130% of 2019 levels.</span> <br> <br> Source: <a href='https://www.mbta.com/news/2023-06-02/fairmount-line-ridership-reaches-new-all-time-high-fairmount-ridership-130-pre?utm_campaign=curated-content&utm_content=Fairmount+Line+Ridership+Reaches+New+All-Time+High%2C+Fairmount+Ridership+at+130%25+of+pre-COVID+levels+in+May+2023&utm_medium=sidebar&utm_source=hub&utm_term=commuter-rail' target='_blank'>MBTA</a>",
-			backgroundImages: ["assets/story/Scene-2022-after.png"]
+			backgroundImages: ["assets/story/four-corners-station-people-3.jpg"]
 		},
 		{
-			backgroundSticky: "follow",
+			backgroundSticky: "middle",
 			year: "Today",
 			title: "A Staple of the Community",
 			body: "Thanks to years of local and state efforts, the train has become an important source of transit access that is efficient and simple for the communities it serves.",
-			backgroundImages: ["assets/story/Scene-today.png"],
+			backgroundImages: ["assets/story/four-corners-station-people-all.jpg"],
 			narration:
 				"But our fight doesn’t end there. This long legacy of community-led action continues today!",
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
-			backgroundSticky: "follow",
+			backgroundSticky: "end",
 			year: "The Future",
 			title: "Equity beyond Access",
 			body: "“The term “equity” means the consistent and systematic fair, just, and impartial treatment of all individuals, including individuals who belong to underserved communities that have been denied such treatment.” <br> <br> Source: <a href='https://www.planning.dot.gov/planning/topic_transportationequity.aspx' target='_blank'>U.S  Department of Transportation</a>",
-			backgroundImages: ["assets/story/Scene-today.png"],
+			backgroundImages: ["assets/story/four-corners-station-people-all.jpg"],
 			narration:
 				"Access, as important as it is, is not equity. Our community is still working towards broader transit equity.",
 			narrationImage: "assets/story/narrator-head.png"

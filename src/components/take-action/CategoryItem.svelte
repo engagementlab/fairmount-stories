@@ -17,8 +17,7 @@
 			>
 				<svelte:component this={icon} size="100%" class="text-lime-700" />
 			</div>
-			<!-- <img src={imgSrc} class="aspect-square max-h-[9em]" alt="" /> -->
-			<h1 class="text-white text-center my-7">
+			<h1 class="text-white text-center my-7 text-[3em]">
 				<span
 					class="bg-lime-700 border-x-[13px] rounded-md -mx-3 border-lime-700"
 					style="box-decoration-break: clone;

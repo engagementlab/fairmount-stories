@@ -10,107 +10,136 @@
 		{
 			backgroundSticky: "start",
 			textOnTop: true,
-			alignBottom: true,
 			sticky: "start",
 			narration:
 				"One big effort right now is getting the Fairmount Line to be better for the health of our community and planet.",
-			backgroundImages: ["assets/story/air-quality/train-zoom-1.jpg"],
+			backgroundImages: [
+				"assets/story/arial-texture-bg-lg.jpg",
+				"assets/story/arial-zoom-in-bg.png",
+				"assets/story/full-train-zoom-in.png",
+				"assets/story/arial-zoom-in-fg.png"
+			],
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
-			backgroundSticky: "follow",
+			backgroundSticky: "middle",
 			textOnTop: true,
 			sticky: "middle",
-			alignBottom: true,
 			narration:
 				"Right now, the engines that move the trains get their energy from diesel fuel.",
-			backgroundImages: ["assets/story/air-quality/train-zoom-1.jpg"],
+			backgroundImages: [
+				"assets/story/arial-texture-bg-lg.jpg",
+				"assets/story/arial-zoom-in-bg.png",
+				"assets/story/full-train-zoom-in.png",
+				"assets/story/arial-zoom-in-fg.png"
+			],
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
-			backgroundSticky: "follow",
+			backgroundSticky: "middle",
 			textOnTop: true,
 			sticky: "middle",
-			alignBottom: true,
 			narration:
 				"When the engine revs up, it releases <span>diesel exhaust</span> into the air.",
-			backgroundImages: ["assets/story/air-quality/train-zoom-1.jpg"],
+			backgroundImages: [
+				"assets/story/arial-texture-bg-lg.jpg",
+				"assets/story/arial-zoom-in-bg.png",
+				"assets/story/full-train-zoom-in.png",
+				"assets/story/arial-zoom-in-fg.png"
+			],
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
-			backgroundSticky: "follow",
+			backgroundSticky: "end",
 			textOnTop: true,
-			alignBottom: true,
 			sticky: "middle",
 			narration: "Let’s take a look at what's in that exhaust.",
-			backgroundImages: ["assets/story/air-quality/train-zoom-2.jpg"],
+			backgroundImages: [
+				"assets/story/arial-texture-bg-lg.jpg",
+				"assets/story/arial-zoom-in-bg.png",
+				"assets/story/full-train-zoom-in.png",
+				"assets/story/arial-zoom-in-fg.png"
+			],
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
 			textOnTop: true,
-			alignBottom: true,
-			sticky: "end",
+			sticky: "middle",
 			narration: "Let’s take a look at what's in that exhaust.",
-			backgroundImages: ["assets/story/air-quality/train-zoom-3.jpg"],
+			// backgroundImages: ["assets/story/air-quality/train-zoom-3.jpg"],
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
-			sticky: "middle",
+			sticky: "start",
+			fixBackground: true,
 			componentFullScreen: AirQualityInteractive,
 			backgroundImages: ["assets/story/exhaust.png"]
 		},
 		{
-			backgroundSticky: "start",
-			textOnTop: true,
-			alignBottom: true,
-			backgroundImages: ["assets/story/air-quality/train-zoom-3.jpg"]
+			textOnTop: true
+			// backgroundImages: ["assets/story/arial-zoom-in.jpg"]
 		},
 		{
-			backgroundSticky: "follow",
-			textOnTop: true,
-			alignBottom: true,
-			backgroundImages: ["assets/story/air-quality/train-zoom-2.jpg"]
+			textOnTop: true
+			// backgroundImages: ["assets/story/arial-zoom-in.jpg"]
 		},
 		{
-			backgroundSticky: "follow",
 			textOnTop: true,
 			sticky: "start",
-			alignBottom: true,
 			body: "One train passing by isn’t that bad...",
-			backgroundImages: ["assets/story/air-quality/train-zoom-1.jpg"]
+			backgroundImages: [
+				"assets/story/arial-texture-bg-lg.jpg",
+				"assets/story/arial-zoom-in-bg.png",
+				"assets/story/full-train-zoom-in.png",
+				"assets/story/arial-zoom-in-fg.png"
+			]
 		},
 		{
-			backgroundSticky: "follow",
 			textOnTop: true,
 			sticky: "middle",
-			alignBottom: true,
-			body: "but many trains per day...",
-			backgroundImages: ["assets/story/air-quality/train-zoom-.5.jpg"]
+			body: "...but many trains per day...",
+			backgroundImages: [
+				"assets/story/arial-texture-bg-lg.jpg",
+				"assets/story/arial-zoom-mid-bg.png",
+				"assets/story/full-train-zoom-mid.png",
+				"assets/story/arial-zoom-mid-fg.png"
+			]
 		},
 		{
-			backgroundSticky: "follow",
 			textOnTop: true,
 			sticky: "middle",
-			alignBottom: true,
-			body: "even more trains per week...",
-			backgroundImages: ["assets/story/air-quality/train-zoom-.25.jpg"]
+			body: "...even more trains per week...",
+			backgroundImages: [
+				"assets/story/arial-texture-bg-sm.jpg",
+				"assets/story/arial-zoom-out-bg.png",
+				"assets/story/full-train-zoom-out.png",
+				"assets/story/arial-zoom-out-fg.png"
+			]
 		},
 		{
-			backgroundSticky: "follow",
 			textOnTop: true,
 			sticky: "middle",
-			alignBottom: true,
-			body: "...starts to add up, meaning that there’s a higher concentration of particulate matter in the air.",
-			backgroundImages: ["assets/story/air-quality/train-zoom-.25.jpg"]
+			backgroundSticky: "start",
+			body: "...starts to add up, meaning that there’s a <span>higher concentration of particulate matter in the air.</span>",
+			backgroundImages: [
+				"assets/story/arial-texture-bg-sm.jpg",
+				"assets/story/arial-zoom-out-more-bg.png",
+				"assets/story/full-train-zoom-out-more.png",
+				"assets/story/arial-zoom-out-more-fg.png"
+			]
 		},
 		{
-			backgroundSticky: "follow",
 			textOnTop: true,
 			sticky: "end",
-			alignBottom: true,
+			backgroundSticky: "end",
 			// body: "This means that the air quality is less healthy. <br> <br> Curious about the air quality in your community? <br> <strong><a href='https://airpartners.org'>Visit Air Partners for more info!</a></strong>",
 			body: "This means that the air quality is less healthy. <br> <br> Curious about the impacts on the surrounding community? <span><a href='https://docs.google.com/document/d/165glMsKTi2KzDevNZabPY921dweCCRC2VsjuTxRbvHI/edit?usp=sharing' target='_blank'>Click Here!</a></span>",
-			backgroundImages: ["assets/story/air-quality/train-zoom-.25.jpg"]
+			backgroundImages: [
+				"assets/story/arial-texture-bg-sm.jpg",
+				"assets/story/arial-zoom-out-more-bg.png",
+				"assets/story/full-train-zoom-out-more.png",
+				"assets/story/arial-zoom-out-more-fg.png"
+			]
 		}
 	];
 
@@ -148,7 +177,7 @@
 			fixBackground: true,
 			textOnTop: true,
 
-			body: 'In Massachusetts, an area is considered an Environmental Justice Community if any of the following are true: <br><br><li>the median household income is less than 65% the statewide median</li><li>at least a 40% minority population</li><li>less than 25% households identify as speaking English "very well"</li></div><br>– mass.gov',
+			body: 'In Massachusetts, an area is considered an Environmental Justice Community if any of the middleing are true: <br><br><li>the median household income is less than 65% the statewide median</li><li>at least a 40% minority population</li><li>less than 25% households identify as speaking English "very well"</li></div><br>– mass.gov',
 			backgroundImages: ["assets/story/Map-EJ-boston.png"],
 			citationText: "Map data: mass.gov",
 			citationLink:
