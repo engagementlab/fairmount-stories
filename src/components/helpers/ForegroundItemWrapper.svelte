@@ -11,7 +11,7 @@
 	export let top = 0;
 	export let stepTop;
 
-	export let scrollRate = -0.04;
+	export let scrollRate = -0.06;
 
 	let bottom = 0;
 	let stepHeight = 0;
