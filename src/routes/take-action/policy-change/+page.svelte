@@ -4,6 +4,7 @@
 	import CategoryPage from "$components/take-action/CategoryPage.svelte";
 	import copy from "$data/copy.json";
 	import version from "$utils/version.js";
+	import { Landmark } from "lucide-svelte";
 
 	export let data;
 
@@ -20,7 +21,7 @@
 	setContext("data", data.data);
 
 	let info = {
-		imgSrc: "../../assets/take-action/policy-icon.png",
+		icon: Landmark,
 		title: "Policy Change",
 		description:
 			"Did you know that there’s a Bill that would support electrifying  the Fairmount Line? Learn how you can contribute to the passing of this policy by attending public bill hearings and supporting policy advocacy work.",

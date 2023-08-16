@@ -58,6 +58,14 @@
 			>
 				<h2 class="text-white basis-1/4 min-w-[5.5em]">Contributors</h2>
 				<div class="flex flex-col gap-10">
+					<div>
+						<p class="text-white">Jasper Katzban - Site Design & Development</p>
+						<p class="text-white">
+							Riddhima Dave - Design & Communications Management
+						</p>
+						<p class="text-white">Emerson Holloway - Design & Administration</p>
+						<p class="text-white">Jennifer J. Lee - Website Illustrations</p>
+					</div>
 					<p class="text-white">
 						The Fairmount Indigo CDC Collaborative and the Dorchester Bay
 						Economic Development Corporation, including Andrealis Martinez and
@@ -72,13 +80,6 @@
 						Rachele Gardner.
 					</p>
 				</div>
-			</div>
-			<div
-				class="flex gap-10 flex-wrap items-baseline"
-				in:fly={{ y: 20, duration: 500, delay: 250 }}
-			>
-				<h2 class="text-white basis-1/4 min-w-[5.5em]">What's Next?</h2>
-				<p class="text-white">text</p>
 			</div>
 		</div>
 	</div>

@@ -1,10 +1,10 @@
 <script>
 	import { setContext } from "svelte";
-	import { browser } from "$app/environment";
 	import Meta from "$components/Meta.svelte";
 	import CategoryPage from "$components/take-action/CategoryPage.svelte";
 	import copy from "$data/copy.json";
 	import version from "$utils/version.js";
+	import { BookOpen } from "lucide-svelte";
 
 	export let data;
 
@@ -21,7 +21,7 @@
 	setContext("data", data.data);
 
 	let info = {
-		imgSrc: "../../assets/take-action/education-icon.png",
+		icon: BookOpen,
 		title: "Education",
 		description:
 			"Congrats on viewing this website! Learning about the work being done to improve the Fairmount Line is a great first step. We’ve put together resources to help you learn more.",

@@ -29,7 +29,7 @@
 					class="m-auto substance-label !text-[1.7em] sm:!text-[2.2em] text-center"
 					style="color: {color}"
 				>
-					{@html title}
+					<!-- {@html title} -->
 				</h3>
 			</div>
 		</div>

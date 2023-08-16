@@ -3,7 +3,6 @@
 	import { BookOpen, Landmark, Megaphone } from "lucide-svelte";
 
 	let educationInfo = {
-		// imgSrc: "assets/take-action/education-icon.png",
 		icon: BookOpen,
 		title: "Education",
 		description:
@@ -12,7 +11,6 @@
 		linkText: "Get Resources"
 	};
 	let selfAdvocacyInfo = {
-		// imgSrc: "assets/take-action/advocacy-icon.png",
 		icon: Megaphone,
 		title: "Self Advocacy",
 		description:
@@ -21,7 +19,6 @@
 		linkText: "Try it out"
 	};
 	let policyChangeInfo = {
-		// imgSrc: "assets/take-action/policy-icon.png",
 		icon: Landmark,
 		title: "Policy Change",
 		description:

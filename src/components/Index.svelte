@@ -44,6 +44,7 @@
 		>
 			<img
 				src="assets/full-train-loader.png"
+				alt="Fairmount commuter rail train"
 				class="w-[150vw]"
 				class:train-right-in={introAnimationStart}
 				class:train-right-out={outroAnimationStart}
@@ -56,6 +57,7 @@
 		>
 			<img
 				src="assets/full-train-loader.png"
+				alt="Fairmount commuter rail train"
 				class="w-[150vw]"
 				class:train-left-in={introAnimationStart}
 				class:train-left-out={outroAnimationStart}

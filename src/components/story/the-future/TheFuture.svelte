@@ -63,25 +63,10 @@
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
-			textOnTop: true,
-			sticky: "middle",
-			narration: "Let’s take a look at what's in that exhaust.",
-			// backgroundImages: ["assets/story/air-quality/train-zoom-3.jpg"],
-			narrationImage: "assets/story/narrator-head.png"
-		},
-		{
 			sticky: "start",
 			fixBackground: true,
 			componentFullScreen: AirQualityInteractive,
-			backgroundImages: ["assets/story/exhaust.png"]
-		},
-		{
-			textOnTop: true
-			// backgroundImages: ["assets/story/arial-zoom-in.jpg"]
-		},
-		{
-			textOnTop: true
-			// backgroundImages: ["assets/story/arial-zoom-in.jpg"]
+			backgroundImages: ["assets/story/arial-focus.jpg"]
 		},
 		{
 			textOnTop: true,
@@ -177,7 +162,7 @@
 			fixBackground: true,
 			textOnTop: true,
 
-			body: 'In Massachusetts, an area is considered an Environmental Justice Community if any of the middleing are true: <br><br><li>the median household income is less than 65% the statewide median</li><li>at least a 40% minority population</li><li>less than 25% households identify as speaking English "very well"</li></div><br>– mass.gov',
+			body: 'In Massachusetts, an area is considered an Environmental Justice Community if any of the following are true: <br><br><div class="text-left"><li>the median household income is less than 65% the statewide median</li><li>at least a 40% minority population</li><li>less than 25% households identify as speaking English "very well"</li></div><br>– mass.gov',
 			backgroundImages: ["assets/story/Map-EJ-boston.png"],
 			citationText: "Map data: mass.gov",
 			citationLink:

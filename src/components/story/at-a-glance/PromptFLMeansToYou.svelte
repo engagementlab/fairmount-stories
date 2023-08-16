@@ -111,9 +111,9 @@
 	];
 </script>
 
-<section class="z-50 bg-white">
+<section class="z-50 bg-gradient-to-b from-white to-yellow-100">
 	<div
-		class="flex min-h-[80vh] w-full flex-col gap-12 justify-center items-center justify-items-center p-10 z-50"
+		class="flex min-h-[90vh] w-full flex-col gap-12 justify-center items-center justify-items-center p-10 z-50"
 	>
 		<div class="flex flex-col items-center max-w-lg gap-5 z-50">
 			<div

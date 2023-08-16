@@ -10,14 +10,14 @@
 
 <button
 	on:click={() => (showModal = true)}
-	class="aspect-square w-[10em] sm:w-[15em] bg-center bg-contain bg-no-repeat hover:bg-center hover:bg-contain hover:bg-no-repeat hover:bg-transparent"
+	class="aspect-square w-[10em] sm:w-[15em] bg-center bg-contain bg-no-repeat hover:bg-center hover:bg-contain hover:bg-no-repeat hover:bg-transparent transition hover:scale-125"
 	style="background-image: url({iconSrc})"
 >
 	<h3
 		class="substance-label !text-[1.7em] sm:!text-[2.2em]"
 		style="color: {color}"
 	>
-		{@html title}
+		<!-- {@html title} -->
 	</h3>
 </button>
 

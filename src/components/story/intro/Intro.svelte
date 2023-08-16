@@ -4,6 +4,7 @@
 
 	const steps = [
 		{
+			id: "welcome",
 			componentFullScreen: Landing,
 			backgroundImages: [
 				"assets/story/arial-texture-bg-lg.jpg",

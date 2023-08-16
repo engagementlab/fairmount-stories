@@ -3,7 +3,7 @@
 		class="m-auto w-full max-w-screen-md flex flex-col justify-center items-center gap-16"
 	>
 		<div class="flex justify-center items-center">
-			<a class="border-0" href="#intro">
+			<a class="border-0" href="#welcome">
 				<div class="flex flex-col justify-center items-center gap-5">
 					<div
 						class="bg-slate-600 rounded-full drop-shadow-md transition hover:scale-110 hover:bg-slate-500"

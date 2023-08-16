@@ -22,6 +22,7 @@
 
 <button
 	on:click={handleClick}
+	on:focus={handleMouseOver}
 	on:mouseover={handleMouseOver}
 	on:mouseleave={handleMouseLeave}
 	{disabled}

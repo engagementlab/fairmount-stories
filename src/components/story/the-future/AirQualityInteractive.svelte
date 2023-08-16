@@ -22,7 +22,7 @@
 	<div class="clean-air absolute left-[30%] top-[10%]">
 		<AirQualityPopout
 			title="clean<br>air"
-			iconSrc={"assets/story/air-quality/clean-air-icon.png"}
+			iconSrc={"assets/story/clean-air-icon.png"}
 			color="#7FAEDD"
 		>
 			<p slot="description">
@@ -42,7 +42,7 @@
 	<div class="natural-particles absolute right-[15%] top-[27%]">
 		<AirQualityPopout
 			title="natural<br>particles"
-			iconSrc={"assets/story/air-quality/natural-particles-icon.png"}
+			iconSrc={"assets/story/natural-particles-icon.png"}
 			color="#CBD22A"
 			><p slot="description">
 				Clean air contains particles from natural sources, including pollen from
@@ -62,7 +62,7 @@
 	<div class="exhaust-gases absolute left-[10%] top-[43%]">
 		<AirQualityPopout
 			title="exhaust<br>gases"
-			iconSrc={"assets/story/air-quality/exhaust-gases-icon.png"}
+			iconSrc={"assets/story/exhaust-gases-icon.png"}
 			color="#69BB14"
 		>
 			<p slot="description">
@@ -88,7 +88,7 @@
 	<div class="exhaust-particles absolute right-[28%] top-[65%]">
 		<AirQualityPopout
 			title="exhaust<br>particles"
-			iconSrc={"assets/story/air-quality/exhaust-particles-icon.png"}
+			iconSrc={"assets/story/exhaust-particles-icon.png"}
 			color="#E87601"
 		>
 			<p slot="description">

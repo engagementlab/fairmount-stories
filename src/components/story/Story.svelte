@@ -20,7 +20,7 @@
 
 	let value;
 	const sections = [
-		{ title: "Intro", anchor: "#intro" },
+		{ title: "Welcome", anchor: "#welcome" },
 		{ title: "At A Glance", anchor: "#at-a-glance" },
 		{ title: "History", anchor: "#history" },
 		{ title: "The Future", anchor: "#the-future" },

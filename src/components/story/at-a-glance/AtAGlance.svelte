@@ -49,5 +49,5 @@
 	<SectionHeader {HeaderText} />
 	<ScrollSection steps={steps1} />
 	<PromptMeansToYou />
-	<ScrollSection steps={steps2} />
+	<ScrollSection steps={steps2} backgroundColor="bg-yellow-100" />
 </section>
