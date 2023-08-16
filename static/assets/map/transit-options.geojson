@@ -1,0 +1,18 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "9 Miles in 30 Minutes"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0789,
+                    42.2972
+                ]
+            }
+        }
+    ]
+}
