@@ -129,7 +129,7 @@
 							target="_blank"
 							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
 							>Barr Foundation</a
-						>
+						>.
 					</p>
 				</div>
 			</div>
