@@ -8,6 +8,7 @@
 	export let body;
 	export let narration;
 	export let narrationImage;
+	export let citation;
 	export let alignBottom;
 
 	let innerWidth;
@@ -86,6 +87,14 @@
 			</div>
 		{:else if narration}
 			<p class="quote text-center">{@html narration}</p>
+		{/if}
+		{#if citation}
+			<p
+				class="text-bod px-[5px] text-center sm:text-left"
+				class:!text-center={textOnTop}
+			>
+				{@html citation}
+			</p>
 		{/if}
 		<slot />
 	</div>

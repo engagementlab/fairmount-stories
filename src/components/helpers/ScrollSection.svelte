@@ -130,6 +130,7 @@
 						body={step.body}
 						narration={step.narration}
 						narrationImage={step.narrationImage}
+						citation={step.citation}
 						alignBottom={step.alignBottom}
 						textOnTop={step.textOnTop}
 					>

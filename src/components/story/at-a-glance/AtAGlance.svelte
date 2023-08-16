@@ -43,7 +43,7 @@
 		},
 		{
 			fixBackground: true,
-			body: "The line is within the limits of the City of Boston, similar to the city’s subways and light rail. <span>Despite this, it’s still classified as a commuter rail.</span>",
+			body: "The line is within the limits of the City of Boston, similar to the city’s subways and light rail. <span>Despite this, it’s still classified as a commuter rail line.</span>",
 			backgroundMap: {
 				lng: -71.12,
 				lat: 42.295,
@@ -56,7 +56,7 @@
 			fixBackground: true,
 			body: "It takes only 30 minutes for a train to complete its 9 mile course one-way, <span>making it a faster option for residents than driving or taking the bus.</span> ",
 			narration:
-				"If I'm going to South Station, we're gonna take the commuter rail, as opposed to taking the bus and then another train.",
+				"If I'm going to South Station, we're gonna take the commuter rail as opposed to taking the bus and then another train.",
 			narrationImage: "assets/story/narrator-head.png",
 			backgroundMap: {
 				lng: -71.12,

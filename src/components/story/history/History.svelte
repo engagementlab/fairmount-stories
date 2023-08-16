@@ -94,12 +94,13 @@
 				],
 				offsetMapPos: true
 			},
-			body: "Source: <a href='https://www.bostonplans.org/planning/planning-initiatives/fairmount-indigo-planning-initiative' target='_blank'>FICC, Boston Planning & Development Agency</a>",
 			narration:
 				"As part of the Fairmount Indigo Transit Coalition, me and others along the line pushed for five more stops to be built.",
 			narrationImage: "assets/story/narrator-head.png",
 			imageLeft: "assets/story/history-activism-2.jpg",
-			imageRight: "assets/story/history-construction-1.jpg"
+			imageRight: "assets/story/history-construction-1.jpg",
+			citation:
+				"Source: <a href='https://www.bostonplans.org/planning/planning-initiatives/fairmount-indigo-planning-initiative' target='_blank'>FICC, Boston Planning & Development Agency</a>"
 		},
 		{
 			narration:
@@ -127,7 +128,9 @@
 			sticky: "start",
 			year: "2022",
 			title: "Ridership Increases",
-			body: "Today, there are significantly more riders on the line than before Covid. <span>Ridership is now at 130% of 2019 levels.</span> <br> <br> Source: <a href='https://www.mbta.com/news/2023-06-02/fairmount-line-ridership-reaches-new-all-time-high-fairmount-ridership-130-pre?utm_campaign=curated-content&utm_content=Fairmount+Line+Ridership+Reaches+New+All-Time+High%2C+Fairmount+Ridership+at+130%25+of+pre-COVID+levels+in+May+2023&utm_medium=sidebar&utm_source=hub&utm_term=commuter-rail' target='_blank'>MBTA</a>",
+			body: "Today, there are significantly more riders on the line than before Covid. <span>Ridership is now at 130% of 2019 levels.</span>",
+			citation:
+				"Source: <a href='https://www.mbta.com/news/2023-06-02/fairmount-line-ridership-reaches-new-all-time-high-fairmount-ridership-130-pre?utm_campaign=curated-content&utm_content=Fairmount+Line+Ridership+Reaches+New+All-Time+High%2C+Fairmount+Ridership+at+130%25+of+pre-COVID+levels+in+May+2023&utm_medium=sidebar&utm_source=hub&utm_term=commuter-rail' target='_blank'>MBTA</a>",
 			backgroundImages: ["assets/story/four-corners-station-people-2.jpg"],
 			id: "after-often-prompt"
 		},
@@ -136,7 +139,9 @@
 			fixBackground: true,
 			year: "2022",
 			title: "Ridership Increases",
-			body: "Today, there are significantly more riders on the line than before Covid. <span>Ridership is now at 130% of 2019 levels.</span> <br> <br> Source: <a href='https://www.mbta.com/news/2023-06-02/fairmount-line-ridership-reaches-new-all-time-high-fairmount-ridership-130-pre?utm_campaign=curated-content&utm_content=Fairmount+Line+Ridership+Reaches+New+All-Time+High%2C+Fairmount+Ridership+at+130%25+of+pre-COVID+levels+in+May+2023&utm_medium=sidebar&utm_source=hub&utm_term=commuter-rail' target='_blank'>MBTA</a>",
+			body: "Today, there are significantly more riders on the line than before Covid. <span>Ridership is now at 130% of 2019 levels.</span>",
+			citation:
+				"Source: <a href='https://www.mbta.com/news/2023-06-02/fairmount-line-ridership-reaches-new-all-time-high-fairmount-ridership-130-pre?utm_campaign=curated-content&utm_content=Fairmount+Line+Ridership+Reaches+New+All-Time+High%2C+Fairmount+Ridership+at+130%25+of+pre-COVID+levels+in+May+2023&utm_medium=sidebar&utm_source=hub&utm_term=commuter-rail' target='_blank'>MBTA</a>",
 			backgroundImages: ["assets/story/four-corners-station-people-3.jpg"]
 		},
 		{
@@ -153,7 +158,9 @@
 			fixBackground: true,
 			year: "The Future",
 			title: "Equity beyond Access",
-			body: "“The term “equity” means the consistent and systematic fair, just, and impartial treatment of all individuals, including individuals who belong to underserved communities that have been denied such treatment.” <br> <br> Source: <a href='https://www.planning.dot.gov/planning/topic_transportationequity.aspx' target='_blank'>U.S  Department of Transportation</a>",
+			body: "“The term “equity” means the consistent and systematic fair, just, and impartial treatment of all individuals, including individuals who belong to underserved communities that have been denied such treatment.”",
+			citation:
+				"Source: <a href='https://www.planning.dot.gov/planning/topic_transportationequity.aspx' target='_blank'>U.S.  Department of Transportation</a>",
 			backgroundImages: ["assets/story/four-corners-station-people-all.jpg"],
 			narration:
 				"Access, as important as it is, is not equity. Our community is still working towards broader transit equity.",

@@ -34,7 +34,6 @@
 		</text>
 		<text
 			dx="55"
-			textLength="160"
 			text-anchor="middle"
 			class="tooltip text-[1.6em] tracking-[.16em] uppercase"
 			fill="black"

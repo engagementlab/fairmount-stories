@@ -105,24 +105,17 @@
 		class="flex flex-col max-w-screen-xl gap-5 justify-center items-center drop-shadow-xl"
 	>
 		<h1
-			class="title sm:text-[6em] text-center text-white"
+			class="title sm:text-[6em] text-center text-white drop-shadow-xl"
 			in:fly={{ y: 20, duration: 500, delay: 100 }}
 		>
 			The Fairmount Line Community:
 		</h1>
 		<h2
-			class="subtitle sm:text-[4em] text-center text-white"
+			class="subtitle sm:text-[4em] text-center text-white drop-shadow-xl"
 			in:fly={{ y: 20, duration: 500, delay: 150 }}
 		>
 			Stories of its Past, Present, & Future
 		</h2>
-		<p
-			class="text-center max-w-xl text-white drop-shadow-md"
-			in:fly={{ y: 20, duration: 500, delay: 200 }}
-		>
-			An interactive narrative experience to learn about Boston’s Fairmount
-			Commuter Rail Line.
-		</p>
 	</div>
 	<div
 		class="flex justify-center items-center"

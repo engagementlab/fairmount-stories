@@ -13,7 +13,7 @@
 	bind:this={dialog}
 	on:close={() => (showModal = false)}
 	on:click|self={() => dialog.close()}
-	class="p-10 bg-white rounded-lg drop-shadow-xl max-w-[25em]"
+	class="p-10 bg-white rounded-lg drop-shadow-xl max-w-[38em]"
 >
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div on:click|stopPropagation class="flex flex-col gap-20">
