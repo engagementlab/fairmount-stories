@@ -187,7 +187,9 @@
 			fixBackground: true,
 			textOnTop: true,
 
-			body: 'In Massachusetts, an area is considered an environmental justice community if any of the following are true: <br><br><div class="text-left"><li>the median household income is less than 65% the statewide median</li><li>at least a 40% minority population</li><li>less than 25% households identify as speaking English "very well"</li></div><br>– mass.gov',
+			body: 'In Massachusetts, an area is considered an environmental justice community if any of the following are true: <br><br><div class="text-left"><li>the median household income is less than 65% the statewide median</li><li>at least a 40% minority population</li><li>less than 25% households identify as speaking English "very well"</li></div>',
+			citation:
+				"Source: <a href='https://www.mass.gov/environmental-justice' target='_blank'>mass.gov</a>",
 			backgroundMap: {
 				lng: -71.09,
 				lat: 42.3232,
