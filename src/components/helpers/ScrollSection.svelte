@@ -91,8 +91,6 @@
 						backgroundSticky={step.backgroundSticky}
 						loadItem={i >= (value || 0) - 1 && i <= (value || 0) + 1}
 						showItem={i == (value || 0)}
-						citationText={step.citationText}
-						citationLink={step.citationLink}
 					>
 						<BackgroundImage src={backgroundImage} />
 					</BackgroundParallaxItem>

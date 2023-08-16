@@ -1,5 +1,4 @@
 <script>
-	import { LayoutPanelLeft } from "lucide-svelte";
 	import { Map } from "mapbox-gl";
 	import { onMount } from "svelte";
 
