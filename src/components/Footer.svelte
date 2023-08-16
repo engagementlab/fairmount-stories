@@ -1,6 +1,8 @@
-<div class="flex bg-slate-800 w-full py-28 px-5 text-slate-300 min-h-screen">
+<div
+	class="flex bg-slate-800 w-full py-28 px-5 text-slate-300 min-h-screen z-50"
+>
 	<div
-		class="m-auto w-full max-w-screen-md flex flex-col justify-center items-center gap-16"
+		class="m-auto w-full max-w-screen-md flex flex-col justify-center items-center gap-16 z-50"
 	>
 		<div class="flex justify-center items-center">
 			<a class="border-0" href="#welcome">
