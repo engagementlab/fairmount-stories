@@ -5,6 +5,7 @@
 
 	import BackgroundParallaxItem from "$components/helpers/BackgroundParallaxItem.svelte";
 	import BackgroundImage from "$components/helpers/BackgroundImage.svelte";
+	import BackgroundMap from "$components/helpers/BackgroundMap.svelte";
 	import ForegroundItem from "$components/helpers/ForegroundItem.svelte";
 	import ForegroundItemWrapper from "$components/helpers/ForegroundItemWrapper.svelte";
 
@@ -98,6 +99,15 @@
 				{/each}
 			{/if}
 		{/each}
+		{#if steps[value || 0].backgroundMap}
+			<BackgroundParallaxItem
+				fixBackground={true}
+				loadItem={true}
+				showItem={true}
+			>
+				<BackgroundMap {...steps[value || 0].backgroundMap} />
+			</BackgroundParallaxItem>
+		{/if}
 	</div>
 	<Scrolly bind:value>
 		{#each steps as step, i}

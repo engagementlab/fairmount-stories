@@ -8,21 +8,68 @@
 	const steps1 = [
 		{
 			fixBackground: true,
+			body: "The Fairmount Line consists of 9 stops throughout Boston.",
+			backgroundMap: {
+				lng: -71.12,
+				lat: 42.295,
+				zoom: 10.5,
+				visibleFeatures: [
+					"tracks",
+					"neighborhoods",
+					"tracks",
+					"uphams-corner",
+					"four-corners",
+					"talbot-avenue",
+					"morton-street",
+					"fairmount",
+					"readville",
+					"blue-hill-avenue",
+					"newmarket",
+					"south-station"
+				],
+				offsetMapPos: true
+			}
+		},
+		{
+			fixBackground: true,
 			body: "The Fairmount Line services four major neighborhoods, and has the highest <span>percentage of ridership comprised of people of color in low to middle income households</span> in the MBTA commuter system.",
-			backgroundImages: ["assets/story/FL-neighborhoods.png"]
+			backgroundMap: {
+				lng: -71.12,
+				lat: 42.295,
+				zoom: 10.5,
+				visibleFeatures: ["tracks", "neighborhoods"],
+				offsetMapPos: true
+			}
 		},
 		{
 			fixBackground: true,
 			body: "The line is within the limits of the City of Boston, similar to the city’s subways and light rail. <span>Despite this, it’s still classified as a commuter rail.</span>",
-			backgroundImages: ["assets/story/FL-city-limits.png"]
+			backgroundMap: {
+				lng: -71.12,
+				lat: 42.295,
+				zoom: 10.5,
+				visibleFeatures: ["tracks", "city-limits"],
+				offsetMapPos: true
+			}
 		},
 		{
 			fixBackground: true,
 			body: "It takes only 30 minutes for a train to complete its 9 mile course one-way, <span>making it a faster option for residents than driving or taking the bus.</span> ",
-			backgroundImages: ["assets/story/FL-transit-options.png"],
 			narration:
 				"If I'm going to South Station, we're gonna take the commuter rail, as opposed to taking the bus and then another train.",
-			narrationImage: "assets/story/narrator-head.png"
+			narrationImage: "assets/story/narrator-head.png",
+			backgroundMap: {
+				lng: -71.12,
+				lat: 42.295,
+				zoom: 10.5,
+				visibleFeatures: [
+					"tracks",
+					"transit-options",
+					"readville",
+					"south-station"
+				],
+				offsetMapPos: true
+			}
 		}
 	];
 

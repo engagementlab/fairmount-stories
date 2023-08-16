@@ -27,7 +27,24 @@
 			year: "2005",
 			title: "Action to Increase Stops",
 			body: "Due to pressure from community activists and the EPA, the MBTA agreed to make improvements to the existing Fairmount Line and begin efforts to add more stops. <br> <span>Thanks to these efforts, access and connectivity for the Fairmount Corridor improved considerably.</span> <br/> <br/>Curious about transit accessibility in your area? <br/> <a href='https://alltransit.cnt.org/metrics/' target='_blank'>Check out the AllTransit tool!</a>",
-			backgroundImages: ["assets/story/FL-2005.png"],
+			backgroundMap: {
+				lng: -71.12,
+				lat: 42.295,
+				zoom: 10.5,
+				visibleFeatures: [
+					"tracks",
+					"uphams-corner-green",
+					"four-corners-gray",
+					"talbot-avenue-gray",
+					"morton-street",
+					"fairmount-green",
+					"readville-green",
+					"blue-hill-avenue-gray",
+					"newmarket-gray",
+					"south-station"
+				],
+				offsetMapPos: true
+			},
 			imageLeft: "assets/story/history-activism-3.jpg",
 			imageRight: "assets/story/history-construction-2.jpg"
 		},
@@ -35,14 +52,48 @@
 			fixBackground: true,
 			narration:
 				"Before 2012, we only had three stops plus the terminals at South Station and Readville. I’ve lived here for 52 years, but until 2013 we didn’t even have my station, Four Corners.",
-			backgroundImages: ["assets/story/FL-2012.png"],
+			backgroundMap: {
+				lng: -71.12,
+				lat: 42.295,
+				zoom: 10.5,
+				visibleFeatures: [
+					"tracks",
+					"uphams-corner",
+					"four-corners-gray",
+					"talbot-avenue-gray",
+					"morton-street",
+					"fairmount",
+					"readville",
+					"blue-hill-avenue-gray",
+					"newmarket-gray",
+					"south-station"
+				],
+				offsetMapPos: true
+			},
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
 			fixBackground: true,
 			year: "2012-2019",
 			title: "5 More Stops Added",
-			backgroundImages: ["assets/story/FL-2012-2019.png"],
+			backgroundMap: {
+				lng: -71.12,
+				lat: 42.295,
+				zoom: 10.5,
+				visibleFeatures: [
+					"tracks",
+					"uphams-corner",
+					"four-corners-green",
+					"talbot-avenue-green",
+					"morton-street",
+					"fairmount",
+					"readville",
+					"blue-hill-avenue-green",
+					"newmarket-green",
+					"south-station"
+				],
+				offsetMapPos: true
+			},
 			body: "Source: <a href='https://www.bostonplans.org/planning/planning-initiatives/fairmount-indigo-planning-initiative' target='_blank'>FICC, Boston Planning & Development Agency</a>",
 			narration:
 				"As part of the Fairmount Indigo Transit Coalition, me and others along the line pushed for five more stops to be built.",
@@ -60,7 +111,8 @@
 				"https://www.bostonplans.org/planning/planning-initiatives/fairmount-indigo-planning-initiative"
 		},
 		{
-			backgroundSticky: "start",
+			// backgroundSticky: "start",
+			fixBackground: true,
 			year: "2020",
 			title: "More Frequent Trains",
 			body: "In an effort to increase <span>transit equity</span>, the MBTA piloted a program to run trains every 45 minutes on weekdays. This schedule was made permanent in 2022.",
@@ -71,7 +123,7 @@
 			componentInline: PromptHowOften
 		},
 		{
-			backgroundSticky: "middle",
+			fixBackground: true,
 			sticky: "start",
 			year: "2022",
 			title: "Ridership Increases",
@@ -81,14 +133,14 @@
 		},
 		{
 			sticky: "end",
-			backgroundSticky: "middle",
+			fixBackground: true,
 			year: "2022",
 			title: "Ridership Increases",
 			body: "Today, there are significantly more riders on the line than before Covid. <span>Ridership is now at 130% of 2019 levels.</span> <br> <br> Source: <a href='https://www.mbta.com/news/2023-06-02/fairmount-line-ridership-reaches-new-all-time-high-fairmount-ridership-130-pre?utm_campaign=curated-content&utm_content=Fairmount+Line+Ridership+Reaches+New+All-Time+High%2C+Fairmount+Ridership+at+130%25+of+pre-COVID+levels+in+May+2023&utm_medium=sidebar&utm_source=hub&utm_term=commuter-rail' target='_blank'>MBTA</a>",
 			backgroundImages: ["assets/story/four-corners-station-people-3.jpg"]
 		},
 		{
-			backgroundSticky: "middle",
+			fixBackground: true,
 			year: "Today",
 			title: "A Staple of the Community",
 			body: "Thanks to years of local and state efforts, the train has become an important source of transit access that is efficient and simple for the communities it serves.",
@@ -98,7 +150,7 @@
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
-			backgroundSticky: "end",
+			fixBackground: true,
 			year: "The Future",
 			title: "Equity beyond Access",
 			body: "“The term “equity” means the consistent and systematic fair, just, and impartial treatment of all individuals, including individuals who belong to underserved communities that have been denied such treatment.” <br> <br> Source: <a href='https://www.planning.dot.gov/planning/topic_transportationequity.aspx' target='_blank'>U.S  Department of Transportation</a>",
