@@ -30,10 +30,14 @@
 					project aims to create community and support environmental justice
 					advocacy efforts through multimedia storytelling and education. The
 					purpose of this website and our project at large is to support the
-					Fairmount Indigo CDC Collaborative's advocacy in educating their
-					community about climate justice and transit equity by visualizing
-					relationships between people, their communities, transit, and air
-					quality.
+					<a
+						href="https://community.massenergize.org/fairmount-boston/"
+						target="_blank"
+						class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+						>Fairmount Indigo CDC Collaborative's</a
+					> advocacy in educating their community about climate justice and transit
+					equity by visualizing relationships between people, their communities,
+					transit, and air quality.
 				</p>
 			</div>
 			<div
@@ -58,8 +62,15 @@
 			>
 				<h2 class="text-white basis-1/4 min-w-[5.5em]">Contributors</h2>
 				<div class="flex flex-col gap-10">
-					<div>
-						<p class="text-white">Jasper Katzban - Site Design & Development</p>
+					<div class="flex flex-col gap-3">
+						<p class="text-white">
+							<a
+								href="https://jasperkatzban.com"
+								target="_blank"
+								class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+								>Jasper Katzban</a
+							> - Site Design & Development
+						</p>
 						<p class="text-white">
 							Riddhima Dave - Design & Communications Management
 						</p>
@@ -67,20 +78,62 @@
 						<p class="text-white">Jennifer J. Lee - Website Illustrations</p>
 					</div>
 					<p class="text-white">
-						The Fairmount Indigo CDC Collaborative and the Dorchester Bay
-						Economic Development Corporation, including Andrealis Martinez and
-						Kendra Beaver.
+						The <a
+							href="https://community.massenergize.org/fairmount-boston/"
+							target="_blank"
+							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							>Fairmount Indigo CDC Collaborative</a
+						>
+						and the
+						<a
+							href="https://www.dbedc.org"
+							target="_blank"
+							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							>Dorchester Bay Economic Development Corporation</a
+						>, including Andrealis Martinez and Kendra Beaver.
 					</p>
 					<p class="text-white">
-						The Air Partners team at Olin College, including Scott Hersey and
-						Francesca Majluf.
+						The <a
+							href="https://airpartners.org"
+							target="_blank"
+							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+						>
+							Air Partners</a
+						>
+						team at
+						<a
+							href="https://olin.edu"
+							target="_blank"
+							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							>Olin College</a
+						>, including Scott Hersey and Francesca Majluf.
 					</p>
 					<p class="text-white">
-						The Engagement Lab at Emerson College, including Eric Gordon and
-						Rachele Gardner.
+						The <a
+							href="https://elab.emerson.edu"
+							target="_blank"
+							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							>Engagement Lab</a
+						>
+						at
+						<a
+							href="https://emerson.edu"
+							target="_blank"
+							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							>Emerson College</a
+						>, including Eric Gordon and Rachele Gardner.
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<style lang="postcss">
+	/* a {
+		border-bottom: none;
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 3px;
+	} */
+</style>
