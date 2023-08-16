@@ -79,7 +79,7 @@
 			>
 				<p class="m-auto quote text-center">{@html narration}</p>
 				<div
-					class="m-auto sm:m-0 basis-1/3 sm:basis-1/4 shrink-0 grow-0 border-8 border-gray-200 rounded-full bg-gray-200"
+					class=" m-auto sm:m-0 basis-1/3 sm:basis-1/4 shrink-0 grow-0 border-8 border-gray-200 rounded-full bg-gray-200 narration-image"
 				>
 					<img src={narrationImage} alt="The narrator's face" />
 				</div>
@@ -100,5 +100,28 @@
 		margin-inline: -5px;
 		box-decoration-break: clone;
 		-webkit-box-decoration-break: clone;
+	}
+
+	.narration-image {
+		/* animation: narration-image-scale 3s ease-in-out alternate infinite;
+		animation: narration-image-rotate 5s ease-out alternate infinite; */
+	}
+
+	@keyframes narration-image-scale {
+		from {
+			transform: scale(1.02);
+		}
+		to {
+			transform: scale(0.95);
+		}
+	}
+
+	@keyframes narration-image-rotate {
+		from {
+			transform: rotate(2deg);
+		}
+		to {
+			transform: rotate(-2deg);
+		}
 	}
 </style>

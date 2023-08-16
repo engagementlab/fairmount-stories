@@ -38,6 +38,7 @@
 		class="fixed justify-center items-center flex z-[20000] bg-[#B5D334] min-h-full min-w-full"
 		out:fade
 	>
+		<h2 class="text-white z-10 drop-shadow-md">Loading...</h2>
 		<div
 			class="shrink-0 -translate-y-[2vw] absolute delay-500"
 			class:opacity-0={outroAnimationStart}
@@ -48,7 +49,9 @@
 				class="w-[150vw]"
 				class:train-right-in={introAnimationStart}
 				class:train-right-out={outroAnimationStart}
-				style="transform: translate(100vw, -11vw)"
+				style="transform: {introAnimationStart
+					? ''
+					: 'translate(100vw, -11vw)'}"
 			/>
 		</div>
 		<div
@@ -61,7 +64,9 @@
 				class="w-[150vw]"
 				class:train-left-in={introAnimationStart}
 				class:train-left-out={outroAnimationStart}
-				style="transform: translate(-100vw, 11vw)"
+				style="transform: {introAnimationStart
+					? ''
+					: 'translate(-100vw, 11vw)'}"
 			/>
 		</div>
 	</div>
