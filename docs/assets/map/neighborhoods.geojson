@@ -1,0 +1,57 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Roxbury"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0951,
+                    42.3248
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Dorchester"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0745,
+                    42.2973
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mattapan"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0871,
+                    42.2724
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Hyde Park"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.1247,
+                    42.2557
+                ]
+            }
+        }
+    ]
+}
