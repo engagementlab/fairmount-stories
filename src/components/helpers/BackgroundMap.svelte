@@ -37,15 +37,15 @@
 		"blue-hill-avenue-gray",
 		"newmarket-gray",
 		"south-station-gray",
-		"uphams-corner-green",
-		"four-corners-green",
-		"talbot-avenue-green",
-		"morton-street-green",
-		"fairmount-green",
-		"readville-green",
-		"blue-hill-avenue-green",
-		"newmarket-green",
-		"south-station-green"
+		"uphams-corner-new",
+		"four-corners-new",
+		"talbot-avenue-new",
+		"morton-street-new",
+		"fairmount-new",
+		"readville-new",
+		"blue-hill-avenue-new",
+		"newmarket-new",
+		"south-station-new"
 	];
 
 	const stations = {
@@ -77,7 +77,7 @@
 					type: "Point"
 				},
 				properties: {
-					Name: "uphams-corner-green"
+					Name: "uphams-corner-new"
 				},
 				type: "Feature"
 			},
@@ -107,7 +107,7 @@
 					type: "Point"
 				},
 				properties: {
-					Name: "four-corners-green"
+					Name: "four-corners-new"
 				},
 				type: "Feature"
 			},
@@ -137,7 +137,7 @@
 					type: "Point"
 				},
 				properties: {
-					Name: "talbot-avenue-green"
+					Name: "talbot-avenue-new"
 				},
 				type: "Feature"
 			},
@@ -167,7 +167,7 @@
 					type: "Point"
 				},
 				properties: {
-					Name: "morton-street-green"
+					Name: "morton-street-new"
 				},
 				type: "Feature"
 			},
@@ -197,7 +197,7 @@
 					type: "Point"
 				},
 				properties: {
-					Name: "fairmount-green"
+					Name: "fairmount-new"
 				},
 				type: "Feature"
 			},
@@ -227,7 +227,7 @@
 					type: "Point"
 				},
 				properties: {
-					Name: "readville-green"
+					Name: "readville-new"
 				},
 				type: "Feature"
 			},
@@ -257,7 +257,7 @@
 					type: "Point"
 				},
 				properties: {
-					Name: "blue-hill-avenue-green"
+					Name: "blue-hill-avenue-new"
 				},
 				type: "Feature"
 			},
@@ -287,7 +287,7 @@
 					type: "Point"
 				},
 				properties: {
-					Name: "newmarket-green"
+					Name: "newmarket-new"
 				},
 				type: "Feature"
 			},
@@ -317,7 +317,7 @@
 					type: "Point"
 				},
 				properties: {
-					Name: "south-station-green"
+					Name: "south-station-new"
 				},
 				type: "Feature"
 			}
@@ -439,67 +439,67 @@
 		});
 
 		map.loadImage(
-			"assets/map/stations/south-station-green.png",
+			"assets/map/stations/south-station-new.png",
 			(error, image) => {
 				if (error) throw error;
 
-				map.addImage("south-station-green", image);
+				map.addImage("south-station-new", image);
 			}
 		);
-		map.loadImage("assets/map/stations/newmarket-green.png", (error, image) => {
+		map.loadImage("assets/map/stations/newmarket-new.png", (error, image) => {
 			if (error) throw error;
 
-			map.addImage("newmarket-green", image);
+			map.addImage("newmarket-new", image);
 		});
 		map.loadImage(
-			"assets/map/stations/uphams-corner-green.png",
+			"assets/map/stations/uphams-corner-new.png",
 			(error, image) => {
 				if (error) throw error;
 
-				map.addImage("uphams-corner-green", image);
+				map.addImage("uphams-corner-new", image);
 			}
 		);
 		map.loadImage(
-			"assets/map/stations/four-corners-green.png",
+			"assets/map/stations/four-corners-new.png",
 			(error, image) => {
 				if (error) throw error;
 
-				map.addImage("four-corners-green", image);
+				map.addImage("four-corners-new", image);
 			}
 		);
 		map.loadImage(
-			"assets/map/stations/talbot-avenue-green.png",
+			"assets/map/stations/talbot-avenue-new.png",
 			(error, image) => {
 				if (error) throw error;
 
-				map.addImage("talbot-avenue-green", image);
+				map.addImage("talbot-avenue-new", image);
 			}
 		);
 		map.loadImage(
-			"assets/map/stations/morton-street-green.png",
+			"assets/map/stations/morton-street-new.png",
 			(error, image) => {
 				if (error) throw error;
 
-				map.addImage("morton-street-green", image);
+				map.addImage("morton-street-new", image);
 			}
 		);
 		map.loadImage(
-			"assets/map/stations/blue-hill-avenue-green.png",
+			"assets/map/stations/blue-hill-avenue-new.png",
 			(error, image) => {
 				if (error) throw error;
 
-				map.addImage("blue-hill-avenue-green", image);
+				map.addImage("blue-hill-avenue-new", image);
 			}
 		);
-		map.loadImage("assets/map/stations/fairmount-green.png", (error, image) => {
+		map.loadImage("assets/map/stations/fairmount-new.png", (error, image) => {
 			if (error) throw error;
 
-			map.addImage("fairmount-green", image);
+			map.addImage("fairmount-new", image);
 		});
-		map.loadImage("assets/map/stations/readville-green.png", (error, image) => {
+		map.loadImage("assets/map/stations/readville-new.png", (error, image) => {
 			if (error) throw error;
 
-			map.addImage("readville-green", image);
+			map.addImage("readville-new", image);
 		});
 	};
 

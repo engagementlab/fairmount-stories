@@ -205,7 +205,7 @@
 			textOnTop: true,
 			sticky: "start",
 			narration:
-				"I like that when our community really needs to get things done – as a whole and in a collective – we can. When we work together, it's evident that things can and do get done properly, with ethics and transparency.",
+				"When our community works together — as a whole and in a collective — we can get things done properly, with ethics and transparency.",
 			narrationImage: "assets/story/narrator-head.png",
 			id: "after-ej-prompt"
 		},

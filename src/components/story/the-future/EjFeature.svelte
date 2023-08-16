@@ -67,7 +67,7 @@
 					attribution="— Hyde Park Resident"
 				/>
 				<EjFeatureQuote
-					quote="I clean my windowsill in my home for over 20 years... my windows sills that should be white, and it's always black."
+					quote="I've cleaned soot off the windowsills in my home for over 20 years... they should be white, and they're always black."
 					attribution="— Dorchester Resident"
 				/>
 			</div>

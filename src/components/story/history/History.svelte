@@ -33,12 +33,12 @@
 				zoom: 10.5,
 				visibleFeatures: [
 					"tracks",
-					"uphams-corner-green",
+					"uphams-corner",
 					"four-corners-gray",
 					"talbot-avenue-gray",
 					"morton-street",
-					"fairmount-green",
-					"readville-green",
+					"fairmount",
+					"readville",
 					"blue-hill-avenue-gray",
 					"newmarket-gray",
 					"south-station"
@@ -83,13 +83,13 @@
 				visibleFeatures: [
 					"tracks",
 					"uphams-corner",
-					"four-corners-green",
-					"talbot-avenue-green",
+					"four-corners-new",
+					"talbot-avenue-new",
 					"morton-street",
 					"fairmount",
 					"readville",
-					"blue-hill-avenue-green",
-					"newmarket-green",
+					"blue-hill-avenue-new",
+					"newmarket-new",
 					"south-station"
 				],
 				offsetMapPos: true
