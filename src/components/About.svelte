@@ -123,17 +123,16 @@
 							>Emerson College</a
 						>, including Eric Gordon and Rachele Gardner.
 					</p>
+					<p class="text-white">
+						Additional funding provided by the <a
+							href="https://www.barrfoundation.org"
+							target="_blank"
+							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							>Barr Foundation</a
+						>
+					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-<style lang="postcss">
-	/* a {
-		border-bottom: none;
-		text-decoration: underline;
-		text-decoration-thickness: 2px;
-		text-underline-offset: 3px;
-	} */
-</style>
