@@ -29,7 +29,7 @@
 					class="m-auto substance-label !text-[1.7em] sm:!text-[2.2em] text-center"
 					style="color: {color}"
 				>
-					<!-- {@html title} -->
+					{@html title}
 				</h3>
 			</div>
 		</div>
@@ -88,7 +88,7 @@
 	.substance-label {
 		font-size: 2.5rem;
 		letter-spacing: 3px;
-		text-shadow: -0.4vw -0.4vw 0 white, 0.4vw -0.4vw 0 white,
-			-0.4vw 0.4vw 0 white, 0.4vw 0.4vw 0 white;
+		text-shadow: -0.08em -0.08em 0 white, 0.08em -0.08em 0 white,
+			-0.08em 0.08em 0 white, 0.08em 0.08em 0 white;
 	}
 </style>

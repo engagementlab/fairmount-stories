@@ -15,7 +15,9 @@
 
 <div class="w-full m-auto max-w-screen-lg relative h-screen">
 	<div class="absolute w-full left-0 top-[6em] sm:botton-[5vh] flex px-10">
-		<h4 class="m-auto tooltip text-center drop-shadow-lg">
+		<h4
+			class="m-auto tooltip text-center drop-shadow-lg bg-white/40 rounded-full py-2 px-4"
+		>
 			Click on an icon to learn more about what's in the Air!
 		</h4>
 	</div>
@@ -23,7 +25,7 @@
 		<AirQualityPopout
 			title="clean<br>air"
 			iconSrc={"assets/story/clean-air-icon.png"}
-			color="#7FAEDD"
+			color="#8ebb5c"
 		>
 			<p slot="description">
 				Clean air is mostly Nitrogen, but also contains Oxygen (which plants
@@ -43,7 +45,7 @@
 		<AirQualityPopout
 			title="natural<br>particles"
 			iconSrc={"assets/story/natural-particles-icon.png"}
-			color="#CBD22A"
+			color="#f0ba53"
 			><p slot="description">
 				Clean air contains particles from natural sources, including pollen from
 				plants, wind-blown dust, and sea spray particles.
@@ -63,7 +65,7 @@
 		<AirQualityPopout
 			title="exhaust<br>gases"
 			iconSrc={"assets/story/exhaust-gases-icon.png"}
-			color="#69BB14"
+			color="#5e9fad"
 		>
 			<p slot="description">
 				When fossil fuels are burned, a complex mixture of particles and gases
@@ -89,7 +91,7 @@
 		<AirQualityPopout
 			title="exhaust<br>particles"
 			iconSrc={"assets/story/exhaust-particles-icon.png"}
-			color="#E87601"
+			color="#b53da8"
 		>
 			<p slot="description">
 				When fossil fuels are burned, a complex mixture of particles and gases
