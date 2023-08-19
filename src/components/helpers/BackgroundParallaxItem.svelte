@@ -18,7 +18,7 @@
 		top = outer.getBoundingClientRect().top;
 	});
 
-	let mobileSize = innerWidth < 640;
+	$: mobileSize = innerWidth < 640;
 
 	let transform = "";
 
@@ -35,7 +35,6 @@
 
 <div
 	class="hidden flex-wrap basis-full min-h-screen -mb-[100vh] transition-opacity duration-500 opacity-0"
-	style="will-change: transform, opacity"
 	class:duration-0={backgroundSticky == "start" ||
 		backgroundSticky == "middle" ||
 		backgroundSticky == "end"}
@@ -43,7 +42,11 @@
 	class:opacity-100={showItem}
 	bind:this={outer}
 >
-	<div class="flex flex-wrap basis-full z-[-1000]" style:transform>
+	<div
+		class="flex flex-wrap basis-full z-[-1000]"
+		style="will-change: transform, opacity"
+		style:transform
+	>
 		<slot />
 	</div>
 </div>
