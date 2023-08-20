@@ -27,19 +27,15 @@
 			"Congrats on viewing this website! Learning about the work being done to improve the Fairmount Line is a great first step. We’ve put together resources to help you learn more.",
 		actionItems: [
 			{
-				title: "Action Item Title",
-				description: "Brief Description of action item",
+				title: "Share this website",
+				description:
+					"Did you learn anything valuable from this website? If you believe it was helpful, you can educate your network too!",
 				linkUrl: "#"
 			},
 			{
-				title: "Action Item Title",
-				description: "Brief Description of action item",
-				linkUrl: "#"
-			},
-			{
-				title: "Action Item Title",
-				description: "Brief Description of action item",
-				linkUrl: "#"
+				title: "More coming soon!",
+				description:
+					"In the coming weeks, we'll be adding more ways for you to take action. Check back soon!"
 			}
 		]
 	};

@@ -24,22 +24,24 @@
 		icon: Megaphone,
 		title: "Self Advocacy",
 		description:
-			"By speaking up about issues that matter to you, you can contribute to the positive changes you wish to see – just like the residents who shared their stories on this website!",
+			"By speaking up about issues that matter to you, you can contribute to the positive changes you wish to see — just like the residents who shared their stories on this website!",
 		actionItems: [
 			{
-				title: "Action Item Title",
-				description: "Brief Description of action item",
+				title: "Attend a training",
+				description:
+					"Take charge in working through the problems that most impact you. Attend a training to learn skills to make a difference in your community.",
 				linkUrl: "#"
 			},
 			{
-				title: "Action Item Title",
-				description: "Brief Description of action item",
+				title: "Share your story",
+				description:
+					"Sharing your voice makes your experience heard. It's also a great first step in building solidarity and solutions for your family and your community.",
 				linkUrl: "#"
 			},
 			{
-				title: "Action Item Title",
-				description: "Brief Description of action item",
-				linkUrl: "#"
+				title: "More coming soon!",
+				description:
+					"In the coming weeks, we'll be adding more ways for you to take action. Check back soon!"
 			}
 		]
 	};

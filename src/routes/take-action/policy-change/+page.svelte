@@ -24,22 +24,24 @@
 		icon: Landmark,
 		title: "Policy Change",
 		description:
-			"Did you know that there’s a Bill that would support electrifying  the Fairmount Line? Learn how you can contribute to the passing of this policy by attending public bill hearings and supporting policy advocacy work.",
+			"The Fairmount Line Electrification Bill is currently being discussed in the Massachusetts State House. If passed, this bill would require the MBTA to make a plan to electrify the Fairmount Line, which would drastically reduce pollution caused by the train. Click below to take action to support this bill!",
 		actionItems: [
 			{
-				title: "Action Item Title",
-				description: "Brief Description of action item",
-				linkUrl: "#"
+				title: "Read The Bill",
+				description:
+					"Get up to speed on the language of the bill, and what changes could come to the Fairmount Line if it were passed.",
+				linkUrl: "https://malegislature.gov/Bills/192/S2280/Senate/Bill/"
 			},
 			{
-				title: "Action Item Title",
-				description: "Brief Description of action item",
-				linkUrl: "#"
+				title: "Write to your legislators",
+				description:
+					"Ask your state legislators to co-sponsor this crucial bill for health and equity in our neighborhoods.",
+				linkUrl: "https://malegislature.gov/Bills/192/S2280/Senate/Bill/"
 			},
 			{
-				title: "Action Item Title",
-				description: "Brief Description of action item",
-				linkUrl: "#"
+				title: "More coming soon!",
+				description:
+					"In the coming weeks, we'll be adding more ways for you to take action. Check back soon!"
 			}
 		]
 	};
