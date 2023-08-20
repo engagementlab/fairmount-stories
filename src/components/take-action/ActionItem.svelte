@@ -1,38 +1,40 @@
 <script>
+	import { MoveRight } from "lucide-svelte";
+
 	export let title;
 	export let description;
 	export let linkUrl;
 </script>
 
-<div class="basis-full" disabled={linkUrl == undefined}>
-	<a class="group" href={linkUrl}>
-		<div
-			class="flex justify-between items-center w-full h-full bg-white drop-shadow-xl transition group-hover:drop-shadow-2xl rounded-lg p-8"
-		>
-			<div class="">
-				{#if title}
-					<h2 class="text-white text-[2.8em] mt-3 mb-6">
-						<span
-							class="bg-lime-700 border-x-[13px] rounded-md border-lime-700"
-							style="box-decoration-break: clone;
-					-webkit-box-decoration-break: clone;">{title}</span
-						>
-					</h2>
-				{/if}
-				{#if description}
-					<p>{description}</p>
-				{/if}
-			</div>
-			<div class="basis-1/6 h-full w-full flex">
-				<button
-					class="m-auto bg-lime-100 px-4 py-1 rounded-md drop-shadow-md transition-transform outline outline-4 outline-lime-700 group-hover:scale-110 group-hover:bg-lime-700"
-					disabled={linkUrl == undefined}
-				>
-					<h3 class="label text-center text-lime-700 group-hover:text-white">
-						visit
-					</h3>
-				</button>
+<a
+	class="flex flex-col gap-4 bg-white drop-shadow-xl rounded-xl px-4 py-6 sm:py-6 border-4 border-white transition"
+	href={linkUrl}
+	disabled={linkUrl == undefined}
+	class:group={linkUrl}
+	class:hover:border-lime-700={linkUrl}
+	class:opacity-50={linkUrl == undefined}
+>
+	<div class="flex">
+		<div class="flex gap-5 items-center">
+			{#if title}
+				<h2 class="text-white text-[2.3em] sm:text-[2.8em] my-1 sm:my-2">
+					<span
+						class="bg-lime-700 border-x-[9px] sm:border-x-[13px] rounded-md border-lime-700"
+						style="box-decoration-break: clone;
+				-webkit-box-decoration-break: clone;">{title}</span
+					>
+				</h2>
+			{/if}
+			<div
+				class="rounded-full p-2 mr-2 group-hover:scale-110 group-hover:translate-x-1 group-hover:bg-lime-100 transition"
+			>
+				<MoveRight color="#4d7c0f" size="2.3em" />
 			</div>
 		</div>
-	</a>
-</div>
+	</div>
+	<div class="flex justify-between items-center gap-5">
+		{#if description}
+			<p>{description}</p>
+		{/if}
+	</div>
+</a>
