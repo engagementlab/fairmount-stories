@@ -1,21 +1,34 @@
+<script>
+	export let isHomePage = false;
+</script>
+
 <div
 	class="flex bg-slate-800 w-full py-28 px-5 text-slate-300 min-h-screen z-50"
 >
 	<div
 		class="m-auto w-full max-w-screen-md flex flex-col justify-center items-center gap-16 z-50"
 	>
-		<div class="flex justify-center items-center">
-			<a class="border-0" href="#welcome">
-				<div class="flex flex-col justify-center items-center gap-5">
-					<div
-						class="bg-slate-600 rounded-full drop-shadow-md transition hover:scale-110 hover:bg-slate-500"
-					>
-						<p class="toolip text-center hover:text-white scroll-arrow">ꜛ</p>
+		{#if isHomePage}
+			<div class="flex justify-center items-center">
+				<a class="border-0" href="#welcome">
+					<div class="flex flex-col justify-center items-center gap-5">
+						<div
+							class="bg-slate-600 rounded-full drop-shadow-md transition hover:scale-110 hover:bg-slate-500"
+						>
+							<p class="toolip text-center hover:text-white scroll-arrow">ꜛ</p>
+						</div>
+						<p class="tooltip text-center drop-shadow-md">back to top</p>
 					</div>
-					<p class="tooltip text-center drop-shadow-md">back to top</p>
-				</div>
+				</a>
+			</div>
+		{:else}
+			<a
+				class="border-0 bg-slate-600 rounded-full drop-shadow-md transition hover:scale-110 hover:bg-slate-500 px-4 py-2"
+				href="/"
+			>
+				<p class="tooltip text-center drop-shadow-md">return home</p>
 			</a>
-		</div>
+		{/if}
 		<div class="w-full">
 			<h1 class="tracking-wide text-center">The Fairmount Line Community:</h1>
 			<h2 class="tracking-wide text-center">

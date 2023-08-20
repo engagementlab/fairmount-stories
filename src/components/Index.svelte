@@ -72,7 +72,7 @@
 	</div>
 {/if}
 <Story on:mounted={handleMount()} />
-<Footer />
+<Footer isHomePage={true} />
 
 <style>
 	.train-left-in {
