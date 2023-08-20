@@ -1,5 +1,4 @@
 <script>
-	// export let imgSrc;
 	export let icon;
 	export let title;
 	export let description;
