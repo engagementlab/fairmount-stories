@@ -36,7 +36,8 @@
 				title: "Write to your legislators",
 				description:
 					"Ask your state legislators to co-sponsor this crucial bill for health and equity in our neighborhoods.",
-				linkUrl: "https://malegislature.gov/Bills/192/S2280/Senate/Bill/"
+				linkUrl:
+					"https://actionnetwork.org/letters/ask-your-legislators-to-co-sponsor-environmental-justice-bill-for-the-fairmount-corridor-commuter-rail"
 			},
 			{
 				title: "More coming soon!",
