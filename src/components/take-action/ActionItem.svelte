@@ -9,6 +9,7 @@
 <a
 	class="flex flex-col gap-4 bg-white drop-shadow-xl rounded-xl px-4 py-6 sm:py-6 border-4 border-white transition"
 	href={linkUrl}
+	target="_blank"
 	disabled={linkUrl == undefined}
 	class:group={linkUrl}
 	class:hover:border-lime-700={linkUrl}
