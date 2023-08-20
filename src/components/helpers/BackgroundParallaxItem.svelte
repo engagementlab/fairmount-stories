@@ -34,17 +34,18 @@
 <svelte:window bind:innerWidth />
 
 <div
-	class="hidden flex-wrap basis-full min-h-screen -mb-[100vh] transition-opacity duration-500 opacity-0"
-	class:duration-0={backgroundSticky == "start" ||
-		backgroundSticky == "middle" ||
-		backgroundSticky == "end"}
+	class="hidden flex-wrap basis-full min-h-screen -mb-[100vh] duration-500 opacity-0"
+	class:!duration-0={backgroundSticky}
+	class:delay-500={backgroundSticky}
+	class:transition-opacity={!backgroundSticky}
 	class:!flex={loadItem}
 	class:opacity-100={showItem}
+	style="will-change: opacity"
 	bind:this={outer}
 >
 	<div
 		class="flex flex-wrap basis-full z-[-1000]"
-		style="will-change: transform, opacity"
+		style="will-change: transform"
 		style:transform
 	>
 		<slot />
