@@ -6,7 +6,7 @@
 		icon: BookOpen,
 		title: "Education",
 		description:
-			"Learn more about environmental justice, and climate change in your community!",
+			"Learn more about environmental justice and climate change in your community!",
 		linkUrl: "take-action/education",
 		linkText: "Get Resources"
 	};
