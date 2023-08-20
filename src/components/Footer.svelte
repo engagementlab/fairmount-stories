@@ -41,7 +41,7 @@
 					<a href="mailto:kbeaver@dbedc.org">Contact us</a>
 				</p>
 				<p class="font-normal tooltip transition hover:text-white">
-					<a href="about">About this site</a>
+					<a href="/about">About this site</a>
 				</p>
 			</div>
 
@@ -69,7 +69,7 @@
 					target="_blank"
 				>
 					<img
-						src="assets/logos/ficc-logo.png"
+						src="/assets/logos/ficc-logo.png"
 						alt="FICC logo"
 						class="h-[3em]"
 					/>
@@ -80,7 +80,7 @@
 					target="_blank"
 				>
 					<img
-						src="assets/logos/elab-logo.png"
+						src="/assets/logos/elab-logo.png"
 						alt="Engagement Lab logo"
 						class="h-[3em]"
 					/>
@@ -91,7 +91,7 @@
 					target="_blank"
 				>
 					<img
-						src="assets/logos/air-partners-logo.png"
+						src="/assets/logos/air-partners-logo.png"
 						alt="Air Partners logo"
 						class="h-[3em]"
 					/>
