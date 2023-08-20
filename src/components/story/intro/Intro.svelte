@@ -63,7 +63,7 @@
 			// alignBottom: true,
 			narration:
 				"I live near the Four Corners / Geneva station on the Fairmount Line. For me, the Fairmount Line is connected to a lot of good memories",
-			backgroundImages: ["assets/story/four-corners-station-narrator.png"]
+			backgroundImages: ["assets/story/four-corners-station-narrator.jpg"]
 		},
 		{
 			sticky: "middle",
@@ -97,7 +97,7 @@
 			textOnTop: true,
 			narration:
 				"The Fairmount Line has become a big part of my community, one I am really appreciative of.",
-			backgroundImages: ["assets/story/four-corners-station-narrator.png"]
+			backgroundImages: ["assets/story/four-corners-station-narrator.jpg"]
 		},
 		{
 			sticky: "end",
@@ -105,7 +105,7 @@
 			textOnTop: true,
 			narration:
 				"The line is a part of other communities nearby, too. <br><br> <span>Let me show you!</span>",
-			backgroundImages: ["assets/story/four-corners-station-narrator.png"]
+			backgroundImages: ["assets/story/four-corners-station-narrator.jpg"]
 		}
 	];
 </script>
