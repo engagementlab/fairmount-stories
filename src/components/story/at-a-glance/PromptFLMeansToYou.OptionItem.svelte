@@ -2,13 +2,13 @@
 	export let icon;
 	export let labelTop = "";
 	export let labelBottom = "";
-	export let disabled = true;
+	export let disabled = false;
+	export let selected = false;
 
-	let clicked = false;
 	let mouseOver = false;
 
 	const handleClick = () => {
-		clicked = !clicked;
+		selected = !selected;
 	};
 
 	const handleMouseOver = () => {
@@ -27,18 +27,18 @@
 	on:mouseleave={handleMouseLeave}
 	{disabled}
 	class="bg-fuchsia-800 md:hover:!bg-yellow-500 rounded-full w-[25vw] sm:w-[6em] md:w-[7em] lg:w-[8em] aspect-square transition duration-[50ms] group rounded-full drop-shadow-xl group"
-	class:rotate-0={clicked}
-	class:scale-125={clicked}
-	class:bg-yellow-500={clicked}
-	class:!opacity-100={clicked && disabled}
-	class:md:hover:scale-110={!clicked && !disabled}
+	class:rotate-0={selected}
+	class:scale-125={selected}
+	class:bg-yellow-500={selected}
+	class:!opacity-100={selected && disabled}
+	class:md:hover:scale-110={!selected && !disabled}
 	class:!cursor-default={disabled}
 	tabindex="0"
 >
 	<svg
 		class="-mb-[25vw] sm:-mb-[6em] md:-mb-[7em] lg:-mb-[8em] transition"
-		class:md:group-odd:group-hover:rotate-12={!disabled && !clicked}
-		class:md:group-even:group-hover:-rotate-12={!disabled && !clicked}
+		class:md:group-odd:group-hover:rotate-12={!disabled && !selected}
+		class:md:group-even:group-hover:-rotate-12={!disabled && !selected}
 		xmlns="http://www.w3.org/2000/svg"
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 		viewBox="8 8 184 184"
@@ -58,7 +58,7 @@
 		<text
 			text-anchor="middle"
 			class="tooltip text-[1.6em] tracking-[-.02em] uppercase"
-			fill={clicked || mouseOver ? "black" : "white"}
+			fill={selected || mouseOver ? "black" : "white"}
 		>
 			<textPath xlink:href="#topCircle" startOffset="23%">{labelTop}</textPath>
 		</text>
@@ -66,7 +66,7 @@
 			dx="55"
 			text-anchor="middle"
 			class="tooltip text-[1.6em] tracking-[.14em] uppercase"
-			fill={clicked || mouseOver ? "black" : "white"}
+			fill={selected || mouseOver ? "black" : "white"}
 		>
 			<textPath xlink:href="#bottomCircle" startOffset="15%"
 				>{labelBottom}</textPath
@@ -76,8 +76,8 @@
 	<div class="w-full h-full p-[5vw] sm:p-[19px] md:p-[22px] lg:p-6">
 		<div
 			class="w-full h-full bg-white rounded-full flex transition"
-			class:md:group-odd:group-hover:rotate-12={!disabled && !clicked}
-			class:md:group-even:group-hover:-rotate-12={!disabled && !clicked}
+			class:md:group-odd:group-hover:rotate-12={!disabled && !selected}
+			class:md:group-even:group-hover:-rotate-12={!disabled && !selected}
 		>
 			<svelte:component this={icon} color="black" size="45%" class="m-auto" />
 		</div>

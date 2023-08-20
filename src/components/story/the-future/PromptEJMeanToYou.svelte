@@ -1,28 +1,13 @@
 <script>
 	import ConsentInfo from "$components/helpers/ConsentInfo.svelte";
 
-	let submitted = false;
-	let submitStatus;
-	let ejResponse;
-	let attributionResponse;
-	const handleSubmit = async (e) => {
-		if (!attributionResponse) {
-			attributionResponse = "Anonymous";
-		}
-		ejResponse = `"${ejResponse}"`;
-		submitted = true;
-		// submitStatus = "submitting";
-		// const formData = new FormData(e.currentTarget);
-		// let EJMeansToYou = formData.get("EJMeansToYou");
-		// let prefilledLink = `https://docs.google.com/forms/d/e/1FAIpQLSdHEuhy24vRrBcMBsBQiEhl335hFHbe9NaL0hKbj-ElRbDuig/formResponse?usp=pp_url&entry.309548713=${EJMeansToYou}&submit=Submit`;
-		// const res = await fetch(prefilledLink);
-		// const res = await fetch("contact.json", {
-		// 	method: "POST",
-		// 	body: formData
-		// });
+	let ejResponse = "";
+	let attributionResponse = "";
+	$: prefilledLink = `https://docs.google.com/forms/d/e/1FAIpQLSdHEuhy24vRrBcMBsBQiEhl335hFHbe9NaL0hKbj-ElRbDuig/formResponse?usp=pp_url&entry.309548713=${ejResponse}&entry.790043533=${attributionResponse}&submit=Submit`;
 
-		// const { message } = await res.json();
-		// submitStatus = message;
+	let submitted = false;
+	const handleSubmit = () => {
+		submitted = true;
 	};
 </script>
 
@@ -32,8 +17,7 @@
 	<h2 class="label text-center">
 		<span>What does Environmental Justice mean to you?</span>
 	</h2>
-	<!-- <form class="flex flex-col gap-10" method="POST"> -->
-	<form class="flex flex-col gap-10" on:submit|preventDefault={handleSubmit}>
+	<div class="flex flex-col gap-10">
 		<div class="bg-white rounded-lg drop-shadow-2xl p-5">
 			<textarea
 				class="w-full outline-0 p-2 text-2xl min-h-[10em] align-top mb-5 rounded-md !cursor-default"
@@ -72,12 +56,14 @@
 			class="flex w-full justify-center items-center gap-5"
 			class:hidden={submitted}
 		>
-			<button
-				type="submit"
-				class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110"
+			<a
+				href={prefilledLink}
+				on:click={handleSubmit}
+				target="_blank"
+				class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
 			>
 				<h3 class="label text-gray-700">Submit</h3>
-			</button>
+			</a>
 			<a
 				href="#after-ej-prompt"
 				class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
@@ -86,7 +72,7 @@
 			</a>
 		</div>
 		<h3 class="label m-auto" class:hidden={!submitted}>Thank you!</h3>
-	</form>
+	</div>
 	<ConsentInfo />
 </div>
 

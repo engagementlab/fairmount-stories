@@ -18,12 +18,6 @@
 		Users2
 	} from "lucide-svelte";
 
-	let submitted = false;
-
-	const handleSubmit = () => {
-		submitted = true;
-	};
-
 	let narratorOptions = [
 		{
 			labelTop: "easy",
@@ -44,71 +38,113 @@
 
 	let userOptions = [
 		{
+			entry: "Easy+transit",
 			labelTop: "easy",
 			labelBottom: "transit",
-			icon: ArrowLeftRight
+			icon: ArrowLeftRight,
+			selected: false
 		},
 		{
+			entry: "Sustainable+travel",
 			labelTop: "sustainable",
 			labelBottom: "travel",
-			icon: RefreshCw
+			icon: RefreshCw,
+			selected: false
 		},
 		{
+			entry: "Reliable+trips",
 			labelTop: "reliable",
 			labelBottom: "trips",
-			icon: Clock4
+			icon: Clock4,
+			selected: false
 		},
 		{
+			entry: "Good+AC",
 			labelTop: "good",
 			labelBottom: "AC",
-			icon: AirVent
+			icon: AirVent,
+			selected: false
 		},
 		{
+			entry: "Too+slow",
 			labelTop: "too",
 			labelBottom: "slow",
-			icon: Watch
+			icon: Watch,
+			selected: false
 		},
 		{
+			entry: "Comfy+seating",
 			labelTop: "comfy",
 			labelBottom: "seating",
-			icon: Sofa
+			icon: Sofa,
+			selected: false
 		},
 		{
+			entry: "Access+to+my+job",
 			labelTop: "access to",
 			labelBottom: "my job",
-			icon: CircleDollarSign
+			icon: CircleDollarSign,
+			selected: false
 		},
 		{
+			entry: "Access+to+community",
 			labelTop: "access to",
 			labelBottom: "community",
-			icon: Users2
+			icon: Users2,
+			selected: false
 		},
 		{
+			entry: "Not+often+enough",
 			labelTop: "not often",
 			labelBottom: "enough",
-			icon: CalendarClock
+			icon: CalendarClock,
+			selected: false
 		},
 		{
+			entry: "Too+noisy",
 			labelTop: "too",
 			labelBottom: "noisy",
-			icon: Ear
+			icon: Ear,
+			selected: false
 		},
 		{
+			entry: "Not+fully+accessible",
 			labelTop: "not fully",
 			labelBottom: "accessible",
-			icon: Accessibility
+			icon: Accessibility,
+			selected: false
 		},
 		{
+			entry: "Clean+ride",
 			labelTop: "clean",
 			labelBottom: "ride",
-			icon: Sparkles
+			icon: Sparkles,
+			selected: false
 		},
 		{
+			entry: "Something+else?",
 			labelTop: "something",
 			labelBottom: "else?",
-			icon: HelpCircle
+			icon: HelpCircle,
+			selected: false
 		}
 	];
+
+	$: optionsEntries = userOptions
+		.filter((option) => {
+			return option.selected;
+		})
+		.map((option) => {
+			return `&entry.498716893=${option.entry}`;
+		})
+		.join("");
+
+	$: prefilledLink = `https://docs.google.com/forms/d/e/1FAIpQLSfTEAiFJGhld3FCTAW5CeHH0gjj5NUAoDWKACYWFzrqhpPPBA/formResponse?usp=pp_url${optionsEntries}&submit=Submit`;
+
+	let submitted = false;
+	const handleSubmit = () => {
+		submitted = true;
+	};
 </script>
 
 <section class="z-50 bg-gradient-to-b from-white to-yellow-100">
@@ -136,7 +172,7 @@
 	>
 		<div class="flex flex-col items-center gap-2 mb-5">
 			<h2 class="m-auto prompt text-center z-50">
-				If you live near the Fairmount Line,<br /> what does it mean to you?
+				If you live near the Fairmount Line,<br /> how do you feel about it?
 			</h2>
 			<p class="tooltip">(click the circles below!)</p>
 		</div>
@@ -144,32 +180,46 @@
 			class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-9"
 		>
 			{#each userOptions.slice(0, 4) as option}
-				<OptionItem {...option} disabled={submitted} />
+				<OptionItem
+					{...option}
+					disabled={submitted}
+					bind:selected={option.selected}
+				/>
 			{/each}
 		</div>
 		<div
 			class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-9"
 		>
 			{#each userOptions.slice(4, 9) as option}
-				<OptionItem {...option} disabled={submitted} />
+				<OptionItem
+					{...option}
+					disabled={submitted}
+					bind:selected={option.selected}
+				/>
 			{/each}
 		</div>
 		<div
 			class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-9"
 		>
 			{#each userOptions.slice(9, 13) as option}
-				<OptionItem {...option} disabled={submitted} />
+				<OptionItem
+					{...option}
+					disabled={submitted}
+					bind:selected={option.selected}
+				/>
 			{/each}
 		</div>
 		<div class="flex flex-col gap-4 mb-2 z-50">
 			<div class:hidden={submitted}>
 				<div class="flex w-full flex-wrap justify-center items-center gap-5">
-					<button
-						class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110"
+					<a
+						href={prefilledLink}
+						target="_blank"
+						class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
 						on:click={handleSubmit}
 					>
 						<h3 class="label text-gray-700">Submit</h3>
-					</button>
+					</a>
 					<a
 						href="#after-share-prompt"
 						class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
@@ -190,7 +240,6 @@
 			<p />
 			<h2 class="m-auto prompt text-center z-50">
 				If you live near the Fairmount Line,<br /> how do you feel about it?
-				<!-- If you live near the Fairmount Line,<br /> what comes to mind when you think of it?? -->
 			</h2>
 			<p class="tooltip">(click the circles below!)</p>
 		</div>
@@ -198,53 +247,79 @@
 			class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
 		>
 			{#each userOptions.slice(0, 2) as option}
-				<OptionItem {...option} disabled={submitted} />
+				<OptionItem
+					{...option}
+					disabled={submitted}
+					bind:selected={option.selected}
+				/>
 			{/each}
 		</div>
 		<div
 			class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
 		>
 			{#each userOptions.slice(2, 5) as option}
-				<OptionItem {...option} disabled={submitted} />
+				<OptionItem
+					{...option}
+					disabled={submitted}
+					bind:selected={option.selected}
+				/>
 			{/each}
 		</div>
 		<div
 			class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
 		>
 			{#each userOptions.slice(5, 7) as option}
-				<OptionItem {...option} disabled={submitted} />
+				<OptionItem
+					{...option}
+					disabled={submitted}
+					bind:selected={option.selected}
+				/>
 			{/each}
 		</div>
 		<div
 			class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
 		>
 			{#each userOptions.slice(7, 10) as option}
-				<OptionItem {...option} disabled={submitted} />
+				<OptionItem
+					{...option}
+					disabled={submitted}
+					bind:selected={option.selected}
+				/>
 			{/each}
 		</div>
 		<div
 			class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
 		>
 			{#each userOptions.slice(10, 12) as option}
-				<OptionItem {...option} disabled={submitted} />
+				<OptionItem
+					{...option}
+					disabled={submitted}
+					bind:selected={option.selected}
+				/>
 			{/each}
 		</div>
 		<div
 			class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
 		>
 			{#each userOptions.slice(12, 13) as option}
-				<OptionItem {...option} disabled={submitted} />
+				<OptionItem
+					{...option}
+					disabled={submitted}
+					bind:selected={option.selected}
+				/>
 			{/each}
 		</div>
 		<div class="flex flex-col gap-2 mb-2 z-50">
 			<div class:hidden={submitted}>
 				<div class="flex w-full flex-wrap justify-center items-center gap-5">
-					<button
-						class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110"
+					<a
+						href={prefilledLink}
+						target="_blank"
+						class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
 						on:click={handleSubmit}
 					>
 						<h3 class="label text-gray-700">Submit</h3>
-					</button>
+					</a>
 					<a
 						href="#after-share-prompt"
 						class="bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 drop-shadow-xl transition hover:scale-110 border-0"
