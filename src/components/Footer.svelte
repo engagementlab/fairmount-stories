@@ -1,4 +1,5 @@
 <script>
+	import { assets } from "$app/paths";
 	export let isHomePage = false;
 </script>
 
@@ -62,7 +63,7 @@
 					target="_blank"
 				>
 					<img
-						src="/assets/logos/ficc-logo.png"
+						src="{assets}/assets/logos/ficc-logo.png"
 						alt="FICC logo"
 						class="h-[3em]"
 					/>
@@ -73,7 +74,7 @@
 					target="_blank"
 				>
 					<img
-						src="/assets/logos/elab-logo.png"
+						src="{assets}/assets/logos/elab-logo.png"
 						alt="Engagement Lab logo"
 						class="h-[3em]"
 					/>
@@ -84,7 +85,7 @@
 					target="_blank"
 				>
 					<img
-						src="/assets/logos/air-partners-logo.png"
+						src="{assets}/assets/logos/air-partners-logo.png"
 						alt="Air Partners logo"
 						class="h-[3em]"
 					/>
