@@ -24,19 +24,25 @@
 		icon: Megaphone,
 		title: "Self Advocacy",
 		description:
-			"By speaking up about issues that matter to you, you can contribute to the positive changes you wish to see — just like the residents who shared their stories on this website!",
+			"By speaking up about issues that matter to you, you can contribute to the positive changes you wish to see — just like the residents who shared their stories on this website!<br><br><span>Learn how to advocate for a better Fairmount Line below!</span>",
 		actionItems: [
 			{
 				title: "Attend a training",
 				description:
 					"Take charge in working through the problems that most impact you. Attend a training to learn skills to make a difference in your community.",
-				linkUrl: "#"
+				linkUrl: "https://community.massenergize.org/fairmount-boston/events"
 			},
 			{
 				title: "Share your story",
 				description:
 					"Sharing your voice makes your experience heard. It's also a great first step in building solidarity and solutions for your family and your community.",
-				linkUrl: "#"
+				linkUrl: "https://forms.gle/64zTMdFqUi3NrQVUA"
+			},
+			{
+				title: "Get involved",
+				description:
+					"Click here to get in touch with the Fairmount Indigo CDC Collaborative (FICC)!",
+				linkUrl: "https://linktr.ee/fairmountcollab"
 			},
 			{
 				title: "More coming soon!",

@@ -23,21 +23,21 @@
 				</div>
 			</a>
 		</div>
-		<div class="flex flex-col gap-5">
-			<div class="flex flex-wrap-reverse justify-center items-center gap-10">
-				<h1
-					class="text-lime-700 text-[5em] sm:text-[8em] align-middle text-center"
-				>
-					{title}
-				</h1>
-				<div
-					class="rounded-full bg-lime-100 aspect-square max-h-[9em] h-[9em] w-[9em] p-7 group-hover:scale-110 transition"
-				>
-					<svelte:component this={icon} size="100%" class="text-lime-700" />
-				</div>
+		<div class="flex flex-wrap-reverse justify-center items-center gap-10">
+			<h1
+				class="text-lime-700 text-[5em] sm:text-[8em] align-middle text-center"
+			>
+				{title}
+			</h1>
+			<div
+				class="rounded-full bg-white aspect-square max-h-[9em] h-[9em] w-[9em] p-7 group-hover:scale-110 transition"
+			>
+				<svelte:component this={icon} size="100%" class="text-lime-700" />
 			</div>
-			<p class="description text-center px-10">{description}</p>
 		</div>
+		<p class="text-center max-w-screen-md m-auto">
+			{@html description}
+		</p>
 		<div class="w-full flex flex-col gap-10 pt-10 max-w-screen-md m-auto">
 			{#each actionItems as item}
 				<ActionItem {...item} />
@@ -46,3 +46,18 @@
 	</div>
 </section>
 <Footer />
+
+<style lang="postcss">
+	p :global(span) {
+		font-weight: 500;
+		border-radius: 10px;
+		background-color: #4d7c0f;
+		border-inline: 15px solid #4d7c0f;
+		border-block: 5px solid #4d7c0f;
+		margin-inline: -5px;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+		color: white;
+		font-family: var(--font-tooltip, sans-serif);
+	}
+</style>

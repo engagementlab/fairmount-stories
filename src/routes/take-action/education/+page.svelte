@@ -24,13 +24,19 @@
 		icon: BookOpen,
 		title: "Education",
 		description:
-			"Congrats on viewing this website! Learning about the work being done to improve the Fairmount Line is a great first step. We’ve put together resources to help you learn more.",
+			"Congrats on viewing this website! Learning about the work being done to improve the Fairmount Line is a great first step. <br><br><span>Check out resources from FICC below!</span>",
 		actionItems: [
+			{
+				title: "Attend a workshop",
+				description:
+					"Curious about air quality? Want to learn about cleaner methods of transit? Attend a workshop to learn more!",
+				linkUrl: "https://community.massenergize.org/fairmount-boston/events"
+			},
 			{
 				title: "Share this website",
 				description:
 					"Did you learn anything valuable from this website? If you believe it was helpful, you can educate your network too!",
-				linkUrl: "#"
+				linkUrl: "/share"
 			},
 			{
 				title: "More coming soon!",

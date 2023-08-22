@@ -24,7 +24,7 @@
 		icon: Landmark,
 		title: "Policy Change",
 		description:
-			"The Fairmount Line Electrification Bill is currently being discussed in the Massachusetts State House. If passed, this bill would require the MBTA to make a plan to electrify the Fairmount Line, which would drastically reduce pollution caused by the train. Click below to take action to support this bill!",
+			"The Fairmount Line Electrification Bill is currently being discussed in the Massachusetts State House. If passed, this bill would require the MBTA to make a plan to electrify the Fairmount Line, which would drastically reduce pollution caused by the train.<br><br><span>Click below to take action to support this bill!</span>",
 		actionItems: [
 			{
 				title: "Read The Bill",
@@ -35,7 +35,7 @@
 			{
 				title: "Write to your legislators",
 				description:
-					"Ask your state legislators to co-sponsor this crucial bill for health and equity in our neighborhoods.",
+					"It's quick and easy to ask your state legislators to co-sponsor this crucial bill for health and equity in our neighborhoods.",
 				linkUrl:
 					"https://actionnetwork.org/letters/ask-your-legislators-to-co-sponsor-environmental-justice-bill-for-the-fairmount-corridor-commuter-rail"
 			},
