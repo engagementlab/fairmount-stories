@@ -31,6 +31,7 @@
 		"svelte-copy": "^1.4.1",
 		"svelte-lucide": "^0.7.6",
 		"svelte-preprocess": "^5.0.4",
+		"svelte-share-buttons-component": "^1.5.5",
 		"tailwindcss": "^3.3.3",
 		"vite": "^4.4.2",
 		"vite-plugin-svgstring": "^1.0.0"
