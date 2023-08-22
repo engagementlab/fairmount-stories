@@ -108,13 +108,13 @@
 			class="title sm:text-[6em] text-center text-white drop-shadow-xl"
 			in:fly={{ y: 20, duration: 500, delay: 100 }}
 		>
-			The Fairmount Line Community:
+			Fairmount Stories:
 		</h1>
 		<h2
 			class="subtitle sm:text-[4em] text-center text-white drop-shadow-xl"
 			in:fly={{ y: 20, duration: 500, delay: 150 }}
 		>
-			Stories of its Past, Present, & Future
+			Mobility, Advocacy, and Environmental Justice
 		</h2>
 	</div>
 	<div

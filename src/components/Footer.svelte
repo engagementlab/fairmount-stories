@@ -30,9 +30,9 @@
 			</a>
 		{/if}
 		<div class="w-full">
-			<h1 class="tracking-wide text-center">The Fairmount Line Community:</h1>
+			<h1 class="tracking-wide text-center">Fairmount Stories:</h1>
 			<h2 class="tracking-wide text-center">
-				Stories of its Past, Present, & Future
+				Mobility, Advocacy, and Environmental Justice
 			</h2>
 		</div>
 		<div class="w-86 flex flex-wrap justify-between gap-6">

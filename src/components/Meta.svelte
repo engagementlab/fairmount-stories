@@ -1,6 +1,6 @@
 <script>
-	export let title = "The Fairmount Line Community";
-	export let description = "Description TK";
+	export let title = "Fairmount Stories";
+	export let description = "Mobility, Advocacy, and Environmental Justice";
 	export let url = "https://fairmountstories.airpartners.org";
 	export let keywords = "";
 	export let preloadFont = [];
