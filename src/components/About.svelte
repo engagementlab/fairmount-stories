@@ -1,9 +1,10 @@
 <script>
+	import Footer from "$components/Footer.svelte";
 	import { MoveLeft } from "lucide-svelte";
 	import { fade, fly } from "svelte/transition";
 </script>
 
-<div class="flex w-screen bg-slate-800 p-10 py-40">
+<div class="flex w-screen bg-slate-800 p-10 pt-40">
 	<div class="m-auto w-full max-w-screen-md flex flex-col gap-5">
 		<div class="flex">
 			<a
@@ -136,3 +137,4 @@
 		</div>
 	</div>
 </div>
+<Footer />
