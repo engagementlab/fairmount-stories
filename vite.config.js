@@ -1,6 +1,5 @@
 import { readFileSync } from "fs";
 import { sveltekit } from '@sveltejs/kit/vite';
-// import { timeFormat } from "d3";
 import path from "path";
 import svg from "vite-plugin-svgstring";
 import dsv from "@rollup/plugin-dsv";

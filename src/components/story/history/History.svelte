@@ -112,7 +112,6 @@
 				"https://www.bostonplans.org/planning/planning-initiatives/fairmount-indigo-planning-initiative"
 		},
 		{
-			// backgroundSticky: "start",
 			fixBackground: true,
 			year: "2020",
 			title: "More Frequent Trains",

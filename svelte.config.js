@@ -13,16 +13,8 @@ const config = {
 	preprocess,
 	kit: {
 		adapter: adapterStatic(),
-		// paths: {
-		// 	base: process.env.NODE_ENV === 'production' ? '/fairmount-tester' : '',
-		// }
 	},
 	preprocess: vitePreprocess(),
-	vitePlugin: {
-		// experimental: {
-		// 	inspector: { holdMode: true },
-		// }
-	}
 };
 
 export default config;

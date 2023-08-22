@@ -60,7 +60,6 @@
 		{
 			sticky: "start",
 			textOnTop: true,
-			// alignBottom: true,
 			narration:
 				"I live near the Four Corners / Geneva station on the Fairmount Line. For me, the Fairmount Line is connected to a lot of good memories",
 			backgroundImages: ["assets/story/four-corners-station-narrator.jpg"]
@@ -69,7 +68,6 @@
 			sticky: "middle",
 			backgroundSticky: "start",
 			textOnTop: true,
-			// alignBottom: true,
 			narration:
 				"I love taking my grandkids to the Boston Children’s Museum – we get off at South Station in Downtown Boston.",
 			backgroundImages: [
@@ -83,7 +81,6 @@
 			sticky: "end",
 			backgroundSticky: "middle",
 			textOnTop: true,
-			// alignBottom: true,
 			narration:
 				"And it’s just a 15-minute ride on the Fairmount Line! It saves me from having to take a bus and a train. I enjoy riding through my community as well!",
 			backgroundImages: [
