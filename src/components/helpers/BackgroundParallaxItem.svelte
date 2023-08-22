@@ -6,7 +6,6 @@
 	export let loadItem = false;
 	export let showItem = false;
 	export let stepTop = 0;
-	export let backgroundSticky;
 
 	export let scrollRate = -0.1; //defaults to a slight parallax
 
@@ -35,9 +34,6 @@
 
 <div
 	class="hidden flex-wrap basis-full min-h-screen -mb-[100vh] duration-500 opacity-0"
-	class:!duration-0={backgroundSticky}
-	class:delay-500={backgroundSticky}
-	class:transition-opacity={!backgroundSticky}
 	class:!flex={loadItem}
 	class:opacity-100={showItem}
 	style="will-change: opacity"
