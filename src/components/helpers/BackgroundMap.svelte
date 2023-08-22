@@ -1,15 +1,16 @@
 <script>
 	import { Map } from "mapbox-gl";
 	import { onMount } from "svelte";
+	import stations from "$data/stations.json";
 
 	let map;
 	let mapContainer;
 	let innerWidth;
 
-	export let lng;
-	export let lat;
-	export let zoom;
-	export let visibleFeatures;
+	export let lng = -71.12;
+	export let lat = 42.295;
+	export let zoom = 10.5;
+	export let visibleFeatures = [];
 	export let offsetMapPos = false;
 
 	const features = [
@@ -47,462 +48,6 @@
 		"newmarket-new",
 		"south-station-new"
 	];
-
-	const stations = {
-		type: "FeatureCollection",
-		features: [
-			{
-				geometry: {
-					coordinates: [-71.068625, 42.319104],
-					type: "Point"
-				},
-				properties: {
-					Name: "uphams-corner"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.068625, 42.319104],
-					type: "Point"
-				},
-				properties: {
-					Name: "uphams-corner-gray"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.068625, 42.319104],
-					type: "Point"
-				},
-				properties: {
-					Name: "uphams-corner-new"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.076928, 42.30502],
-					type: "Point"
-				},
-				properties: {
-					Name: "four-corners"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.076928, 42.30502],
-					type: "Point"
-				},
-				properties: {
-					Name: "four-corners-gray"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.076928, 42.30502],
-					type: "Point"
-				},
-				properties: {
-					Name: "four-corners-new"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.078392, 42.293538],
-					type: "Point"
-				},
-				properties: {
-					Name: "talbot-avenue"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.078392, 42.293538],
-					type: "Point"
-				},
-				properties: {
-					Name: "talbot-avenue-gray"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.078392, 42.293538],
-					type: "Point"
-				},
-				properties: {
-					Name: "talbot-avenue-new"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.086059, 42.280285],
-					type: "Point"
-				},
-				properties: {
-					Name: "morton-street"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.086059, 42.280285],
-					type: "Point"
-				},
-				properties: {
-					Name: "morton-street-gray"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.086059, 42.280285],
-					type: "Point"
-				},
-				properties: {
-					Name: "morton-street-new"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.119161, 42.253865],
-					type: "Point"
-				},
-				properties: {
-					Name: "fairmount"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.119161, 42.253865],
-					type: "Point"
-				},
-				properties: {
-					Name: "fairmount-gray"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.119161, 42.253865],
-					type: "Point"
-				},
-				properties: {
-					Name: "fairmount-new"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.133593, 42.237927],
-					type: "Point"
-				},
-				properties: {
-					Name: "readville"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.133593, 42.237927],
-					type: "Point"
-				},
-				properties: {
-					Name: "readville-gray"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.133593, 42.237927],
-					type: "Point"
-				},
-				properties: {
-					Name: "readville-new"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.093836, 42.27279],
-					type: "Point"
-				},
-				properties: {
-					Name: "blue-hill-avenue"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.093836, 42.27279],
-					type: "Point"
-				},
-				properties: {
-					Name: "blue-hill-avenue-gray"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.093836, 42.27279],
-					type: "Point"
-				},
-				properties: {
-					Name: "blue-hill-avenue-new"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.065583, 42.327564],
-					type: "Point"
-				},
-				properties: {
-					Name: "newmarket"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.065583, 42.327564],
-					type: "Point"
-				},
-				properties: {
-					Name: "newmarket-gray"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.065583, 42.327564],
-					type: "Point"
-				},
-				properties: {
-					Name: "newmarket-new"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.055153, 42.351545],
-					type: "Point"
-				},
-				properties: {
-					Name: "south-station"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.055153, 42.351545],
-					type: "Point"
-				},
-				properties: {
-					Name: "south-station-gray"
-				},
-				type: "Feature"
-			},
-			{
-				geometry: {
-					coordinates: [-71.055153, 42.351545],
-					type: "Point"
-				},
-				properties: {
-					Name: "south-station-new"
-				},
-				type: "Feature"
-			}
-		]
-	};
-
-	const loadStations = () => {
-		map.loadImage("assets/map/stations/south-station.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("south-station", image);
-		});
-		map.loadImage("assets/map/stations/newmarket.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("newmarket", image);
-		});
-		map.loadImage("assets/map/stations/uphams-corner.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("uphams-corner", image);
-		});
-		map.loadImage("assets/map/stations/four-corners.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("four-corners", image);
-		});
-		map.loadImage("assets/map/stations/talbot-avenue.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("talbot-avenue", image);
-		});
-		map.loadImage("assets/map/stations/morton-street.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("morton-street", image);
-		});
-		map.loadImage(
-			"assets/map/stations/blue-hill-avenue.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("blue-hill-avenue", image);
-			}
-		);
-		map.loadImage("assets/map/stations/fairmount.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("fairmount", image);
-		});
-		map.loadImage("assets/map/stations/readville.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("readville", image);
-		});
-
-		map.loadImage(
-			"assets/map/stations/south-station-gray.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("south-station-gray", image);
-			}
-		);
-		map.loadImage("assets/map/stations/newmarket-gray.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("newmarket-gray", image);
-		});
-		map.loadImage(
-			"assets/map/stations/uphams-corner-gray.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("uphams-corner-gray", image);
-			}
-		);
-		map.loadImage(
-			"assets/map/stations/four-corners-gray.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("four-corners-gray", image);
-			}
-		);
-		map.loadImage(
-			"assets/map/stations/talbot-avenue-gray.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("talbot-avenue-gray", image);
-			}
-		);
-		map.loadImage(
-			"assets/map/stations/morton-street-gray.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("morton-street-gray", image);
-			}
-		);
-		map.loadImage(
-			"assets/map/stations/blue-hill-avenue-gray.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("blue-hill-avenue-gray", image);
-			}
-		);
-		map.loadImage("assets/map/stations/fairmount-gray.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("fairmount-gray", image);
-		});
-		map.loadImage("assets/map/stations/readville-gray.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("readville-gray", image);
-		});
-
-		map.loadImage(
-			"assets/map/stations/south-station-new.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("south-station-new", image);
-			}
-		);
-		map.loadImage("assets/map/stations/newmarket-new.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("newmarket-new", image);
-		});
-		map.loadImage(
-			"assets/map/stations/uphams-corner-new.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("uphams-corner-new", image);
-			}
-		);
-		map.loadImage(
-			"assets/map/stations/four-corners-new.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("four-corners-new", image);
-			}
-		);
-		map.loadImage(
-			"assets/map/stations/talbot-avenue-new.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("talbot-avenue-new", image);
-			}
-		);
-		map.loadImage(
-			"assets/map/stations/morton-street-new.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("morton-street-new", image);
-			}
-		);
-		map.loadImage(
-			"assets/map/stations/blue-hill-avenue-new.png",
-			(error, image) => {
-				if (error) throw error;
-
-				map.addImage("blue-hill-avenue-new", image);
-			}
-		);
-		map.loadImage("assets/map/stations/fairmount-new.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("fairmount-new", image);
-		});
-		map.loadImage("assets/map/stations/readville-new.png", (error, image) => {
-			if (error) throw error;
-
-			map.addImage("readville-new", image);
-		});
-	};
-
 	onMount(() => {
 		const offsetLng = innerWidth > 640 && offsetMapPos ? lng + 0.12 : lng;
 		const offsetZoom = innerWidth > 640 ? zoom + 0.9 : zoom;
@@ -516,13 +61,8 @@
 			center: [initialState.lng, initialState.lat],
 			zoom: initialState.zoom
 		});
-		map.on("move", () => {
-			updateData();
-		});
 
 		map.on("load", () => {
-			loadStations();
-
 			map.addSource("city-limits", {
 				type: "geojson",
 				data: "assets/map/city-limits.geojson"
@@ -665,32 +205,35 @@
 			});
 
 			stations.features.forEach((feature) => {
-				map.addLayer({
-					id: feature.properties.Name,
-					type: "symbol",
-					source: "stations",
-					layout: {
-						visibility: "none",
-						"icon-image": feature.properties.Name,
-						"icon-allow-overlap": true,
-						"icon-size": 0.17
-					},
-					filter: ["==", "Name", feature.properties.Name]
-				});
-			});
+				map.loadImage(
+					`assets/map/stations/${feature.properties.Name}.png`,
+					(error, image) => {
+						if (error) throw error;
+						map.addImage(feature.properties.Name, image);
 
-			visibleFeatures.forEach((feature) => {
-				map.setLayoutProperty(feature, "visibility", "visible");
+						map.addLayer({
+							id: feature.properties.Name,
+							type: "symbol",
+							source: "stations",
+							layout: {
+								visibility: "none",
+								"icon-image": feature.properties.Name,
+								"icon-allow-overlap": true,
+								"icon-size": 0.17
+							},
+							filter: ["==", "Name", feature.properties.Name]
+						});
+					}
+				);
 			});
 		});
 	});
 
-	function updateData() {
-		zoom = map.getZoom();
-		lng = map.getCenter().lng;
-		lat = map.getCenter().lat;
+	$: if (map && map.loaded()) {
+		visibleFeatures.forEach((feature) => {
+			map.setLayoutProperty(feature, "visibility", "visible");
+		});
 	}
-
 	$: visibleFeatures &&
 		features.forEach((feature) => {
 			if (map && map.getLayer(feature)) {

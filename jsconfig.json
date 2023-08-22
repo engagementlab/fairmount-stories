@@ -29,9 +29,6 @@
 			"$svg/*": [
 				"src/svg/*"
 			],
-			"$utils/*": [
-				"src/utils/*"
-			],
 		}
 	},
 	"include": [

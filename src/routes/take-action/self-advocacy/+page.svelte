@@ -3,12 +3,9 @@
 	import Meta from "$components/Meta.svelte";
 	import CategoryPage from "$components/take-action/CategoryPage.svelte";
 	import copy from "$data/copy.json";
-	import version from "$utils/version.js";
 	import { Megaphone } from "lucide-svelte";
 
 	export let data;
-
-	version();
 
 	const preloadFont = [
 		"https://fonts.gstatic.com/s/vollkorn/v22/0yb9GDoxxrvAnPhYGxkpaE0Urhg0.woff2",

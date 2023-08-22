@@ -3,11 +3,8 @@
 	import Meta from "$components/Meta.svelte";
 	import About from "$components/About.svelte";
 	import copy from "$data/copy.json";
-	import version from "$utils/version.js";
 
 	export let data;
-
-	version();
 
 	const preloadFont = [
 		"https://fonts.gstatic.com/s/vollkorn/v22/0yb9GDoxxrvAnPhYGxkpaE0Urhg0.woff2",

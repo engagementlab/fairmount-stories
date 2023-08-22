@@ -1,5 +1,5 @@
 <script>
-	import InfoModal from "$components/story/the-future/AirQualityInfoModal.svelte";
+	import AirQualityInfoModal from "$components/story/the-future/AirQualityInfoModal.svelte";
 
 	export let title;
 	export let iconSrc = "";
@@ -21,17 +21,11 @@
 	</h3>
 </button>
 
-<InfoModal bind:showModal {title} {iconSrc} {color}>
-	<img
-		slot="icon"
-		src={iconSrc}
-		alt="icon of substance in the air"
-		class="aspect-square h-full"
-	/>
+<AirQualityInfoModal bind:showModal {title} {iconSrc} {color}>
 	<slot name="description" slot="description" />
 	<slot name="sources" slot="sources" />
 	<slot name="effects" slot="effects" />
-</InfoModal>
+</AirQualityInfoModal>
 
 <style>
 	.substance-label {

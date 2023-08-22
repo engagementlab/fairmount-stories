@@ -181,7 +181,9 @@
 		>
 			{#each userOptions.slice(0, 4) as option}
 				<OptionItem
-					{...option}
+					labelTop={option.labelTop}
+					labelBottom={option.labelBottom}
+					icon={option.icon}
 					disabled={submitted}
 					bind:selected={option.selected}
 				/>
@@ -192,7 +194,9 @@
 		>
 			{#each userOptions.slice(4, 9) as option}
 				<OptionItem
-					{...option}
+					labelTop={option.labelTop}
+					labelBottom={option.labelBottom}
+					icon={option.icon}
 					disabled={submitted}
 					bind:selected={option.selected}
 				/>
@@ -203,7 +207,9 @@
 		>
 			{#each userOptions.slice(9, 13) as option}
 				<OptionItem
-					{...option}
+					labelTop={option.labelTop}
+					labelBottom={option.labelBottom}
+					icon={option.icon}
 					disabled={submitted}
 					bind:selected={option.selected}
 				/>
@@ -248,7 +254,9 @@
 		>
 			{#each userOptions.slice(0, 2) as option}
 				<OptionItem
-					{...option}
+					labelTop={option.labelTop}
+					labelBottom={option.labelBottom}
+					icon={option.icon}
 					disabled={submitted}
 					bind:selected={option.selected}
 				/>
@@ -259,7 +267,9 @@
 		>
 			{#each userOptions.slice(2, 5) as option}
 				<OptionItem
-					{...option}
+					labelTop={option.labelTop}
+					labelBottom={option.labelBottom}
+					icon={option.icon}
 					disabled={submitted}
 					bind:selected={option.selected}
 				/>
@@ -270,7 +280,9 @@
 		>
 			{#each userOptions.slice(5, 7) as option}
 				<OptionItem
-					{...option}
+					labelTop={option.labelTop}
+					labelBottom={option.labelBottom}
+					icon={option.icon}
 					disabled={submitted}
 					bind:selected={option.selected}
 				/>
@@ -281,7 +293,9 @@
 		>
 			{#each userOptions.slice(7, 10) as option}
 				<OptionItem
-					{...option}
+					labelTop={option.labelTop}
+					labelBottom={option.labelBottom}
+					icon={option.icon}
 					disabled={submitted}
 					bind:selected={option.selected}
 				/>
@@ -292,7 +306,9 @@
 		>
 			{#each userOptions.slice(10, 12) as option}
 				<OptionItem
-					{...option}
+					labelTop={option.labelTop}
+					labelBottom={option.labelBottom}
+					icon={option.icon}
 					disabled={submitted}
 					bind:selected={option.selected}
 				/>
@@ -303,7 +319,9 @@
 		>
 			{#each userOptions.slice(12, 13) as option}
 				<OptionItem
-					{...option}
+					labelTop={option.labelTop}
+					labelBottom={option.labelBottom}
+					icon={option.icon}
 					disabled={submitted}
 					bind:selected={option.selected}
 				/>

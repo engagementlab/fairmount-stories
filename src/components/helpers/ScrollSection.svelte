@@ -88,7 +88,6 @@
 							: -0.1}
 						fixBackground={step.fixBackground}
 						stepTop={getBackgroundStepTop(i, step.backgroundSticky)}
-						backgroundSticky={step.backgroundSticky}
 						loadItem={i >= (value || 0) - 1 && i <= (value || 0) + 1}
 						showItem={i == (value || 0)}
 					>
@@ -97,15 +96,16 @@
 				{/each}
 			{/if}
 		{/each}
-		{#if steps[value || 0].backgroundMap}
-			<BackgroundParallaxItem
-				fixBackground={true}
-				loadItem={true}
-				showItem={true}
-			>
-				<BackgroundMap {...steps[value || 0].backgroundMap} />
-			</BackgroundParallaxItem>
-		{/if}
+		<BackgroundParallaxItem
+			fixBackground={true}
+			loadItem={true}
+			showItem={steps[value || 0].backgroundMap &&
+				!steps[value || 0].backgroundMap.hide}
+		>
+			<BackgroundMap
+				{...steps[value || 0].backgroundMap || { visibleFeatures: [] }}
+			/>
+		</BackgroundParallaxItem>
 	</div>
 	<Scrolly bind:value>
 		{#each steps as step, i}

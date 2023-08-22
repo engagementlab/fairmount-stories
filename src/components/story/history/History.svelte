@@ -12,7 +12,15 @@
 			narration:
 				"Growing up in the 70’s, I remember how the line passed right next to my back yard, but it didn’t actually stop anywhere near my house.",
 			backgroundImages: ["assets/story/fl-train-old.jpg"],
-			narrationImage: "assets/story/narrator-head.png"
+			narrationImage: "assets/story/narrator-head.png",
+			backgroundMap: {
+				hide: true,
+				lng: -71.12,
+				lat: 42.295,
+				zoom: 10.5,
+				visibleFeatures: [],
+				offsetMapPos: true
+			}
 		},
 		{
 			backgroundSticky: "middle",
@@ -20,7 +28,26 @@
 			narration:
 				"To actually serve the communities it runs through, we needed more stations to be built along the Line.",
 			backgroundImages: ["assets/story/fl-train-old.jpg"],
-			narrationImage: "assets/story/narrator-head.png"
+			narrationImage: "assets/story/narrator-head.png",
+			backgroundMap: {
+				hide: true,
+				lng: -71.12,
+				lat: 42.295,
+				zoom: 10.5,
+				visibleFeatures: [
+					"tracks",
+					"uphams-corner",
+					"four-corners-gray",
+					"talbot-avenue-gray",
+					"morton-street",
+					"fairmount",
+					"readville",
+					"blue-hill-avenue-gray",
+					"newmarket-gray",
+					"south-station"
+				],
+				offsetMapPos: true
+			}
 		},
 		{
 			fixBackground: true,

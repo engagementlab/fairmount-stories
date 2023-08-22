@@ -1,0 +1,356 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.068625,
+                    42.319104
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "uphams-corner"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.068625,
+                    42.319104
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "uphams-corner-gray"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.068625,
+                    42.319104
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "uphams-corner-new"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.076928,
+                    42.30502
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "four-corners"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.076928,
+                    42.30502
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "four-corners-gray"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.076928,
+                    42.30502
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "four-corners-new"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.078392,
+                    42.293538
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "talbot-avenue"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.078392,
+                    42.293538
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "talbot-avenue-gray"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.078392,
+                    42.293538
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "talbot-avenue-new"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.086059,
+                    42.280285
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "morton-street"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.086059,
+                    42.280285
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "morton-street-gray"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.086059,
+                    42.280285
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "morton-street-new"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.119161,
+                    42.253865
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "fairmount"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.119161,
+                    42.253865
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "fairmount-gray"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.119161,
+                    42.253865
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "fairmount-new"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.133593,
+                    42.237927
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "readville"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.133593,
+                    42.237927
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "readville-gray"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.133593,
+                    42.237927
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "readville-new"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.093836,
+                    42.27279
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "blue-hill-avenue"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.093836,
+                    42.27279
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "blue-hill-avenue-gray"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.093836,
+                    42.27279
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "blue-hill-avenue-new"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.065583,
+                    42.327564
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "newmarket"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.065583,
+                    42.327564
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "newmarket-gray"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.065583,
+                    42.327564
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "newmarket-new"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.055153,
+                    42.351545
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "south-station"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.055153,
+                    42.351545
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "south-station-gray"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    -71.055153,
+                    42.351545
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "Name": "south-station-new"
+            },
+            "type": "Feature"
+        }
+    ]
+}

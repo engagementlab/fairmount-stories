@@ -4,7 +4,6 @@
 	import {
 		Bus,
 		Car,
-		Globe,
 		Globe2,
 		Train,
 		TreeDeciduous,
