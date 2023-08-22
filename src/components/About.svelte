@@ -8,13 +8,13 @@
 		<div class="flex">
 			<a
 				href="../"
-				class="border-0 sm:group"
+				class="border-0 group"
 				in:fade={{ duration: 500, delay: 400 }}
 			>
 				<div
 					class="flex items-center gap-1 bg-white/5 transition group-hover:-translate-x-1 rounded-full py-2 px-4 text-slate-400 group-hover:bg-white/30 group-hover:text-white"
 				>
-					<MoveLeft />
+					<MoveLeft class="transition group-hover:-translate-x-1" />
 					<p class="tooltip text-sm">BACK</p>
 				</div>
 			</a>

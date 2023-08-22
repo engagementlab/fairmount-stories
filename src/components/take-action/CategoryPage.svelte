@@ -40,7 +40,7 @@
 				<div
 					class="flex items-center gap-1 bg-lime-100 transition group-hover:-translate-x-1 rounded-full py-2 px-4 text-lime-600 group-hover:bg-white group-hover:text-lime-700"
 				>
-					<MoveLeft />
+					<MoveLeft class="transition group-hover:-translate-x-1" />
 					<p class="tooltip text-sm">BACK</p>
 				</div>
 			</a>
