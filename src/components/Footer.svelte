@@ -3,10 +3,10 @@
 </script>
 
 <div
-	class="flex bg-slate-800 w-full py-28 px-5 text-slate-300 min-h-screen z-50"
+	class="flex bg-slate-800 w-full py-20 px-5 text-slate-300 min-h-[80vh] z-50"
 >
 	<div
-		class="m-auto w-full max-w-screen-md flex flex-col justify-center items-center gap-16 z-50"
+		class="m-auto w-full max-w-screen-md flex flex-col justify-center items-center gap-10 z-50"
 	>
 		{#if isHomePage}
 			<div class="flex justify-center items-center">
@@ -21,20 +21,13 @@
 					</div>
 				</a>
 			</div>
-		{:else}
-			<a
-				class="border-0 bg-slate-600 rounded-full drop-shadow-md transition hover:scale-110 hover:bg-slate-500 px-4 py-2"
-				href="/"
-			>
-				<p class="tooltip text-center drop-shadow-md">return home</p>
-			</a>
 		{/if}
-		<div class="w-full">
+		<a href="/" class="w-full hover:text-white transition border-0">
 			<h1 class="tracking-wide text-center">Fairmount Stories:</h1>
 			<h2 class="tracking-wide text-center">
 				Mobility, Advocacy, and Environmental Justice
 			</h2>
-		</div>
+		</a>
 		<div class="w-86 flex flex-wrap justify-between gap-6">
 			<div class="w-36 m-auto flex flex-col items-center gap-2">
 				<p class="font-normal tooltip transition hover:text-white">
@@ -61,7 +54,7 @@
 				Created in Boston in association with:
 			</p>
 			<div
-				class="flex sm:gap-10 flex-wrap flex-col sm:flex-row justify-center bg-white p-4 rounded-[2em] sm:rounded-full divide-y divide-slate-300 sm:divide-none"
+				class="flex sm:gap-10 flex-wrap flex-col sm:flex-row justify-center bg-slate-200 p-4 rounded-[2em] sm:rounded-full divide-y divide-slate-300 sm:divide-none"
 			>
 				<a
 					href="https://community.massenergize.org/fairmount-boston/"
