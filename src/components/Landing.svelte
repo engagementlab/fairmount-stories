@@ -74,11 +74,11 @@
 		<div class="flex justify-start items-center gap-3">
 			<div class="flex flex-col items-center gap-2">
 				<div
-					class="py-2 rounded-full transition hover:scale-110 hover:bg-black/20 px-4"
+					class="py-2 rounded-full transition hover:scale-110 bg-gray-700/30 hover:bg-gray-700/80 px-4"
 				>
 					<select
 						bind:value={$currentLocale}
-						class="tooltip text-[4vw] sm:text-xl w-28 bg-transparent"
+						class="tooltip text-[4vw] sm:text-xl w-24 bg-transparent"
 					>
 						{#each $locales as locale}
 							<option value={locale}>
@@ -88,7 +88,10 @@
 					</select>
 				</div>
 			</div>
-			<a href="about" class="border-0 transition hover:scale-110 shrink-0">
+			<a
+				href="about"
+				class="border-0 transition hover:scale-110 shrink-0 py-2 rounded-full bg-gray-700/30 hover:bg-gray-700/80 px-4"
+			>
 				<p class="tooltip text-center text-[4vw] sm:text-xl">ABOUT</p>
 			</a>
 			<a
