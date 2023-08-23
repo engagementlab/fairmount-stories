@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="flex bg-slate-800 w-full py-20 px-5 text-slate-300 min-h-[80vh] z-50"
+	class="flex bg-slate-800 w-full py-20 px-5 text-slate-300 min-h-[60vh] z-50"
 >
 	<div
 		class="m-auto w-full max-w-screen-md flex flex-col justify-center items-center gap-10 z-50"

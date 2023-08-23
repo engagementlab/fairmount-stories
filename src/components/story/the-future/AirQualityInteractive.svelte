@@ -17,7 +17,7 @@
 		<h4
 			class="m-auto tooltip text-center drop-shadow-lg bg-white/40 rounded-full py-2 px-4"
 		>
-			Click on an icon to learn more about what's in the Air!
+			Click on an icon to learn more about what's in the air!
 		</h4>
 	</div>
 	<div class="clean-air absolute left-[30%] top-[10%]">

@@ -6,20 +6,6 @@
 
 <div class="flex w-screen bg-slate-800 p-10 pt-40">
 	<div class="m-auto w-full max-w-screen-md flex flex-col gap-5">
-		<div class="flex">
-			<a
-				href="../"
-				class="border-0 group"
-				in:fade={{ duration: 500, delay: 400 }}
-			>
-				<div
-					class="flex items-center gap-1 bg-white/5 transition group-hover:-translate-x-1 rounded-full py-2 px-4 text-slate-400 group-hover:bg-white/30 group-hover:text-white"
-				>
-					<MoveLeft class="transition group-hover:-translate-x-1" />
-					<p class="tooltip text-sm">BACK</p>
-				</div>
-			</a>
-		</div>
 		<div class="m-auto w-full flex flex-col gap-24">
 			<div
 				class="flex flex-col gap-4"
@@ -34,11 +20,11 @@
 					<a
 						href="https://community.massenergize.org/fairmount-boston/"
 						target="_blank"
-						class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
-						>Fairmount Indigo CDC Collaborative's</a
-					> advocacy in educating their community about climate justice and transit
-					equity by visualizing relationships between people, their communities,
-					transit, and air quality.
+						class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
+						>Fairmount Indigo CDC Collaborative</a
+					>'s advocacy in educating their community about climate justice and
+					transit equity by visualizing relationships between people, their
+					communities, transit, and air quality.
 				</p>
 			</div>
 			<div
@@ -68,28 +54,49 @@
 							<a
 								href="https://jasperkatzban.com"
 								target="_blank"
-								class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+								class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
 								>Jasper Katzban</a
-							> - Site Design & Development
+							> — Site Design & Development
 						</p>
 						<p class="text-white">
-							Riddhima Dave - Design & Communications Management
+							<a
+								href="https://www.riddhima-dave.com/"
+								target="_blank"
+								class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
+								>Riddhima Dave</a
+							> — Design & Communications Management
 						</p>
-						<p class="text-white">Emerson Holloway - Design & Administration</p>
-						<p class="text-white">Jennifer J. Lee - Website Illustrations</p>
+						<p class="text-white">
+							<a
+								href="https://www.linkedin.com/in/emerson-holloway?trk=contact-info"
+								target="_blank"
+								class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
+								>Emerson Holloway</a
+							>
+							— Design & Communications Management
+						</p>
+						<p class="text-white">
+							<a
+								href="https://www.jenjlee.info"
+								target="_blank"
+								class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
+								>Jennifer J. Lee</a
+							>
+							— Website Illustrations
+						</p>
 					</div>
 					<p class="text-white">
 						The <a
 							href="https://community.massenergize.org/fairmount-boston/"
 							target="_blank"
-							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
 							>Fairmount Indigo CDC Collaborative</a
 						>
 						and the
 						<a
 							href="https://www.dbedc.org"
 							target="_blank"
-							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
 							>Dorchester Bay Economic Development Corporation</a
 						>, including Andrealis Martinez and Kendra Beaver.
 					</p>
@@ -97,7 +104,7 @@
 						The <a
 							href="https://airpartners.org"
 							target="_blank"
-							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
 						>
 							Air Partners</a
 						>
@@ -105,7 +112,7 @@
 						<a
 							href="https://olin.edu"
 							target="_blank"
-							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
 							>Olin College</a
 						>, including Scott Hersey and Francesca Majluf.
 					</p>
@@ -113,14 +120,14 @@
 						The <a
 							href="https://elab.emerson.edu"
 							target="_blank"
-							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
 							>Engagement Lab</a
 						>
 						at
 						<a
 							href="https://emerson.edu"
 							target="_blank"
-							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
 							>Emerson College</a
 						>, including Eric Gordon and Rachele Gardner.
 					</p>
@@ -128,12 +135,26 @@
 						Additional funding provided by the <a
 							href="https://www.barrfoundation.org"
 							target="_blank"
-							class="hover:text-yellow-500 transition underline border-0 underline-offset-4 decoration-2"
+							class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
 							>Barr Foundation</a
 						>.
 					</p>
 				</div>
 			</div>
+		</div>
+		<div class="flex w-full pt-28">
+			<a
+				href="../"
+				class="border-0 group m-auto"
+				in:fade={{ duration: 500, delay: 200 }}
+			>
+				<div
+					class="flex items-center gap-1 bg-white/5 transition group-hover:-translate-x-1 rounded-full py-2 px-4 text-slate-400 group-hover:bg-white/30 group-hover:text-white"
+				>
+					<MoveLeft class="transition group-hover:-translate-x-1" />
+					<p class="tooltip text-sm">BACK TO STORY</p>
+				</div>
+			</a>
 		</div>
 	</div>
 </div>
