@@ -1,4 +1,5 @@
 <script>
+	import { base } from "$app/paths";
 	import { currentLocale, locales } from "$stores/locales";
 	import { fade, fly, slide } from "svelte/transition";
 	import { Menu } from "lucide-svelte";
@@ -89,7 +90,7 @@
 				</div>
 			</div>
 			<a
-				href="about"
+				href="{base}/about"
 				class="border-0 transition hover:scale-110 shrink-0 py-2 rounded-full bg-gray-700/30 hover:bg-gray-700/80 px-4"
 			>
 				<p class="tooltip text-center text-[4vw] sm:text-xl">ABOUT</p>
@@ -165,7 +166,7 @@
 				class="font-medium tooltip transition hover:text-white"
 				in:fade={{ duration: 500, delay: 100 }}
 			>
-				<a href="about">About this site</a>
+				<a href="{base}/about">About this site</a>
 			</p>
 			<p
 				class="font-medium tooltip transition hover:text-white"

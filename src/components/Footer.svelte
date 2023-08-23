@@ -1,5 +1,5 @@
 <script>
-	import { assets } from "$app/paths";
+	import { assets, base } from "$app/paths";
 	export let isHomePage = false;
 </script>
 
@@ -23,7 +23,7 @@
 				</a>
 			</div>
 		{/if}
-		<a href="/" class="w-full hover:text-white transition border-0">
+		<a href="{base}/" class="w-full hover:text-white transition border-0">
 			<h1 class="tracking-wide text-center">Fairmount Stories:</h1>
 			<h2 class="tracking-wide text-center">
 				Mobility, Advocacy, and Environmental Justice
@@ -35,7 +35,7 @@
 					<a href="mailto:kbeaver@dbedc.org">Contact us</a>
 				</p>
 				<p class="font-normal tooltip transition hover:text-white">
-					<a href="/about">About this site</a>
+					<a href="{base}/about">About this site</a>
 				</p>
 			</div>
 
