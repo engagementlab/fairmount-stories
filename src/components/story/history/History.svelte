@@ -12,15 +12,7 @@
 			narration:
 				"Growing up in the 70's, I remember how the line passed right next to my backyard, but it didn't actually stop anywhere near my house.",
 			backgroundImages: ["assets/story/fl-train-old.jpg"],
-			narrationImage: "assets/story/narrator-head.png",
-			backgroundMap: {
-				hide: true,
-				lng: -71.12,
-				lat: 42.295,
-				zoom: 10.5,
-				visibleFeatures: [],
-				offsetMapPos: true
-			}
+			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
 			backgroundSticky: "middle",
@@ -30,7 +22,6 @@
 			backgroundImages: ["assets/story/fl-train-old.jpg"],
 			narrationImage: "assets/story/narrator-head.png",
 			backgroundMap: {
-				hide: true,
 				lng: -71.12,
 				lat: 42.295,
 				zoom: 10.5,
@@ -47,7 +38,8 @@
 					"south-station"
 				],
 				offsetMapPos: true
-			}
+			},
+			hideBackgroundMap: true
 		},
 		{
 			fixBackground: true,

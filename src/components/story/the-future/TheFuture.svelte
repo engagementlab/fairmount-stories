@@ -134,11 +134,15 @@
 				"assets/story/arial-zoom-out-more-bg.png",
 				"assets/story/full-train-zoom-out-more.png",
 				"assets/story/arial-zoom-out-more-fg.png"
-			]
-		}
-	];
-
-	const EJSteps = [
+			],
+			backgroundMap: {
+				lng: -71.09,
+				lat: 42.3232,
+				zoom: 11,
+				visibleFeatures: ["asthma"]
+			},
+			hideBackgroundMap: true
+		},
 		{
 			fixBackground: true,
 			textOnTop: true,
@@ -224,7 +228,6 @@
 <section id="the-future">
 	<SectionHeader {HeaderText} />
 	<ScrollSection steps={AQSteps} />
-	<ScrollSection steps={EJSteps} />
 	<EjFeature />
 	<ScrollSection steps={outroSteps} backgroundColor="bg-lime-200" />
 </section>

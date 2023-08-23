@@ -1,6 +1,6 @@
 <script>
 	import { Map } from "mapbox-gl";
-	import { onMount } from "svelte";
+	import { onMount, onDestroy } from "svelte";
 	import stations from "$data/stations.json";
 
 	let map;
@@ -227,6 +227,12 @@
 				);
 			});
 		});
+	});
+
+	onDestroy(() => {
+		if (map) {
+			map.remove();
+		}
 	});
 
 	$: if (map && map.loaded()) {

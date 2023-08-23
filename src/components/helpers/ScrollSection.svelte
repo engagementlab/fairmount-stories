@@ -96,16 +96,18 @@
 				{/each}
 			{/if}
 		{/each}
-		<BackgroundParallaxItem
-			fixBackground={true}
-			loadItem={true}
-			showItem={steps[value || 0].backgroundMap &&
-				!steps[value || 0].backgroundMap.hide}
-		>
-			<BackgroundMap
-				{...steps[value || 0].backgroundMap || { visibleFeatures: [] }}
-			/>
-		</BackgroundParallaxItem>
+		{#if steps[value || 0].backgroundMap}
+			<BackgroundParallaxItem
+				fixBackground={true}
+				loadItem={true}
+				showItem={steps[value || 0].backgroundMap &&
+					!steps[value || 0].hideBackgroundMap}
+			>
+				<BackgroundMap
+					{...steps[value || 0].backgroundMap || { visibleFeatures: [] }}
+				/>
+			</BackgroundParallaxItem>
+		{/if}
 	</div>
 	<Scrolly bind:value>
 		{#each steps as step, i}
