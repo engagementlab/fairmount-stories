@@ -1,4 +1,5 @@
 <script>
+	import { base } from "$app/paths";
 	import { onMount } from "svelte";
 	import { MoveLeft, Link, Share2 } from "lucide-svelte";
 	import {
@@ -106,7 +107,7 @@
 		</button>
 	</div>
 	<div class="flex justify-center">
-		<a href="../take-action/education" class="border-0 group m-auto">
+		<a href="{base}/take-action/education" class="border-0 group m-auto">
 			<div
 				class="flex items-center gap-1 bg-lime-100 transition group-hover:-translate-x-1 rounded-full py-2 px-4 text-lime-600 group-hover:bg-white group-hover:text-lime-700"
 			>

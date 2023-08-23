@@ -1,4 +1,5 @@
 <script>
+	import { base } from "$app/paths";
 	import Footer from "$components/Footer.svelte";
 	import { MoveLeft } from "lucide-svelte";
 	import { fade, fly } from "svelte/transition";
@@ -144,7 +145,7 @@
 		</div>
 		<div class="flex w-full pt-28">
 			<a
-				href="../"
+				href={base}
 				class="border-0 group m-auto"
 				in:fade={{ duration: 500, delay: 200 }}
 			>

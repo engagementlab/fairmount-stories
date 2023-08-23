@@ -1,4 +1,5 @@
 <script>
+	import { base } from "$app/paths";
 	import ActionItem from "$components/take-action/ActionItem.svelte";
 	import Footer from "$components/Footer.svelte";
 	import { fly, scale } from "svelte/transition";
@@ -52,7 +53,7 @@
 			{/each}
 		</div>
 		<div class="flex w-full">
-			<a href="../../#take-action" class="border-0 group m-auto">
+			<a href="{base}/#take-action" class="border-0 group m-auto">
 				<div
 					class="flex items-center gap-1 bg-lime-100 transition group-hover:-translate-x-1 rounded-full py-2 px-4 text-lime-600 group-hover:bg-white group-hover:text-lime-700"
 				>
