@@ -24,8 +24,8 @@
 				<span> Environmental Justice is a personal issue. </span>
 			</h2>
 			<p class="text-center mt-10">
-				Below are quotes from Fairmount Line residents about what Environmental
-				Justice means to them.
+				Below are quotes from Fairmount Corridor residents about what
+				Environmental Justice means to them.
 			</p>
 		</div>
 	</div>

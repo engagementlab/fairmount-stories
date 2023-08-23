@@ -21,7 +21,7 @@
 		<div class="bg-white rounded-lg drop-shadow-2xl p-5">
 			<textarea
 				class="w-full outline-0 p-2 text-2xl min-h-[10em] align-top mb-5 rounded-md !cursor-default"
-				placeholder="To me, environmental justice is..."
+				placeholder="To me, Environmental Justice is..."
 				type="text"
 				name="ejResponse"
 				required

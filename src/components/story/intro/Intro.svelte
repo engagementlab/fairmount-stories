@@ -34,7 +34,7 @@
 			backgroundSticky: "middle",
 			textOnTop: true,
 			narration:
-				"I’ve lived here my whole life. I am an educator and recently bought a townhouse close to the MBTA Fairmount commuter rail line. The Fairmount Line has become a big part of how I view my community now.",
+				"I've lived here my whole life. I am an educator and recently bought a townhouse close to the MBTA Fairmount commuter rail line. The Fairmount Line has become a big part of how I view my community now.",
 			backgroundImages: [
 				"assets/story/arial-texture-bg-lg.jpg",
 				"assets/story/arial-zoom-in-bg.png",
@@ -61,7 +61,7 @@
 			sticky: "start",
 			textOnTop: true,
 			narration:
-				"I live near the Four Corners / Geneva station on the Fairmount Line. For me, the Fairmount Line is connected to a lot of good memories",
+				"I live near the Four Corners / Geneva station on the Fairmount Line. For me, the Fairmount Line is connected to a lot of good memories.",
 			backgroundImages: [
 				"assets/story/four-corners-station.jpg",
 				"assets/blank.png",
@@ -73,7 +73,7 @@
 			backgroundSticky: "start",
 			textOnTop: true,
 			narration:
-				"I love taking my grandkids to the Boston Children’s Museum – we get off at South Station in Downtown Boston.",
+				"I love taking my grandkids to the Boston Children's Museum — we get off at South Station in Downtown Boston.",
 			backgroundImages: [
 				"assets/story/train-ride-bg.png",
 				"assets/blank.png",
@@ -86,7 +86,7 @@
 			backgroundSticky: "middle",
 			textOnTop: true,
 			narration:
-				"And it’s just a 15-minute ride on the Fairmount Line! It saves me from having to take a bus and a train. I enjoy riding through my community as well!",
+				"And it's just a 15-minute ride on the Fairmount Line! It saves me from having to take a bus and a train. I enjoy riding through my community as well!",
 			backgroundImages: [
 				"assets/story/train-ride-bg.png",
 				"assets/story/train-ride.png"

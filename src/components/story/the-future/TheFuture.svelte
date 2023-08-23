@@ -54,7 +54,7 @@
 			textOnTop: true,
 			sticky: "end",
 			narration:
-				"Let’s take a look at what's in the air around the Fairmount Line.",
+				"Let's take a look at what's in the air around the Fairmount Line.",
 			backgroundImages: [
 				"assets/story/arial-texture-bg-lg.jpg",
 				"assets/story/arial-zoom-in-bg.png",
@@ -82,7 +82,7 @@
 		{
 			textOnTop: true,
 			sticky: "start",
-			body: "One train passing by isn’t that bad...",
+			body: "One train passing by isn't that bad...",
 			backgroundImages: [
 				"assets/story/arial-texture-bg-lg.jpg",
 				"assets/story/arial-zoom-in-bg.png",
@@ -116,7 +116,7 @@
 			textOnTop: true,
 			sticky: "middle",
 			backgroundSticky: "start",
-			body: "...starts to add up, meaning that there’s a <span>higher concentration of particulate matter in the air.</span>",
+			body: "...starts to add up, meaning that there's a <span>higher concentration of particulate matter in the air.</span>",
 			backgroundImages: [
 				"assets/story/arial-texture-bg-sm.jpg",
 				"assets/story/arial-zoom-out-more-bg.png",
@@ -142,7 +142,7 @@
 		{
 			fixBackground: true,
 			textOnTop: true,
-			body: "Air quality is especially important because these communities already have higher rates of asthma, specifically among children. <span>About 20% population under 18 suffers from asthma.</span>",
+			body: "Air quality is especially important because these communities already have higher rates of asthma, specifically among children. <span>About 20% of the population under 18 suffers from asthma.</span>",
 			backgroundMap: {
 				lng: -71.09,
 				lat: 42.3232,
@@ -172,7 +172,7 @@
 		{
 			fixBackground: true,
 			textOnTop: true,
-			body: "These factors are in part why many of the areas along Fairmount Line are considered <span>environmental justice communities</span>. In essence, they bear the burden of local environmental problems",
+			body: "These factors are in part why many of the areas along Fairmount Line are considered <span>Environmental Justice communities</span>. In essence, they bear the burden of local environmental problems.",
 			backgroundMap: {
 				lng: -71.09,
 				lat: 42.3232,
@@ -187,7 +187,7 @@
 			fixBackground: true,
 			textOnTop: true,
 
-			body: 'In Massachusetts, an area is considered an environmental justice community if any of the following are true: <br><br><div class="text-left"><li>the median household income is less than 65% the statewide median</li><li>at least a 40% minority population</li><li>less than 25% households identify as speaking English "very well"</li></div>',
+			body: 'In Massachusetts, an area is considered an Environmental Justice community if any of the following are true: <br><br><div class="text-left"><li>the median household income is less than 65% of the statewide median</li><li>at least a 40% minority population</li><li>less than 25% of households identify as speaking English "very well"</li></div>',
 			citation:
 				"Source: <a href='https://www.mass.gov/environmental-justice' target='_blank'>mass.gov</a>",
 			backgroundMap: {

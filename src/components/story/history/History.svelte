@@ -10,7 +10,7 @@
 			sticky: "start",
 			backgroundSticky: "start",
 			narration:
-				"Growing up in the 70’s, I remember how the line passed right next to my back yard, but it didn’t actually stop anywhere near my house.",
+				"Growing up in the 70's, I remember how the line passed right next to my backyard, but it didn't actually stop anywhere near my house.",
 			backgroundImages: ["assets/story/fl-train-old.jpg"],
 			narrationImage: "assets/story/narrator-head.png",
 			backgroundMap: {
@@ -78,7 +78,7 @@
 		{
 			fixBackground: true,
 			narration:
-				"Before 2012, we only had three stops plus the terminals at South Station and Readville. I’ve lived here for 52 years, but until 2013 we didn’t even have my station, Four Corners.",
+				"Before 2012, we only had three stops plus the terminals at South Station and Readville. I've lived here for 52 years, but until 2013 we didn't even have my station, Four Corners.",
 			backgroundMap: {
 				lng: -71.12,
 				lat: 42.295,
@@ -154,7 +154,7 @@
 			sticky: "start",
 			year: "2022",
 			title: "Ridership Increases",
-			body: "Today, there are significantly more riders on the line than before Covid. <span>Ridership is now at 130% of 2019 levels.</span>",
+			body: "Today, there are significantly more riders on the line than before COVID-19. <span>Ridership is now at 130% of 2019 levels.</span>",
 			citation:
 				"Source: <a href='https://www.mbta.com/news/2023-06-02/fairmount-line-ridership-reaches-new-all-time-high-fairmount-ridership-130-pre?utm_campaign=curated-content&utm_content=Fairmount+Line+Ridership+Reaches+New+All-Time+High%2C+Fairmount+Ridership+at+130%25+of+pre-COVID+levels+in+May+2023&utm_medium=sidebar&utm_source=hub&utm_term=commuter-rail' target='_blank'>MBTA</a>",
 			backgroundImages: ["assets/story/four-corners-station-people-2.jpg"],
@@ -165,7 +165,7 @@
 			fixBackground: true,
 			year: "2022",
 			title: "Ridership Increases",
-			body: "Today, there are significantly more riders on the line than before Covid. <span>Ridership is now at 130% of 2019 levels.</span>",
+			body: "Today, there are significantly more riders on the line than before COVID-19. <span>Ridership is now at 130% of 2019 levels.</span>",
 			citation:
 				"Source: <a href='https://www.mbta.com/news/2023-06-02/fairmount-line-ridership-reaches-new-all-time-high-fairmount-ridership-130-pre?utm_campaign=curated-content&utm_content=Fairmount+Line+Ridership+Reaches+New+All-Time+High%2C+Fairmount+Ridership+at+130%25+of+pre-COVID+levels+in+May+2023&utm_medium=sidebar&utm_source=hub&utm_term=commuter-rail' target='_blank'>MBTA</a>",
 			backgroundImages: ["assets/story/four-corners-station-people-3.jpg"]
@@ -177,7 +177,7 @@
 			body: "Thanks to years of local and state efforts, the train has become an important source of transit access that is efficient and simple for the communities it serves.",
 			backgroundImages: ["assets/story/four-corners-station-people-all.jpg"],
 			narration:
-				"But our fight doesn’t end there. This long legacy of community-led action continues today!",
+				"But our fight doesn't end there. This long legacy of community-led action continues today!",
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{

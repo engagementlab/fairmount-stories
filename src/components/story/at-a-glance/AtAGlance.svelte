@@ -43,7 +43,7 @@
 		},
 		{
 			fixBackground: true,
-			body: "The line is within the limits of the City of Boston, similar to the city’s subways and light rail. <span>Despite this, it’s still classified as a commuter rail line.</span>",
+			body: "The line is within the limits of the City of Boston, similar to the city's subways and light rail. <span>Despite this, it's still classified as a commuter rail line.</span>",
 			backgroundMap: {
 				lng: -71.12,
 				lat: 42.295,
@@ -86,7 +86,7 @@
 			sticky: "end",
 			textOnTop: true,
 			narration:
-				"But it didn't always look the way it does today. Did you know there’s a long history of community action on the Fairmount Line? <br><br><strong>Let me tell you about it!</strong>",
+				"But it didn't always look the way it does today. Did you know there's a long history of community action on the Fairmount Line? <br><br><strong>Let me tell you about it!</strong>",
 			narrationImage: "assets/story/narrator-head.png"
 		}
 	];

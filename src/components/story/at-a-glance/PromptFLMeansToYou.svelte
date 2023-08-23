@@ -157,7 +157,7 @@
 			>
 				<img src="assets/story/narrator-head.png" alt="The narrator's face" />
 			</div>
-			<p class="quote text-center">To me, the fairmount line is...</p>
+			<p class="quote text-center">To me, the Fairmount Line is...</p>
 		</div>
 		<div
 			class="flex gap-12 flex-wrap max-w-[20em] md:max-w-screen-xl items-start justify-center justify-items-center z-50"

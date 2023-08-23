@@ -28,7 +28,7 @@
 				<h1 class="sm:text-[6em] text-white">About</h1>
 				<p class="text-white">
 					Informed by values of trust, care, inclusion, and justice, this
-					project aims to create community and support environmental justice
+					project aims to create community and support Environmental Justice
 					advocacy efforts through multimedia storytelling and education. The
 					purpose of this website and our project at large is to support the
 					<a
