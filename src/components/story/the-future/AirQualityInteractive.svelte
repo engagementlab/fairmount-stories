@@ -13,7 +13,7 @@
 </script>
 
 <div class="w-full m-auto max-w-screen-lg relative h-screen">
-	<div class="absolute w-full left-0 top-[6em] sm:botton-[5vh] flex px-10">
+	<div class="absolute w-full left-0 bottom-[5vh] flex px-10">
 		<h4
 			class="m-auto tooltip text-center drop-shadow-lg bg-white/40 rounded-full py-2 px-4"
 		>
