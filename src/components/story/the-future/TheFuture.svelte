@@ -151,7 +151,7 @@
 				lng: -71.09,
 				lat: 42.3232,
 				zoom: 11,
-				visibleFeatures: ["asthma"]
+				visibleFeatures: ["asthma", "tracks"]
 			},
 			citationText:
 				"Map data: Community Voices from the Fairmount Corridor Project",
@@ -166,7 +166,7 @@
 				lng: -71.09,
 				lat: 42.3232,
 				zoom: 11,
-				visibleFeatures: ["asthma"]
+				visibleFeatures: ["asthma", "tracks"]
 			},
 			citationText:
 				"Map data: Community Voices from the Fairmount Corridor Project",
@@ -181,7 +181,7 @@
 				lng: -71.09,
 				lat: 42.3232,
 				zoom: 11,
-				visibleFeatures: ["ej"]
+				visibleFeatures: ["ej", "tracks"]
 			},
 			citationText: "Map data: mass.gov",
 			citationLink:
@@ -198,7 +198,7 @@
 				lng: -71.09,
 				lat: 42.3232,
 				zoom: 11,
-				visibleFeatures: ["ej"]
+				visibleFeatures: ["ej", "tracks"]
 			},
 			citationText: "Map data: mass.gov",
 			citationLink:

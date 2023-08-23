@@ -1,17 +1,21 @@
 <script>
-	import { fade } from "svelte/transition";
+	import { fade, scale } from "svelte/transition";
 
 	import Story from "$components/story/Story.svelte";
 	import Footer from "$components/Footer.svelte";
 
 	let loading = true;
 	let showLoader = true;
+	let showLoadingText = false;
 	let introAnimationStart = false;
 	let introAnimationDone = false;
 	let outroAnimationStart = false;
 
 	const handleLoadStart = () => {
 		introAnimationStart = true;
+		setInterval(() => {
+			showLoadingText = true;
+		}, 0);
 		setInterval(() => {
 			introAnimationDone = true;
 		}, 600);
@@ -38,7 +42,19 @@
 		class="fixed justify-center items-center flex z-[20000] bg-[#B5D334] min-h-full min-w-full"
 		out:fade
 	>
-		<h2 class="text-white z-10 drop-shadow-md">Loading...</h2>
+		{#if showLoadingText}
+			<h2
+				class="text-white z-10 drop-shadow-md"
+				in:scale={{
+					duration: 250,
+					delay: 0,
+					opacity: 0,
+					start: 0
+				}}
+			>
+				Loading...
+			</h2>
+		{/if}
 		<div
 			class="shrink-0 -translate-y-[2vw] absolute delay-500"
 			class:opacity-0={outroAnimationStart}

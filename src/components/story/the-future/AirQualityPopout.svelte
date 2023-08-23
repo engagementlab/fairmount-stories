@@ -27,7 +27,7 @@
 	<slot name="effects" slot="effects" />
 </AirQualityInfoModal>
 
-<style>
+<style lang="postcss">
 	.substance-label {
 		font-size: 2.5rem;
 		letter-spacing: 3px;

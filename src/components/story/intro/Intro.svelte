@@ -7,10 +7,8 @@
 			id: "welcome",
 			componentFullScreen: Landing,
 			backgroundImages: [
-				"assets/story/arial-texture-bg-lg.jpg",
-				"assets/story/arial-zoom-in-bg.png",
-				"assets/story/full-train-zoom-in.png",
-				"assets/story/arial-zoom-in-fg.png"
+				"assets/story/four-corners-station.jpg",
+				"assets/story/four-corners-staton-train-fg.png"
 			],
 			backgroundSticky: "start"
 		},
@@ -22,10 +20,8 @@
 			narration:
 				"Hi there! My name is Maria. <br> Welcome to Dorchester, Massachusetts!",
 			backgroundImages: [
-				"assets/story/arial-texture-bg-lg.jpg",
-				"assets/story/arial-zoom-in-bg.png",
-				"assets/story/full-train-zoom-in.png",
-				"assets/story/arial-zoom-in-fg.png"
+				"assets/story/four-corners-station.jpg",
+				"assets/story/four-corners-staton-train-fg.png"
 			],
 			narrationImage: "assets/story/narrator-head.png"
 		},
@@ -36,35 +32,32 @@
 			narration:
 				"I've lived here my whole life. I am an educator and recently bought a townhouse close to the MBTA Fairmount commuter rail line. The Fairmount Line has become a big part of how I view my community now.",
 			backgroundImages: [
-				"assets/story/arial-texture-bg-lg.jpg",
-				"assets/story/arial-zoom-in-bg.png",
-				"assets/story/full-train-zoom-in.png",
-				"assets/story/arial-zoom-in-fg.png"
+				"assets/story/four-corners-station.jpg",
+				"assets/story/four-corners-staton-train-fg.png"
 			],
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
 			sticky: "end",
-			backgroundSticky: "end",
+			backgroundSticky: "middle",
 			textOnTop: true,
 			narration:
 				"When I think of my community, things like access, unity, history, and action come to mind...",
 			backgroundImages: [
-				"assets/story/arial-texture-bg-lg.jpg",
-				"assets/story/arial-zoom-in-bg.png",
-				"assets/story/full-train-zoom-in.png",
-				"assets/story/arial-zoom-in-fg.png"
+				"assets/story/four-corners-station.jpg",
+				"assets/story/four-corners-staton-train-fg.png"
 			],
 			narrationImage: "assets/story/narrator-head.png"
 		},
 		{
 			sticky: "start",
+			backgroundSticky: "end",
 			textOnTop: true,
 			narration:
 				"I live near the Four Corners / Geneva station on the Fairmount Line. For me, the Fairmount Line is connected to a lot of good memories.",
 			backgroundImages: [
 				"assets/story/four-corners-station.jpg",
-				"assets/blank.png",
+				"assets/story/four-corners-staton-train-fg.png",
 				"assets/story/four-corners-station-narrator-fg.png"
 			]
 		},

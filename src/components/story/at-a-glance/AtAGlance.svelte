@@ -15,7 +15,6 @@
 				zoom: 10.5,
 				visibleFeatures: [
 					"tracks",
-					"neighborhoods",
 					"tracks",
 					"uphams-corner",
 					"four-corners",

@@ -48,6 +48,25 @@
 		"newmarket-new",
 		"south-station-new"
 	];
+
+	const setFeatureOpacity = (feature, opacity) => {
+		try {
+			map.setPaintProperty(feature, "fill-opacity", opacity);
+		} catch (error) {}
+		try {
+			map.setPaintProperty(feature, "line-opacity", opacity);
+		} catch (error) {}
+		try {
+			map.setPaintProperty(feature, "raster-opacity", opacity);
+		} catch (error) {}
+		try {
+			map.setPaintProperty(feature, "text-opacity", opacity);
+		} catch (error) {}
+		try {
+			map.setPaintProperty(feature, "icon-opacity", opacity);
+		} catch (error) {}
+	};
+
 	onMount(() => {
 		const offsetLng = innerWidth > 640 && offsetMapPos ? lng + 0.12 : lng;
 		const offsetZoom = innerWidth > 640 ? zoom + 0.9 : zoom;
@@ -63,23 +82,35 @@
 		});
 
 		map.on("load", () => {
+			// Find the index of the first symbol layer in the map style to place content below labels
+			let layers = map.getStyle().layers;
+			let firstSymbolId;
+			for (var i = 0; i < layers.length; i++) {
+				if (layers[i].type === "symbol") {
+					firstSymbolId = layers[i].id;
+					break;
+				}
+			}
+
 			map.addSource("city-limits", {
 				type: "geojson",
 				data: "assets/map/city-limits.geojson"
 			});
 
-			map.addLayer({
-				id: "city-limits",
-				type: "fill",
-				source: "city-limits",
-				layout: {
-					visibility: "none"
+			map.addLayer(
+				{
+					id: "city-limits",
+					type: "fill",
+					source: "city-limits",
+					layout: {},
+					paint: {
+						"fill-color": "#c67acc",
+						"fill-opacity": 0,
+						"fill-opacity-transition": { duration: 500 }
+					}
 				},
-				paint: {
-					"fill-color": "#db2e51",
-					"fill-opacity": 0.25
-				}
-			});
+				firstSymbolId
+			);
 
 			map.addSource("asthma", {
 				type: "image",
@@ -91,17 +122,19 @@
 					[-71.3, 42.2]
 				]
 			});
-			map.addLayer({
-				id: "asthma",
-				type: "raster",
-				source: "asthma",
-				paint: {
-					"raster-fade-duration": 0
+			map.addLayer(
+				{
+					id: "asthma",
+					type: "raster",
+					source: "asthma",
+					paint: {
+						"raster-opacity": 0,
+						"raster-fade-duration": 500
+					},
+					layout: {}
 				},
-				layout: {
-					visibility: "none"
-				}
-			});
+				firstSymbolId
+			);
 
 			map.addSource("ej", {
 				type: "image",
@@ -113,17 +146,19 @@
 					[-71.482, 42.108]
 				]
 			});
-			map.addLayer({
-				id: "ej",
-				type: "raster",
-				source: "ej",
-				paint: {
-					"raster-fade-duration": 0
+			map.addLayer(
+				{
+					id: "ej",
+					type: "raster",
+					source: "ej",
+					paint: {
+						"raster-opacity": 0,
+						"raster-fade-duration": 500
+					},
+					layout: {}
 				},
-				layout: {
-					visibility: "none"
-				}
-			});
+				firstSymbolId
+			);
 
 			map.addSource("tracks", {
 				type: "geojson",
@@ -135,13 +170,14 @@
 				type: "line",
 				source: "tracks",
 				layout: {
-					visibility: "none",
 					"line-join": "round",
 					"line-cap": "round"
 				},
 				paint: {
 					"line-color": "#86198f",
-					"line-width": 5
+					"line-width": 5,
+					"line-opacity": 0,
+					"line-opacity-transition": { duration: 500 }
 				}
 			});
 
@@ -155,7 +191,6 @@
 				type: "symbol",
 				source: "neighborhoods",
 				layout: {
-					visibility: "none",
 					"text-field": ["get", "name"],
 					"text-variable-anchor": ["top", "bottom", "left", "right"],
 					"text-radial-offset": 0.5,
@@ -163,12 +198,15 @@
 					"text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
 					"text-size": 20,
 					"text-transform": "uppercase",
-					"text-offset": [0, 1.5]
+					"text-offset": [0, 1.5],
+					"text-ignore-placement": true,
+					"text-allow-overlap": true
 				},
 				paint: {
-					"text-color": "#5B0063",
 					"text-halo-color": "#fff",
-					"text-halo-width": 3
+					"text-halo-width": 3,
+					"text-opacity": 0,
+					"text-opacity-transition": { duration: 500 }
 				}
 			});
 
@@ -182,7 +220,6 @@
 				type: "symbol",
 				source: "transit-options",
 				layout: {
-					visibility: "none",
 					"text-field": ["get", "name"],
 					"text-variable-anchor": ["top", "bottom", "left", "right"],
 					"text-radial-offset": 0.5,
@@ -190,12 +227,15 @@
 					"text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
 					"text-size": 20,
 					"text-transform": "uppercase",
-					"text-offset": [0, 1.5]
+					"text-offset": [0, 1.5],
+					"text-ignore-placement": true,
+					"text-allow-overlap": true
 				},
 				paint: {
-					"text-color": "#5B0063",
 					"text-halo-color": "#fff",
-					"text-halo-width": 3
+					"text-halo-width": 3,
+					"text-opacity": 0,
+					"text-opacity-transition": { duration: 500 }
 				}
 			});
 
@@ -216,10 +256,12 @@
 							type: "symbol",
 							source: "stations",
 							layout: {
-								visibility: "none",
 								"icon-image": feature.properties.Name,
 								"icon-allow-overlap": true,
 								"icon-size": 0.17
+							},
+							paint: {
+								"icon-opacity": 0
 							},
 							filter: ["==", "Name", feature.properties.Name]
 						});
@@ -237,16 +279,17 @@
 
 	$: if (map && map.loaded()) {
 		visibleFeatures.forEach((feature) => {
-			map.setLayoutProperty(feature, "visibility", "visible");
+			setFeatureOpacity(feature, 1);
 		});
 	}
+
 	$: visibleFeatures &&
 		features.forEach((feature) => {
 			if (map && map.getLayer(feature)) {
 				if (visibleFeatures.includes(feature)) {
-					map.setLayoutProperty(feature, "visibility", "visible");
+					setFeatureOpacity(feature, 1);
 				} else {
-					map.setLayoutProperty(feature, "visibility", "none");
+					setFeatureOpacity(feature, 0);
 				}
 			}
 		});

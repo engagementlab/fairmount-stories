@@ -15,7 +15,7 @@
 <div class="w-full m-auto max-w-screen-lg relative h-screen">
 	<div class="absolute w-full left-0 bottom-[5vh] flex px-10">
 		<h4
-			class="m-auto tooltip text-center drop-shadow-lg bg-white/40 rounded-full py-2 px-4"
+			class="m-auto tooltip text-center drop-shadow-lg bg-white/40 rounded-full py-2 px-4 z-50 backdrop-blur-sm"
 		>
 			Click on an icon to learn more about what's in the air!
 		</h4>
@@ -110,3 +110,30 @@
 		</AirQualityPopout>
 	</div>
 </div>
+
+<style lang="postcss">
+	.clean-air {
+		animation: floatY 3s ease-in-out alternate infinite;
+		animation-delay: 0.75s;
+	}
+	.natural-particles {
+		animation: floatY 3s ease-in-out alternate infinite;
+		animation-delay: 2s;
+	}
+	.exhaust-gases {
+		animation: floatY 3s ease-in-out alternate infinite;
+	}
+	.exhaust-particles {
+		animation: floatY 3s ease-in-out alternate infinite;
+		animation-delay: 1.5s;
+	}
+
+	@keyframes floatY {
+		from {
+			transform: translateY(-7px);
+		}
+		to {
+			transform: translateY(7px);
+		}
+	}
+</style>

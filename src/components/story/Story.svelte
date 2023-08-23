@@ -32,7 +32,7 @@
 
 <svelte:window bind:innerHeight />
 
-<div in:fly={{ y: 20, duration: 500 }}>
+<div>
 	<div class="h-screen" />
 	<div
 		class="navigation-wrapper sticky w-full flex top-0 z-[1000] p-4 group hover:translate-y-2 hover:scale-105 transition h-[5em]"
