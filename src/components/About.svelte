@@ -84,6 +84,14 @@
 								>Jennifer J. Lee</a
 							>
 							— Website Illustrations
+						</p> 
+						<p class="text-white">
+							<a
+								href="https://johnny.omg.lol"
+								target="_blank"
+								class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
+								>Johnny Richardson</a
+							> - Lead Developer, Engagement Lab
 						</p>
 					</div>
 					<p class="text-white">
