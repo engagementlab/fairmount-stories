@@ -14,7 +14,7 @@
 		canShare = navigator.canShare;
 	});
 
-	const url = "http://fairmountstories.airpartners.org";
+	const url = "http://fairmountstories.org";
 	const title =
 		"Fairmount Stories: Mobility, Advocacy, and Environmental Justice";
 	const desc = "Check out this website about the Fairmount Line!";
@@ -33,7 +33,7 @@
 
 	let isCopied = false;
 	const handleCopy = () => {
-		navigator.clipboard.writeText("http://fairmountstories.airpartners.org");
+		navigator.clipboard.writeText("http://fairmountstories.org");
 		isCopied = true;
 	};
 </script>
@@ -96,7 +96,7 @@
 				<Link />
 			</div>
 			<div class="shrink">
-				<p class="tooltip">fairmountstories.airpartners.org</p>
+				<p class="tooltip">fairmountstories.org</p>
 			</div>
 			<div
 				class="tooltip w-24 bg-lime-600 py-2 px-3 drop-shadow-md transition group-hover:bg-lime-800 text-white rounded-md"

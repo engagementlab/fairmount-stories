@@ -1,7 +1,9 @@
+
 <script>
-	import { Map } from "mapbox-gl";
+	// import {mapboxgl} from "mapbox-gl/dist/mapbox-gl-unminified";
 	import { onMount, onDestroy } from "svelte";
 	import stations from "$data/stations.json";
+  import { browser } from '$app/environment'; 
 
 	let map;
 	let mapContainer;
@@ -72,7 +74,7 @@
 		const offsetZoom = innerWidth > 640 ? zoom + 0.9 : zoom;
 		const initialState = { lng: offsetLng, lat: lat, zoom: offsetZoom };
 
-		map = new Map({
+		map = new mapboxgl.Map({
 			container: mapContainer,
 			accessToken:
 				"pk.eyJ1IjoiamFzcGVyYWlycGFydG5lcnMiLCJhIjoiY2w5ZW5tNTk4M2NrZzN1cW05dXk0bnM2dSJ9.kzLXqr_6czhyOGUJPLEn9w",

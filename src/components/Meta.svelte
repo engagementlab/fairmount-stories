@@ -1,7 +1,7 @@
 <script>
 	export let title = "Fairmount Stories";
 	export let description = "Mobility, Advocacy, and Environmental Justice";
-	export let url = "https://fairmountstories.airpartners.org";
+	export let url = "https://fairmountstories.org";
 	export let keywords = "";
 	export let preloadFont = [];
 </script>
@@ -26,4 +26,6 @@
 	{#each preloadFont as href}
 		<link rel="preload" {href} as="font" type="font/woff2" crossorigin />
 	{/each}
+	
+	<script src="https://cdn.jsdelivr.net/npm/mapbox-gl@2.15.0/dist/mapbox-gl.min.js"></script>
 </svelte:head>
