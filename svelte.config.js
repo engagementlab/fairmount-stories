@@ -9,6 +9,7 @@ const preprocess = sveltePreprocess({
 	}
 });
 
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess,
 	kit: {

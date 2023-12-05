@@ -36,10 +36,17 @@
 				linkUrl: "/share"
 			},
 			{
+				title: "Share this website",
+				description:
+					"Did you learn anything valuable from this website? If you believe it was helpful, you can educate your network too!",
+				linkUrl: "/share"
+			},
+			// https://files.elab.works/fairmountstories/transitmatters-fairmount-report-2020.pdf
+			/* 	{
 				title: "More coming soon!",
 				description:
 					"In the coming weeks, we'll be adding more ways for you to take action. Check back soon!"
-			}
+			} */
 		]
 	};
 </script>

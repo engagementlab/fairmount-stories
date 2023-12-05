@@ -1,9 +1,7 @@
 
 <script>
-	// import {mapboxgl} from "mapbox-gl/dist/mapbox-gl-unminified";
 	import { onMount, onDestroy } from "svelte";
 	import stations from "$data/stations.json";
-  import { browser } from '$app/environment'; 
 
 	let map;
 	let mapContainer;

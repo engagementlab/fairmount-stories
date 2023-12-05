@@ -16,16 +16,12 @@
 				<p class="text-white">
 					Informed by values of trust, care, inclusion, and justice, this
 					project aims to create community and support Environmental Justice
-					advocacy efforts through multimedia storytelling and education. The
-					purpose of this website and our project at large is to support the
-					<a
+					advocacy efforts through multimedia storytelling and education. The purpose of this website and our project at large is to support the <a
 						href="https://community.massenergize.org/fairmount-boston/"
 						target="_blank"
 						class="text-yellow-500 hover:text-white transition underline border-0 underline-offset-4 decoration-2"
 						>Fairmount Indigo CDC Collaborative</a
-					>'s advocacy in educating their community about climate justice and
-					transit equity by visualizing relationships between people, their
-					communities, transit, and air quality.
+					> in sharing the history of advocacy along the Fairmount Line and goals for the future of the Line - guided by climate justice, racial equity, economic justice, and transit equity – by visualizing relationships between people, their communities, transit, and air quality.
 				</p>
 			</div>
 			<div
@@ -41,7 +37,7 @@
 					the making - including field research, community connections, and
 					resident interviews - and involved people from different streams with
 					varied skills. We hope our work is successful in being a resource for
-					the community - a tool for education and engagement.
+					the community - a tool for education, engagement, and action.
 				</p>
 			</div>
 			<div

@@ -94,7 +94,7 @@
 		{
 			fixBackground: true,
 			year: "2012-2019",
-			title: "5 More Stops Added",
+			title: "4 More Stops Added",
 			backgroundMap: {
 				lng: -71.12,
 				lat: 42.295,
@@ -123,7 +123,7 @@
 		},
 		{
 			narration:
-				"The mayor, city officials, and local health leaders came together with community advocates to help get these stops built. Seeing the end result made me feel really good to be a part of making it happen!",
+				"The mayor, city and state officials, and local health leaders came together with community advocates to help get these stops built. Seeing the end result made me feel really good to be a part of making it happen!",
 			narrationImage: "assets/story/narrator-head.png",
 			backgroundImages: ["assets/story/blue-hill-stop-open.jpg"],
 			citationText: "Image: Fairmount Indigo Planning Initiative",
@@ -136,7 +136,7 @@
 			title: "More Frequent Trains",
 			body: "In an effort to increase <span>transit equity</span>, the MBTA piloted a program to run trains every 45 minutes on weekdays. This schedule was made permanent in 2022.",
 			narration:
-				"Every 45 minutes is pretty frequent, and you can plan around that. But you know, they could bring it down to 30 minutes or less. Two times an hour would really make it easier to get in and out of Boston.",
+				"Every 45 minutes is pretty frequent, and you can plan around that. But you know, they could bring it down to 15 minutes or less. Trains coming more than once an hour would really make it easier to get in and out of Boston.",
 			narrationImage: "assets/story/narrator-head.png",
 			backgroundImages: ["assets/story/four-corners-station-people-1.jpg"],
 			componentInline: PromptHowOften

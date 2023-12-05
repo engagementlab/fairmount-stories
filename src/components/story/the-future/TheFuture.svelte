@@ -12,7 +12,7 @@
 			textOnTop: true,
 			sticky: "start",
 			narration:
-				"The big effort right now is reducing the negative health impacts of the Fairmount Line.",
+				"A big effort right now is reducing the negative health impacts of the Fairmount Line by electrifying the line!",
 			backgroundImages: [
 				"assets/story/arial-texture-bg-lg.jpg",
 				"assets/story/arial-zoom-in-bg.png",
@@ -146,7 +146,7 @@
 		{
 			fixBackground: true,
 			textOnTop: true,
-			body: "Air quality is especially important because these communities already have higher rates of asthma, specifically among children. <span>About 20% of the population under 18 suffers from asthma.</span>",
+			body: "Air quality is especially important because Fairmount Corridor communities already have higher rates of asthma, specifically among children. <span>About 20% of the population under 18 suffers from asthma.</span>",
 			backgroundMap: {
 				lng: -71.09,
 				lat: 42.3232,
@@ -176,7 +176,7 @@
 		{
 			fixBackground: true,
 			textOnTop: true,
-			body: "These factors are in part why many of the areas along Fairmount Line are considered <span>Environmental Justice communities</span>. In essence, they bear the burden of local environmental problems.",
+			body: "These factors are in part why many of the areas along the Fairmount Line are considered <span>Environmental Justice communities</span>. In essence, they bear the burden of local environmental problems.",
 			backgroundMap: {
 				lng: -71.09,
 				lat: 42.3232,
