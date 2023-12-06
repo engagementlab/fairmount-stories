@@ -26,15 +26,15 @@
 			{
 				title: "Read The Bill",
 				description:
-					"Get up to speed on the language of the bill, and what changes could come to the Fairmount Line if it were passed.",
-				linkUrl: "https://malegislature.gov/Bills/192/S2280/Senate/Bill/"
+					"With the support of state legislators, advocates have filed a bill in the Massachusetts State House that, if passed, would require the MBTA to electrify the Fairmount Line, increase its frequency, and implement other affordability and accessibility measures.",
+				linkUrl: "https://malegislature.gov/Bills/193/S2402"
 			},
 			{
-				title: "Write to your legislators",
+				title: "Ask Governor Healey to electrify the Fairmount Line",
 				description:
-					"It's quick and easy to ask your state legislators to co-sponsor this crucial bill for health and equity in our neighborhoods.",
+					"Use this email template as a quick and easy way to tell our Governor that we want her to use her powers to make an electric Fairmount Line a reality!",
 				linkUrl:
-					"https://actionnetwork.org/letters/ask-your-legislators-to-co-sponsor-environmental-justice-bill-for-the-fairmount-corridor-commuter-rail"
+					"https://actionnetwork.org/letters/tell-governor-healey-we-need-electrification-15-minute-headways-on-the-fairmount-line/"
 			},
 			{
 				title: "More coming soon!",

@@ -24,9 +24,9 @@
 			"By speaking up about issues that matter to you, you can contribute to the positive changes you wish to see — just like the residents who shared their stories on this website!<br><br><span>Learn how to advocate for a better Fairmount Line below!</span>",
 		actionItems: [
 			{
-				title: "Attend a training",
+				title: "Attend an Event",
 				description:
-					"Take charge in working through the problems that most impact you. Attend a training to learn skills to make a difference in your community.",
+					"Take charge in working through some of the problems that most impact the Fairmount Corridor. Attend an event to learn new information, build on skills, and connect with others to make a difference in your community.",
 				linkUrl: "https://community.massenergize.org/fairmount-boston/events"
 			},
 			{
@@ -42,9 +42,9 @@
 				linkUrl: "https://linktr.ee/fairmountcollab"
 			},
 			{
-				title: "More coming soon!",
+				title: "Check back for more",
 				description:
-					"In the coming weeks, we'll be adding more ways for you to take action. Check back soon!"
+					"As time goes on, we will continue to add more ways for you to take action!"
 			}
 		]
 	};

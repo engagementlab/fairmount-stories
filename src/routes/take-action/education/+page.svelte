@@ -36,17 +36,22 @@
 				linkUrl: "/share"
 			},
 			{
-				title: "Share this website",
+				title: "A Better Fairmount Line",
 				description:
-					"Did you learn anything valuable from this website? If you believe it was helpful, you can educate your network too!",
-				linkUrl: "/share"
+				"This report gives more details about the Fairmount Line and analyzes the advantages of potential infrastructure and service improvements for the line, proposing upgrades and changes along its corridor.",
+				linkUrl: "https://files.elab.works/fairmountstories/transitmatters-fairmount-report-2020.pdf"
 			},
-			// https://files.elab.works/fairmountstories/transitmatters-fairmount-report-2020.pdf
-			/* 	{
-				title: "More coming soon!",
+			{
+				title: "Learn about climate change & our health",
 				description:
-					"In the coming weeks, we'll be adding more ways for you to take action. Check back soon!"
-			} */
+				"Watch this super helpful 12-minute video, created by the Massachusetts Medical Society, about climate change’s impact on our health in Massachusetts and beyond.",
+				linkUrl: "https://community.massenergize.org/fairmount-boston/actions/3002"
+			},
+			{
+				title: "Check back for more",
+				description:
+				"As time goes on, we will continue to add new and relevant resources!",
+			}
 		]
 	};
 </script>
