@@ -68,9 +68,10 @@
 	};
 
 	onMount(() => {
-		const offsetLng = innerWidth > 640 && offsetMapPos ? lng + 0.12 : lng;
+		let offsetLng = lng;
 		const offsetZoom = innerWidth > 640 ? zoom + 0.9 : zoom;
 		const initialState = { lng: offsetLng, lat: lat, zoom: offsetZoom };
+		// if(innerWidth > 640) lng = 0.10 
 
 		map = new mapboxgl.Map({
 			container: mapContainer,

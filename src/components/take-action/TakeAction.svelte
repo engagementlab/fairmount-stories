@@ -6,7 +6,7 @@
 		icon: BookOpen,
 		title: "Education",
 		description:
-			"Learn more about Environmental Justice and climate change in your community!",
+			"Learn more about environmental justice, climate change in your community, and the Fairmount Line!",
 		linkUrl: "take-action/education",
 		linkText: "Get Resources"
 	};

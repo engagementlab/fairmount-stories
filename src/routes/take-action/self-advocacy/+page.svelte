@@ -22,12 +22,12 @@
 		title: "Self Advocacy",
 		description:
 			"By speaking up about issues that matter to you, you can contribute to the positive changes you wish to see — just like the residents who shared their stories on this website!<br><br><span>Learn how to advocate for a better Fairmount Line below!</span>",
-		actionItems: [
+		actionItems: [ 
 			{
-				title: "Attend an Event",
+				title: "Tell Governor Healey to electrify the line!",
 				description:
-					"Take charge in working through some of the problems that most impact the Fairmount Corridor. Attend an event to learn new information, build on skills, and connect with others to make a difference in your community.",
-				linkUrl: "https://community.massenergize.org/fairmount-boston/events"
+					"Use this email template as a quick and easy way to tell our Governor that we want her to use her powers to make an electric Fairmount Line a reality!",
+				linkUrl: "https://actionnetwork.org/letters/tell-governor-healey-we-need-electrification-15-minute-headways-on-the-fairmount-line"
 			},
 			{
 				title: "Share your story",

@@ -58,7 +58,7 @@
 				class="flex sm:gap-10 flex-wrap flex-col sm:flex-row justify-center bg-slate-200 p-4 rounded-[2em] sm:rounded-full divide-y divide-slate-300 sm:divide-none"
 			>
 				<a
-					href="https://community.massenergize.org/fairmount-boston/"
+					href="https://linktr.ee/fairmountcollab"
 					class="border-0 pb-4 sm:p-0"
 					target="_blank"
 				>

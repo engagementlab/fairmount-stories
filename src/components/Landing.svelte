@@ -22,7 +22,7 @@
 	>
 		<div class="flex justify-start items-center shrink-0 w-[37vw]">
 			<a
-				href="https://community.massenergize.org/fairmount-boston/"
+				href="https://linktr.ee/fairmountcollab"
 				target="_blank"
 				class="border-0"
 			>
