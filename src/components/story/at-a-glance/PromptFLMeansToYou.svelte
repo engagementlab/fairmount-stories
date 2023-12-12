@@ -358,6 +358,7 @@ const handleSubmit = async () => {
                                                                                                     class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
                                                                                                     disabled={!userOptions.some((o) => o.selected)}
                                                                                                     on:click={handleSubmit}
+                                                                                                    aria-label='submit'
                                                                                                     >
                                                                                                     <h3 class="label text-gray-700">Submit</h3>
                                                                                                 </button>

@@ -52,6 +52,7 @@
 			autofocus
 			class="m-auto py-2 px-4 rounded-full bg-gray-300 transition hover:scale-110"
 			on:click={() => dialog.close()}
+			aria-label='close dialog'				
 		>
 			<p class="tooltip">close</p></button
 		>

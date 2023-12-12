@@ -11,7 +11,6 @@
 	export let lat = 42.295;
 	export let zoom = 10.5;
 	export let visibleFeatures = [];
-	export let offsetMapPos = false;
 
 	const features = [
 		"tracks",

@@ -106,7 +106,7 @@ const handleSubmit = async () => {
                         </a>
                     </div>
                     <h3 class="label m-auto mt-5" class:hidden={! submitted}>Thank you!</h3>
-                                    <h3 class="label m-auto my-5 text-red-500 text-sm" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
+                    <h3 class="label m-auto my-5 text-red-500 text-sm" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
 
                 </div>
                 </div>

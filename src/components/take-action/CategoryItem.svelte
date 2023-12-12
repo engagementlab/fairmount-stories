@@ -26,6 +26,7 @@
 			<p class="text-center grow">{description}</p>
 			<button
 				class="bg-lime-100 px-4 py-1 mt-7 rounded-md drop-shadow-md transition-transform group-hover:scale-110 group-hover:bg-lime-700"
+				aria-label={linkText}
 			>
 				<h3 class="label text-center text-lime-700 group-hover:text-white">
 					{linkText}

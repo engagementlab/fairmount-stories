@@ -26,7 +26,7 @@
 	on:mouseover={handleMouseOver}
 	on:mouseleave={handleMouseLeave}
 	{disabled}
-	class="bg-fuchsia-800 md:hover:!bg-yellow-500 rounded-full w-[25vw] sm:w-[6em] md:w-[7em] lg:w-[8em] aspect-square transition duration-[50ms] group rounded-full drop-shadow-xl group"
+	class="bg-fuchsia-800 md:hover:!bg-yellow-500 rounded-full w-[25vw] sm:w-[6em] md:w-[7em] lg:w-[8em] aspect-square transition duration-[50ms] drop-shadow-xl group"
 	class:rotate-0={selected}
 	class:scale-125={selected}
 	class:bg-yellow-500={selected}
@@ -34,6 +34,7 @@
 	class:md:hover:scale-110={!selected && !disabled}
 	class:!cursor-default={disabled}
 	tabindex="0"
+	aria-label={`${labelTop} ${labelBottom}`}
 >
 	<svg
 		class="-mb-[25vw] sm:-mb-[6em] md:-mb-[7em] lg:-mb-[8em] transition"

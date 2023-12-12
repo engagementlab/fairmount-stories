@@ -38,6 +38,7 @@
 			<button
 				on:click={handleMenuOpen}
 				class="border-0 transition bg-gray-200 rounded-full p-2 shrink-0 group hover:bg-yellow-500"
+				aria-label="open main menu"
 			>
 				<Menu class="text-gray-500 transition group-hover:text-black" />
 			</button>
@@ -192,7 +193,8 @@
 					on:click={handleMenuClose}
 					class="flex items-center gap-1 bg-white/5 transition rounded-full py-2 px-4 text-slate-400 hover:bg-white/30 hover:text-white"
 					in:fade={{ duration: 500, delay: 200 }}
-				>
+					aria-label="close menu"
+					>
 					<div>
 						<p class="tooltip text-sm">Close</p>
 					</div>
