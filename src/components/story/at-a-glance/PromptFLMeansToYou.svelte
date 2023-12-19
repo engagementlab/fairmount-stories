@@ -17,6 +17,7 @@ import {
     Sparkles,
     Users2
 } from "lucide-svelte";
+	import PromptFlResponses from "$components/helpers/PromptFLResponses.svelte";
 
 let narratorOptions = [{
         labelTop: "easy",
@@ -172,20 +173,15 @@ const handleSubmit = async () => {
 </script>
 
 <section class="z-50 bg-gradient-to-b from-white to-yellow-100">
-    <div
-        class="flex min-h-[90vh] w-full flex-col gap-12 justify-center items-center justify-items-center p-10 z-50"
-        >
+    <div class="flex min-h-[90vh] w-full flex-col gap-12 justify-center items-center justify-items-center p-10 z-50">
         <div class="flex flex-col items-center max-w-lg gap-5 z-50">
-            <div
-                class="max-w-[10em] border-8 border-gray-200 rounded-full bg-gray-200"
-                >
+            <div class="max-w-[10em] border-8 border-gray-200 rounded-full bg-gray-200">
                 <img src="assets/story/narrator-head.png" alt="The narrator's face" />
             </div>
             <p class="quote text-center">To me, the Fairmount Line is...</p>
         </div>
         <div
-            class="flex gap-12 flex-wrap max-w-[20em] md:max-w-screen-xl items-start justify-center justify-items-center z-50"
-            >
+            class="flex gap-12 flex-wrap max-w-[20em] md:max-w-screen-xl items-start justify-center justify-items-center z-50">
             {#each narratorOptions as option}
             <NarratorItem {...option} />
             {/each}
@@ -372,7 +368,7 @@ const handleSubmit = async () => {
                                                                                         </div>
                                                                                         <h3 class="label m-auto my-2" class:hidden={!submitted}>Thank you!</h3>
                                                                                         <h3 class="label m-auto my-2 text-red-600 text-sm" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
-
+<PromptFlResponses />
                                                                                         <ConsentInfo />
                                                                                     </div>
                                                                                     </div>
