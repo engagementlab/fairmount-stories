@@ -17,7 +17,7 @@ import {
     Sparkles,
     Users2
 } from "lucide-svelte";
-	import PromptFlResponses from "$components/helpers/PromptFLResponses.svelte";
+import PromptFlResponses from "$components/helpers/PromptFLResponses.svelte";
 
 let narratorOptions = [{
         labelTop: "easy",
@@ -255,6 +255,8 @@ const handleSubmit = async () => {
                                     </div>
                                     <h3 class="label m-auto my-2" class:hidden={!submitted}>Thank you!</h3>
                                     <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
+                                                                                        <PromptFlResponses />
+
                                     <ConsentInfo />
                                 </div>
                                 </div>
@@ -368,7 +370,7 @@ const handleSubmit = async () => {
                                                                                         </div>
                                                                                         <h3 class="label m-auto my-2" class:hidden={!submitted}>Thank you!</h3>
                                                                                         <h3 class="label m-auto my-2 text-red-600 text-sm" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
-<PromptFlResponses />
+                                                                                        <PromptFlResponses />
                                                                                         <ConsentInfo />
                                                                                     </div>
                                                                                     </div>
