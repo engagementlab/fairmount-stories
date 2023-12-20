@@ -9,7 +9,7 @@ let responsesTally = {};
 let status = 0;
 const apiUrl = `https://go.elab.works/api/FairmountStories?code=${process.env.AZURE_API_AUTH_CODE}&spreadsheetId=1JOI70LGU34bC7tAVcePUH2TOEQfhcqppz9vBOpUjsyI`;
 try {
-	// Send as an opaque request, so google accepts;
+	// Send as an opaque request, so our cloud accepts;
 	// A successful response will be code 0, not 200 as is expected
 	fetch(apiUrl, {
 		mode: "no-cors"
@@ -34,7 +34,7 @@ try {
 					else responsesTally[choiceKey] = 1;
 				});
 			});
-			console.log(JSON.stringify(responsesTally));
+
 			writeFileSync(path.join(process.cwd(), '/src/data/responses.json'), JSON.stringify(responsesTally));
 		})
 		.catch((e) => {
