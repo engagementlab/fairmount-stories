@@ -4,6 +4,7 @@
 	export let labelBottom = "";
 	export let disabled = false;
 	export let selected = false;
+	export let submitted = false;
 
 	let mouseOver = false;
 

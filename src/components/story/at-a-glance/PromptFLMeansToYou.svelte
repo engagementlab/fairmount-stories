@@ -131,17 +131,22 @@ let userOptions = [{
 
 let submitted = false;
 let error = false;
-let status = 0
+let status = 0;
+let submittedResponses = [];
 
 const handleSubmit = async () => {
-    const optionsEntries = userOptions
+    const selectedOptions = userOptions
         .filter((option) => {
             return option.selected;
-        })
+        });
+    const optionsEntries = selectedOptions
         .map((option) => {
             return `&entry.498716893=${option.entry}`;
         })
         .join("");
+    submittedResponses = selectedOptions;
+    submitted = true;
+    return
     const prefilledLink = `https://docs.google.com/forms/d/e/1FAIpQLSfTEAiFJGhld3FCTAW5CeHH0gjj5NUAoDWKACYWFzrqhpPPBA/formResponse?usp=pp_url${optionsEntries}&submit=Submit`;
     try {
         // Send as an opaque request, so google accepts;
@@ -159,7 +164,8 @@ const handleSubmit = async () => {
                     error = true;
                     return;
                 }
-                submitted = true
+                submittedResponses = selectedOptions;
+                submitted = true;
             })
             .catch(() => {
                 error = true;
@@ -253,54 +259,49 @@ const handleSubmit = async () => {
                                             </a>
                                         </div>
                                     </div>
-                                    <h3 class="label m-auto my-2" class:hidden={!submitted}>Thank you!</h3>
-                                    <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
-                                                                                        <PromptFlResponses />
 
-                                    <ConsentInfo />
-                                </div>
-                                </div>
+                                    <div class:hidden={!submitted}>
 
-                                <div
-                                    class="flex sm:hidden min-h-[100vh] w-full flex-col gap-3 px-[2vw] py-10 justify-center items-center justify-items-center z-50"
-                                    >
-                                    <div class="flex flex-col items-center mb-5 gap-2">
-                                        <p />
-                                        <h2 class="m-auto prompt text-center z-50">
-                                            If you live near the Fairmount Line,<br /> how do you feel about it?
-                                        </h2>
-                                        <p class="tooltip">(click the circles below!)</p>
-                                    </div>
-                                    <div
-                                        class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
-                                        >
-                                        {#each userOptions.slice(0, 2) as option}
-                                        <OptionItem
-                                            labelTop={option.labelTop}
-                                            labelBottom={option.labelBottom}
-                                            icon={option.icon}
-                                            disabled={submitted}
-                                            bind:selected={option.selected}
-                                            />
-                                            {/each}
-                                            </div>
-                                            <div
-                                                class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
-                                                >
-                                                {#each userOptions.slice(2, 5) as option}
-                                                <OptionItem
-                                                    labelTop={option.labelTop}
-                                                    labelBottom={option.labelBottom}
-                                                    icon={option.icon}
-                                                    disabled={submitted}
-                                                    bind:selected={option.selected}
-                                                    />
-                                                    {/each}
+                                        <h3 class="label m-auto my-2">Thank you!
+                                        </h3>
+                                        <!-- ########### -->
+                                        <div
+                                            class="grid grid-cols-4 row-auto z-50 gap-16 my-10"
+                                            >
+                                            {#each submittedResponses as option}
+                                            <OptionItem
+                                                labelTop={option.labelTop}
+                                                labelBottom={option.labelBottom}
+                                                icon={option.icon}
+                                                disabled={submitted}
+                                                submitted={true}
+                                                bind:selected={option.selected}
+                                                />
+                                                {/each}
+                                                </div>
+                                                </div>
+
+                                                <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
+                                                <PromptFlResponses />
+
+                                                <ConsentInfo />
+                                                </div>
+                                                </div>
+
+                                                <div
+                                                    class="flex sm:hidden min-h-[100vh] w-full flex-col gap-3 px-[2vw] py-10 justify-center items-center justify-items-center z-50"
+                                                    >
+                                                    <div class="flex flex-col items-center mb-5 gap-2">
+                                                        <p />
+                                                        <h2 class="m-auto prompt text-center z-50">
+                                                            If you live near the Fairmount Line,<br /> how do you feel about it?
+                                                        </h2>
+                                                        <p class="tooltip">(click the circles below!)</p>
                                                     </div>
                                                     <div
                                                         class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
                                                         >
-                                                        {#each userOptions.slice(5, 7) as option}
+                                                        {#each userOptions.slice(0, 2) as option}
                                                         <OptionItem
                                                             labelTop={option.labelTop}
                                                             labelBottom={option.labelBottom}
@@ -313,7 +314,7 @@ const handleSubmit = async () => {
                                                             <div
                                                                 class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
                                                                 >
-                                                                {#each userOptions.slice(7, 10) as option}
+                                                                {#each userOptions.slice(2, 5) as option}
                                                                 <OptionItem
                                                                     labelTop={option.labelTop}
                                                                     labelBottom={option.labelBottom}
@@ -326,7 +327,7 @@ const handleSubmit = async () => {
                                                                     <div
                                                                         class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
                                                                         >
-                                                                        {#each userOptions.slice(10, 12) as option}
+                                                                        {#each userOptions.slice(5, 7) as option}
                                                                         <OptionItem
                                                                             labelTop={option.labelTop}
                                                                             labelBottom={option.labelBottom}
@@ -339,7 +340,7 @@ const handleSubmit = async () => {
                                                                             <div
                                                                                 class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
                                                                                 >
-                                                                                {#each userOptions.slice(12, 13) as option}
+                                                                                {#each userOptions.slice(7, 10) as option}
                                                                                 <OptionItem
                                                                                     labelTop={option.labelTop}
                                                                                     labelBottom={option.labelBottom}
@@ -349,29 +350,55 @@ const handleSubmit = async () => {
                                                                                     />
                                                                                     {/each}
                                                                                     </div>
-                                                                                    <div class="flex flex-col gap-2 mb-2 z-50">
-                                                                                        <div class:hidden={submitted}>
-                                                                                            <div class="flex w-full flex-wrap justify-center items-center gap-5">
-                                                                                                <button
-                                                                                                    class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
-                                                                                                    disabled={!userOptions.some((o) => o.selected)}
-                                                                                                    on:click={handleSubmit}
-                                                                                                    aria-label='submit'
-                                                                                                    >
-                                                                                                    <h3 class="label text-gray-700">Submit</h3>
-                                                                                                </button>
-                                                                                                <a
-                                                                                                    href="#after-share-prompt"
-                                                                                                    class="bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 drop-shadow-xl transition hover:scale-110 border-0"
-                                                                                                    >
-                                                                                                    <h3 class="label text-gray-700">{submitted ? "Next" : "Skip"}</h3>
-                                                                                                </a>
+                                                                                    <div
+                                                                                        class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
+                                                                                        >
+                                                                                        {#each userOptions.slice(10, 12) as option}
+                                                                                        <OptionItem
+                                                                                            labelTop={option.labelTop}
+                                                                                            labelBottom={option.labelBottom}
+                                                                                            icon={option.icon}
+                                                                                            disabled={submitted}
+                                                                                            bind:selected={option.selected}
+                                                                                            />
+                                                                                            {/each}
                                                                                             </div>
-                                                                                        </div>
-                                                                                        <h3 class="label m-auto my-2" class:hidden={!submitted}>Thank you!</h3>
-                                                                                        <h3 class="label m-auto my-2 text-red-600 text-sm" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
-                                                                                        <PromptFlResponses />
-                                                                                        <ConsentInfo />
-                                                                                    </div>
-                                                                                    </div>
-                                                                                    </section>
+                                                                                            <div
+                                                                                                class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
+                                                                                                >
+                                                                                                {#each userOptions.slice(12, 13) as option}
+                                                                                                <OptionItem
+                                                                                                    labelTop={option.labelTop}
+                                                                                                    labelBottom={option.labelBottom}
+                                                                                                    icon={option.icon}
+                                                                                                    disabled={submitted}
+                                                                                                    bind:selected={option.selected}
+                                                                                                    />
+                                                                                                    {/each}
+                                                                                                    </div>
+                                                                                                    <div class="flex flex-col gap-2 mb-2 z-50">
+                                                                                                        <div class:hidden={submitted}>
+                                                                                                            <div class="flex w-full flex-wrap justify-center items-center gap-5">
+                                                                                                                <button
+                                                                                                                    class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
+                                                                                                                    disabled={!userOptions.some((o) => o.selected)}
+                                                                                                                    on:click={handleSubmit}
+                                                                                                                    aria-label='submit'
+                                                                                                                    >
+                                                                                                                    <h3 class="label text-gray-700">Submit</h3>
+                                                                                                                </button>
+                                                                                                                <a
+                                                                                                                    href="#after-share-prompt"
+                                                                                                                    class="bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 drop-shadow-xl transition hover:scale-110 border-0"
+                                                                                                                    >
+                                                                                                                    <h3 class="label text-gray-700">{submitted ? "Next" : "Skip"}</h3>
+                                                                                                                </a>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <h3 class="label m-auto my-2" class:hidden={!submitted}>Thank you!</h3>
+                                                                                                        <h3 class="label m-auto my-2 text-red-600 text-sm" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
+                                                                                                        <PromptFlResponses />
+                                                                                                        <ConsentInfo />
+                                                                                                    </div>
+                                                                                                    </div>
+                                                                                                    </section>
