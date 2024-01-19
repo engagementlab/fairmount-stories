@@ -193,19 +193,27 @@ const handleSubmit = async () => {
             {/each}
         </div>
     </div>
+    <!-- TABLET+ -->
     <div
-        class="hidden sm:flex min-h-[100vh] w-full flex-col gap-4 lg:px-4 py-10 justify-center items-center justify-items-center z-50"
+        class="flex min-h-[100vh] w-full flex-col gap-4 lg:px-4 py-10 justify-center items-center justify-items-center z-50"
         >
-        <div class="flex flex-col items-center gap-2 mb-5">
+        <div class="flex flex-col items-center gap-2 mb-5 px-5">
             <h2 class="m-auto prompt text-center z-50">
                 If you live near the Fairmount Line,<br /> how do you feel about it?
             </h2>
             <p class="tooltip">(click the circles below!)</p>
         </div>
+
         <div
-            class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-9"
+            class="flex w-full gap-x-3 gap-y-2 px-[2vw] sm:p-0
+            basis-full flex-wrap flex-row items-start justify-center justify-items-center z-50 sm:gap-x-9 sm:gap-y-3"
+            class:hidden={submitted}
             >
-            {#each userOptions.slice(0, 4) as option}
+            {#each userOptions as option, i}
+            <!-- Mobile breaks -->
+            {#if [2, 5, 7, 10, 12].includes(i)} <div class="block basis-full h-0 sm:hidden"></div>{/if}
+            <!-- Tab+ breaks -->
+            {#if i === 4 || i === 9} <div class="hidden basis-full h-0 sm:block"></div>{/if}
             <OptionItem
                 labelTop={option.labelTop}
                 labelBottom={option.labelBottom}
@@ -215,190 +223,48 @@ const handleSubmit = async () => {
                 />
                 {/each}
                 </div>
-                <div
-                    class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-9"
-                    >
-                    {#each userOptions.slice(4, 9) as option}
-                    <OptionItem
-                        labelTop={option.labelTop}
-                        labelBottom={option.labelBottom}
-                        icon={option.icon}
-                        disabled={submitted}
-                        bind:selected={option.selected}
-                        />
-                        {/each}
+                <div class="flex flex-col gap-4 mb-2 z-50 mt-3">
+                    <div class:hidden={submitted}>
+                        <div class="flex w-full flex-wrap justify-center items-center gap-5">
+                            <button
+                                class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
+                                disabled={!userOptions.some((o) => o.selected)}
+                                on:click={handleSubmit}
+                                >
+                                <h3 class="label text-gray-700">Submit</h3>
+                            </button>
+                            <a
+                                href="#after-share-prompt"
+                                class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
+                                >
+                                <h3 class="label text-gray-700">{submitted ? "Next" : "Skip"}</h3>
+                            </a>
                         </div>
+                    </div>
+
+                    <div class:hidden={!submitted}>
+                        <h3 class="label m-auto my-2">Thank you!
+                        </h3>
                         <div
-                            class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-9"
+                            class="grid grid-cols-4 row-auto z-50 gap-16 my-10"
                             >
-                            {#each userOptions.slice(9, 13) as option}
+                            {#each submittedResponses as option}
                             <OptionItem
                                 labelTop={option.labelTop}
                                 labelBottom={option.labelBottom}
                                 icon={option.icon}
                                 disabled={submitted}
+                                submitted={true}
                                 bind:selected={option.selected}
                                 />
                                 {/each}
                                 </div>
-                                <div class="flex flex-col gap-4 mb-2 z-50">
-                                    <div class:hidden={submitted}>
-                                        <div class="flex w-full flex-wrap justify-center items-center gap-5">
-                                            <button
-                                                class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
-                                                disabled={!userOptions.some((o) => o.selected)}
-                                                on:click={handleSubmit}
-                                                >
-                                                <h3 class="label text-gray-700">Submit</h3>
-                                            </button>
-                                            <a
-                                                href="#after-share-prompt"
-                                                class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
-                                                >
-                                                <h3 class="label text-gray-700">{submitted ? "Next" : "Skip"}</h3>
-                                            </a>
-                                        </div>
-                                    </div>
+                                </div>
 
-                                    <div class:hidden={!submitted}>
+                                <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
+                                <PromptFlResponses />
 
-                                        <h3 class="label m-auto my-2">Thank you!
-                                        </h3>
-                                        <!-- ########### -->
-                                        <div
-                                            class="grid grid-cols-4 row-auto z-50 gap-16 my-10"
-                                            >
-                                            {#each submittedResponses as option}
-                                            <OptionItem
-                                                labelTop={option.labelTop}
-                                                labelBottom={option.labelBottom}
-                                                icon={option.icon}
-                                                disabled={submitted}
-                                                submitted={true}
-                                                bind:selected={option.selected}
-                                                />
-                                                {/each}
-                                                </div>
-                                                </div>
-
-                                                <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
-                                                <PromptFlResponses />
-
-                                                <ConsentInfo />
-                                                </div>
-                                                </div>
-
-                                                <div
-                                                    class="flex sm:hidden min-h-[100vh] w-full flex-col gap-3 px-[2vw] py-10 justify-center items-center justify-items-center z-50"
-                                                    >
-                                                    <div class="flex flex-col items-center mb-5 gap-2">
-                                                        <p />
-                                                        <h2 class="m-auto prompt text-center z-50">
-                                                            If you live near the Fairmount Line,<br /> how do you feel about it?
-                                                        </h2>
-                                                        <p class="tooltip">(click the circles below!)</p>
-                                                    </div>
-                                                    <div
-                                                        class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
-                                                        >
-                                                        {#each userOptions.slice(0, 2) as option}
-                                                        <OptionItem
-                                                            labelTop={option.labelTop}
-                                                            labelBottom={option.labelBottom}
-                                                            icon={option.icon}
-                                                            disabled={submitted}
-                                                            bind:selected={option.selected}
-                                                            />
-                                                            {/each}
-                                                            </div>
-                                                            <div
-                                                                class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
-                                                                >
-                                                                {#each userOptions.slice(2, 5) as option}
-                                                                <OptionItem
-                                                                    labelTop={option.labelTop}
-                                                                    labelBottom={option.labelBottom}
-                                                                    icon={option.icon}
-                                                                    disabled={submitted}
-                                                                    bind:selected={option.selected}
-                                                                    />
-                                                                    {/each}
-                                                                    </div>
-                                                                    <div
-                                                                        class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
-                                                                        >
-                                                                        {#each userOptions.slice(5, 7) as option}
-                                                                        <OptionItem
-                                                                            labelTop={option.labelTop}
-                                                                            labelBottom={option.labelBottom}
-                                                                            icon={option.icon}
-                                                                            disabled={submitted}
-                                                                            bind:selected={option.selected}
-                                                                            />
-                                                                            {/each}
-                                                                            </div>
-                                                                            <div
-                                                                                class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
-                                                                                >
-                                                                                {#each userOptions.slice(7, 10) as option}
-                                                                                <OptionItem
-                                                                                    labelTop={option.labelTop}
-                                                                                    labelBottom={option.labelBottom}
-                                                                                    icon={option.icon}
-                                                                                    disabled={submitted}
-                                                                                    bind:selected={option.selected}
-                                                                                    />
-                                                                                    {/each}
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
-                                                                                        >
-                                                                                        {#each userOptions.slice(10, 12) as option}
-                                                                                        <OptionItem
-                                                                                            labelTop={option.labelTop}
-                                                                                            labelBottom={option.labelBottom}
-                                                                                            icon={option.icon}
-                                                                                            disabled={submitted}
-                                                                                            bind:selected={option.selected}
-                                                                                            />
-                                                                                            {/each}
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="flex basis-full flex-wrap items-start justify-center justify-items-center z-50 gap-[6vw]"
-                                                                                                >
-                                                                                                {#each userOptions.slice(12, 13) as option}
-                                                                                                <OptionItem
-                                                                                                    labelTop={option.labelTop}
-                                                                                                    labelBottom={option.labelBottom}
-                                                                                                    icon={option.icon}
-                                                                                                    disabled={submitted}
-                                                                                                    bind:selected={option.selected}
-                                                                                                    />
-                                                                                                    {/each}
-                                                                                                    </div>
-                                                                                                    <div class="flex flex-col gap-2 mb-2 z-50">
-                                                                                                        <div class:hidden={submitted}>
-                                                                                                            <div class="flex w-full flex-wrap justify-center items-center gap-5">
-                                                                                                                <button
-                                                                                                                    class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
-                                                                                                                    disabled={!userOptions.some((o) => o.selected)}
-                                                                                                                    on:click={handleSubmit}
-                                                                                                                    aria-label='submit'
-                                                                                                                    >
-                                                                                                                    <h3 class="label text-gray-700">Submit</h3>
-                                                                                                                </button>
-                                                                                                                <a
-                                                                                                                    href="#after-share-prompt"
-                                                                                                                    class="bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 drop-shadow-xl transition hover:scale-110 border-0"
-                                                                                                                    >
-                                                                                                                    <h3 class="label text-gray-700">{submitted ? "Next" : "Skip"}</h3>
-                                                                                                                </a>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <h3 class="label m-auto my-2" class:hidden={!submitted}>Thank you!</h3>
-                                                                                                        <h3 class="label m-auto my-2 text-red-600 text-sm" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
-                                                                                                        <PromptFlResponses />
-                                                                                                        <ConsentInfo />
-                                                                                                    </div>
-                                                                                                    </div>
-                                                                                                    </section>
+                                <ConsentInfo />
+                                </div>
+                                </div>
+                                </section>
