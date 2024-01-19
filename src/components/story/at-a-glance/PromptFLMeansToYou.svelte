@@ -19,6 +19,8 @@ import {
 } from "lucide-svelte";
 import PromptFlResponses from "$components/helpers/PromptFLResponses.svelte";
 
+import responses from "$data/responses.json";
+
 let narratorOptions = [{
         labelTop: "easy",
         labelBottom: "transit",
@@ -133,6 +135,7 @@ let submitted = false;
 let error = false;
 let status = 0;
 let submittedResponses = [];
+const allResponsesSum = Object.values(responses).reduce((acc, currVal) => acc + currVal, 0)
 
 const handleSubmit = async () => {
     const selectedOptions = userOptions
@@ -257,6 +260,9 @@ const handleSubmit = async () => {
                                 submitted={true}
                                 bind:selected={option.selected}
                                 />
+                                
+                                {responses[option.entry]}
+                                {`${Math.round((responses[option.entry] / allResponsesSum) * 100)}%`}
                                 {/each}
                                 </div>
                                 </div>
