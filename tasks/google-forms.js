@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { writeFileSync } from "node:fs";
+import { writeFileSync, rmSync } from "node:fs";
 import path from "node:path";
 import process from "node:process";
 
@@ -30,11 +30,13 @@ try {
 				if (!submission || !submission[0] || submission[0].length < 1) return;
 				const responses = submission[0].split(", ");
 				responses.forEach((choiceKey) => {
-					if (responsesTally[choiceKey]) responsesTally[choiceKey]++;
-					else responsesTally[choiceKey] = 1;
+					const keyFormatted =  choiceKey.replaceAll(" ", "+")
+					if (responsesTally[keyFormatted]) responsesTally[keyFormatted]++;
+					else responsesTally[keyFormatted] = 1;
 				});
 			});
 
+			rmSync(path.join(process.cwd(), "/src/data/responses.json"));
 			writeFileSync(path.join(process.cwd(), '/src/data/responses.json'), JSON.stringify(responsesTally));
 		})
 		.catch((e) => {
