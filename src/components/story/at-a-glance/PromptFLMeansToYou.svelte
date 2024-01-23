@@ -204,7 +204,10 @@ const handleSubmit = async () => {
             <h2 class="m-auto prompt text-center z-50">
                 If you live near the Fairmount Line,<br /> how do you feel about it?
             </h2>
-            <p class="tooltip">(click the circles below!)</p>
+            <p class="tooltip" class:hidden={submitted}>
+                (click the circles below!)</p>
+            <p class="tooltip" class:hidden={!submitted}>Thank you for your vote!
+            </p>
         </div>
 
         <div
@@ -246,8 +249,6 @@ const handleSubmit = async () => {
                     </div>
 
                     <div class:hidden={!submitted}>
-                        <h3 class="label m-auto my-2">Thank you!
-                        </h3>
                         <div
                             class="grid grid-cols-4 row-auto z-50 gap-16 my-10"
                             >
@@ -260,7 +261,7 @@ const handleSubmit = async () => {
                                 submitted={true}
                                 bind:selected={option.selected}
                                 />
-                                
+
                                 {responses[option.entry]}
                                 {`${Math.round((responses[option.entry] / allResponsesSum) * 100)}%`}
                                 {/each}
@@ -268,7 +269,7 @@ const handleSubmit = async () => {
                                 </div>
 
                                 <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
-                                <PromptFlResponses />
+                                <!-- <PromptFlResponses /> -->
 
                                 <ConsentInfo />
                                 </div>
