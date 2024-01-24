@@ -252,26 +252,40 @@ const handleSubmit = async () => {
                         <div
                             class="grid grid-cols-4 row-auto z-50 gap-16 my-10"
                             >
-                            {#each submittedResponses as option}
-                            <OptionItem
-                                labelTop={option.labelTop}
-                                labelBottom={option.labelBottom}
-                                icon={option.icon}
-                                disabled={submitted}
-                                submitted={true}
-                                bind:selected={option.selected}
-                                />
+                            {#each submittedResponses as option, i}
+                            {@const percent = `${Math.round((responses[option.entry] / allResponsesSum) * 100)}%`}
+                            <div class="flex flex-col">
+                                <OptionItem
+                                    labelTop={option.labelTop}
+                                    labelBottom={option.labelBottom}
+                                    icon={option.icon}
+                                    disabled={submitted}
+                                    submitted={true}
+                                    bind:selected={option.selected}
+                                    />
 
-                                {responses[option.entry]}
-                                {`${Math.round((responses[option.entry] / allResponsesSum) * 100)}%`}
-                                {/each}
-                                </div>
-                                </div>
+                                    <div class="flex flex-col items-center justify-center w-40 h-40 bg-fuchsia-800 text-white rounded-full aspect-square tooltip">
+                                        <p class="py-2">
+                                            {responses[option.entry]} votes
+                                        </p>
+                                        <svg role="status" class="w-24 h-3">
+                                            <rect x="1" y="1" class='w-24 h-3 stroke-fuchsia-800 fill-white' />
+                                            <rect x="1" y="1" class={`h-3 fill-yellow-500 animate-[fillBar_1s_ease-in-out]`} style={`--percentage: ${percent}; animation-delay: ${i*.3}s; animation-iteration-count: 1;`} />
+                                        </svg>
+                                        <div class="py-2">
+                                            {percent} of voters
+                                        </div>
+                                    </div>
+                                    </div>
 
-                                <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
-                                <!-- <PromptFlResponses /> -->
+                                    {/each}
+                                    </div>
+                                    </div>
 
-                                <ConsentInfo />
-                                </div>
-                                </div>
-                                </section>
+                                    <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
+                                    <!-- <PromptFlResponses /> -->
+
+                                    <ConsentInfo />
+                                    </div>
+                                    </div>
+                                    </section>

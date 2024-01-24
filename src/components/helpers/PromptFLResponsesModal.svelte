@@ -9,7 +9,6 @@ let dialog;
 
 $: if (dialog && showModal) {
     dialog.showModal();
-    console.log(responses)
 }
 </script>
 
