@@ -240,7 +240,7 @@ const handleSubmit = async () => {
                                 <h3 class="label text-gray-700">Submit</h3>
                             </button>
                             <a
-                                href="#after-share-prompt"
+                                href="#top-responses"
                                 class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
                                 >
                                 <h3 class="label text-gray-700">{submitted ? "Next" : "Skip"}</h3>
@@ -319,7 +319,8 @@ const handleSubmit = async () => {
 
                                             <ConsentInfo />
 
-                                            <h5 class='uppercase text-center'>What Do People Care Most About Overall?</h5>
+                                            <div id="top-responses" class="">
+                                            <h5 class='uppercase text-center mt-28'>What Do People Care Most About Overall?</h5>
                                             <div class="flex flex-col md:flex-row md:gap-x-12">
                                                 {#each Object.keys(responses).slice(0 ,3) as response, i}
                                                 {@const option =  userOptions.find(o => o.entry === response)}
@@ -352,6 +353,8 @@ const handleSubmit = async () => {
 
                                                                 {/each}
                                                                 </div>
+                                                                </div>
+                                                                
                                                                 </div>
                                                                 </div>
                                                                 </section>
