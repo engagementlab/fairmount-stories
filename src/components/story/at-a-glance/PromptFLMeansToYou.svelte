@@ -250,10 +250,10 @@ const handleSubmit = async () => {
                     <!-- class:hidden={!submitted} -->
                     <div >
                         <div
-                            class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 row-auto z-50 gap-8 gap-y-9 xl:gap-y-16 my-10" 
+                            class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 row-auto z-50 gap-8 gap-y-9 md:gap-y-12 xl:gap-y-16 my-10"
                             >
-                            {#each {length: 10} as _, i}
-                            <div class={`flex flex-col items-center opacity-0 ${i%2===0 ? ' animate-enter-bottom': 'animate-enter-top'}`} style={`--delay: ${i*(.1*Math.random())}s`}>
+                            <!-- {#each {length: 10} as _, i}
+                            <div class={`flex flex-col items-center opacity-0 ${i%2 === 0 ? ' animate-enter-bottom': 'animate-enter-top'}`} style={`--delay: ${i*(.1*Math.random())}s`}>
                                 <OptionItem
                                     labelTop={userOptions[0].labelTop}
                                     labelBottom={userOptions[0].labelBottom}
@@ -265,57 +265,57 @@ const handleSubmit = async () => {
                                     />
 
                                     <div class="flex flex-col items-center justify-center w-[30vw] sm:w-[6em] md:w-[7em] lg:w-[8em] mt-5 bg-fuchsia-800 text-white rounded-full aspect-square tooltip">
-                                        <h5 class='text-sm'>
+                                        <h5 class='text-sm md:text-lg lg:text-2xl'>
                                             400 votes
                                             </h5
                                             >
-                                            <svg role="status" class="w-16 lg:w-24 h-3 mt-1">
-                                                <rect x="1" y="1" class='w-24 h-3 stroke-fuchsia-800 fill-white' />
+                                            <svg role="status" class="w-16 md:w-20 lg:w-24 h-3 mt-1">
+                                                <rect x="1" y="1" class='w-full h-3 stroke-fuchsia-800 fill-white' />
                                                 <rect x="1" y="1" class='h-3 fill-yellow-500 animate-fill' style={`--percentage: ${(100*Math.random())}%; --delay: ${i*.2}s`} />
                                             </svg>
-                                            <h5 class='text-sm font-light mt-2'>
-                                               51% voters
+                                            <h5 class='text-sm lg:text-xl font-light mt-2'>
+                                                51% voters
                                             </h5>
 
                                             </div>
                                             </div>
-{/each}
-                                            {#each submittedResponses as option, i}
-                                            {@const percent = `${Math.round((responses[option.entry] / allResponsesSum) * 100)}%`}
-                                            <div class="flex flex-col">
-                                                <OptionItem
-                                                    labelTop={option.labelTop}
-                                                    labelBottom={option.labelBottom}
-                                                    icon={option.icon}
-                                                    disabled={submitted}
-                                                    submitted={true}
-                                                    bind:selected={option.selected}
-                                                    />
+                            {/each} -->
+                            {#each submittedResponses as option, i}
+                            {@const percent = `${Math.round((responses[option.entry] / allResponsesSum) * 100)}%`}
+                            <div class={`flex flex-col items-center opacity-0 ${i%2 === 0 ? ' animate-enter-bottom': 'animate-enter-top'}`} style={`--delay: ${i*(.1*Math.random())}s`}>
+                                <OptionItem
+                                    labelTop={option.labelTop}
+                                    labelBottom={option.labelBottom}
+                                    icon={option.icon}
+                                    disabled={submitted}
+                                    submitted={true}
+                                    selected={true}
+                                    result={true}
+                                    />
 
-                                                    <div class="flex flex-col items-center justify-center w-40 h-40 bg-fuchsia-800 text-white rounded-full aspect-square tooltip">
-                                                        <p class="py-2">
-                                                            {responses[option.entry]} votes
-                                                        </p>
-                                                        <svg role="status" class="w-24 h-3">
-                                                            <rect x="1" y="1" class='w-24 h-3 stroke-fuchsia-800 fill-white' />
-                                                            <!-- ;  -->
-                                                            <rect x="1" y="1" class={`h-3 fill-yellow-500 animate-fill`} style={`--percentage: ${percent};`} />
-                                                            <!-- <rect x="1" y="1" class={`h-3 fill-yellow-500 animate-[fillBar_1s_ease-in-out]`} style={`--percentage: ${percent}; animation-delay: ${i*.3}s; animation-iteration-count: 1; animation-fill-mode: forwards;`} /> -->
-                                                        </svg>
-                                                        <div class="py-2">
-                                                            {percent} of voters
-                                                        </div>
-                                                    </div>
-                                                    </div>
+                                    <div class="flex flex-col items-center justify-center w-[30vw] sm:w-[6em] md:w-[7em] lg:w-[8em] mt-5 bg-fuchsia-800 text-white rounded-full aspect-square tooltip">
+                                        <h5 class='text-sm md:text-lg lg:text-2xl'>
+                                            {responses[option.entry]} votes
+                                            </h5
+                                            >
+                                            <svg role="status" class="w-16 lg:w-24 h-3 mt-1">
+                                                <rect x="1" y="1" class='w-24 h-3 stroke-fuchsia-800 fill-white' />
+                                                <rect x="1" y="1" class='h-3 fill-yellow-500 animate-fill' style={`--percentage: ${percent}; --delay: ${i*.2}s`} />
+                                            </svg>
+                                            <h5 class='text-sm lg:text-xl font-light mt-2'>
+                                                {percent} voters
+                                            </h5>
 
-                                                    {/each}
-                                                    </div>
-                                                    </div>
+                                            </div>
+                                            </div>
+                                            {/each}
+                                            </div>
+                                            </div>
 
-                                                    <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
-                                                    <!-- <PromptFlResponses /> -->
+                                            <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
+                                            <!-- <PromptFlResponses /> -->
 
-                                                    <ConsentInfo />
-                                                    </div>
-                                                    </div>
-                                                    </section>
+                                            <ConsentInfo />
+                                            </div>
+                                            </div>
+                                            </section>
