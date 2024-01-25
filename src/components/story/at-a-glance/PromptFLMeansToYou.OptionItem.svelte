@@ -30,7 +30,7 @@ const handleMouseLeave = () => {
     on:mouseover={handleMouseOver}
     on:mouseleave={handleMouseLeave}
     {disabled}
-    class="bg-fuchsia-800 md:hover:!bg-yellow-500 rounded-full w-[25vw] sm:w-[6em] md:w-[7em] lg:w-[8em] aspect-square transition duration-[50ms] group"
+    class="bg-fuchsia-800 md:hover:!bg-yellow-500 rounded-full w-[25vw] sm:w-[6em] md:w-[7em] lg:w-[8em] aspect-square transition duration-[50ms] group max-h-32"
     class:rotate-0={selected}
     class:scale-125={selected}
     class:bg-yellow-500={selected}

@@ -39,6 +39,11 @@ try {
 				});
 			});
 
+			// Sort responses by vote count descending to make it easy to display the top three on client
+			responsesTally = Object.keys(responsesTally)
+				.sort((a, b) => responsesTally[b] - responsesTally[a])
+				.reduce((acc, key) => ((acc[key] = responsesTally[key]), acc), {});
+
 			// Write the responses to JSON file
 			rmSync(path.join(process.cwd(), "/src/data/responses.json"));
 			writeFileSync(path.join(process.cwd(), '/src/data/responses.json'), JSON.stringify(responsesTally));
