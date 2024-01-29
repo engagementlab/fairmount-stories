@@ -120,13 +120,6 @@ let userOptions = [{
         labelBottom: "ride",
         icon: Sparkles,
         selected: false
-    },
-    {
-        entry: "Something+else?",
-        labelTop: "something",
-        labelBottom: "else?",
-        icon: HelpCircle,
-        selected: false
     }
 ];
 
