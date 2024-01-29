@@ -4,8 +4,8 @@ export default {
 	theme: {
 		extend: {
 			animation: {
-				fill: "fillBar 1s ease-in-out var(--delay) forwards",
-				"enter-top": "enter .7s ease-in-out var(--delay) forwards",
+				fill: "fillBar 1s cubic-bezier(.99,.01,.64,1) var(--delay) forwards",
+				"enter": "enter .7s ease-in-out var(--delay) forwards",
 				"enter-bottom": "enterBottom .7s ease-in-out var(--delay) forwards"
 			},
 			keyframes: {
@@ -20,7 +20,8 @@ export default {
 				enter: {
 					"0%": {
 						opacity: 0,
-						transform: "translateY(-5%)"
+						transform: "translateY(calc(var(--nudge)*5%))"
+						//  transform: translateX(calc(var(--child-index)*10%))
 					},
 					"100%": {
 						opacity: 1,
@@ -30,10 +31,10 @@ export default {
 				enterBottom: {
 					"0%": {
 						opacity: 0,
-            transform: "translateY(5%)"
+						transform: "translateY(5%)"
 					},
 					"100%": {
-            opacity: 1,
+						opacity: 1,
 						transform: "translateY(0)"
 					}
 				}

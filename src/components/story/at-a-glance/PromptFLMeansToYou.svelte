@@ -17,7 +17,6 @@ import {
     Sparkles,
     Users2
 } from "lucide-svelte";
-import PromptFlResponses from "$components/helpers/PromptFLResponses.svelte";
 
 import responses from "$data/responses.json";
 
@@ -149,7 +148,7 @@ const handleSubmit = async () => {
         .join("");
     submittedResponses = selectedOptions;
     submitted = true;
-    return
+    // return
     const prefilledLink = `https://docs.google.com/forms/d/e/1FAIpQLSfTEAiFJGhld3FCTAW5CeHH0gjj5NUAoDWKACYWFzrqhpPPBA/formResponse?usp=pp_url${optionsEntries}&submit=Submit`;
     try {
         // Send as an opaque request, so google accepts;
@@ -251,10 +250,12 @@ const handleSubmit = async () => {
                     <div class:hidden={!submitted}>
                         <h5 class='uppercase text-center'>How Many People Share Your Feelings About The Line?</h5>
                         <div
-                            class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 row-auto z-50 gap-8 gap-y-9 md:gap-y-12 xl:gap-y-16 my-10"
+                            class="flex flex-row flex-wrap justify-center z-50 gap-8 gap-y-9 md:gap-y-12 xl:gap-y-16 my-10"
                             >
-                            <!-- {#each {length: 10} as _, i}
-                            <div class={`flex flex-col items-center opacity-0 ${i%2 === 0 ? ' animate-enter-bottom': 'animate-enter-top'}`} style={`--delay: ${i*(.1*Math.random())}s`}>
+                            <!-- {#each {length: 12} as _, i}
+                            {#if i % 5  === 0} <div class="basis-full hidden lg:block"></div>{/if}
+                            <div class={`flex flex-col items-center opacity-0 animate-enter`} 
+                                 style={`--delay: ${i*(.1*Math.random())}s; --nudge: ${Math.floor(Math.random() * 11) - 5}`}>
                                 <OptionItem
                                     labelTop={userOptions[0].labelTop}
                                     labelBottom={userOptions[0].labelBottom}
@@ -283,8 +284,12 @@ const handleSubmit = async () => {
                             {/each} -->
                             {#each submittedResponses as option, i}
                             {@const percent = Math.round((responses[option.entry] / allResponsesSum) * 100)}
-                            <div class={`flex flex-col items-center opacity-0 ${i%2 === 0 ? ' animate-enter-bottom': 'animate-enter-top'}`} style={`--delay: ${i*(.1*Math.random())}s`}>
-                                <OptionItem
+                            {#if i % 5  === 0} <div class="basis-full hidden lg:block"></div>{/if}
+                            <!-- <div class={`flex flex-col items-center opacity-0 ${i%2 === 0 ? 'animate-enter-bottom': 'animate-enter-top'}`} style={`--delay: ${i*(.1*Math.random())}s`}> -->
+
+                            <div class={`flex flex-col items-center opacity-0 animate-enter`} 
+                                 style={`--delay: ${i*(.1*Math.random())}s; --nudge: ${Math.floor(Math.random() * 11) - 5}`}>
+                            <OptionItem
                                     labelTop={option.labelTop}
                                     labelBottom={option.labelBottom}
                                     icon={option.icon}
@@ -296,7 +301,11 @@ const handleSubmit = async () => {
 
                                     <div class="flex flex-col items-center justify-center w-[30vw] sm:w-[6em] md:w-[7em] lg:w-[8em] mt-5 bg-fuchsia-800 text-white rounded-full aspect-square tooltip">
                                         <h5 class='text-sm md:text-lg lg:text-2xl'>
+                                            {#if responses[option.entry] === 1}
+                                            1 vote
+                                            {:else}
                                             {`${!responses[option.entry] ? 'No' : responses[option.entry]} votes`}
+                                            {/if}
                                             </h5
                                             >
                                             {#if !isNaN(percent)}
@@ -320,41 +329,40 @@ const handleSubmit = async () => {
                                             <ConsentInfo />
 
                                             <div id="top-responses" class="">
-                                            <h5 class='uppercase text-center mt-28'>What Do People Care Most About Overall?</h5>
-                                            <div class="flex flex-col md:flex-row md:gap-x-12">
-                                                {#each Object.keys(responses).slice(0 ,3) as response, i}
-                                                {@const option =  userOptions.find(o => o.entry === response)}
-                                                {@const percent = Math.round((responses[response] / allResponsesSum) * 100)}
-                                                <div class="flex flex-wrap justify-center items-center">
-                                                    <h2 class="text-9xl mr-3"><span class="prompt text-black">#</span>{i+1}</h2>
-                                                    <OptionItem
-                                                        labelTop={option.labelTop}
-                                                        labelBottom={option.labelBottom}
-                                                        icon={option.icon}
-                                                        disabled={submitted}
-                                                        submitted={true}
-                                                        result={true}
-                                                        />
-                                                        <div class="block basis-full h-0"></div>
-                                                        <div class="flex flex-col items-center justify-center w-[30vw] sm:w-[6em] md:w-[7em] lg:w-[8em] mt-5 bg-yellow-500 text-white rounded-full aspect-square tooltip">
-                                                            <h5 class='text-sm md:text-lg lg:text-2xl'>
-                                                                {`${responses[response]} votes`}
-                                                                </h5
-                                                                >
-                                                                <svg role="status" class="w-16 lg:w-24 h-3 mt-1">
-                                                                    <rect x="1" y="1" class='w-24 h-3 fill-white' />
-                                                                    <rect x="1" y="1" class='h-3 fill-fuchsia-800 animate-fill' style={`--percentage: ${percent}%; --delay: ${i*.2}s`} />
-                                                                </svg>
-                                                                <h5 class='text-sm lg:text-xl font-light mt-2'>
-                                                                    {percent}% voters
-                                                                </h5>
-                                                                </div>
-                                                                </div>
+                                                <h5 class='uppercase text-center mt-28'>What Do People Care Most About Overall?</h5>
+                                                <div class="flex flex-col md:flex-row md:gap-x-12 justify-center">
+                                                    {#each Object.keys(responses).slice(0 ,3) as response, i}
+                                                    {@const option =  userOptions.find(o => o.entry === response)}
+                                                    {@const percent = Math.round((responses[response] / allResponsesSum) * 100)}
+                                                    <div class="flex flex-wrap justify-center items-center">
+                                                        <h2 class="text-9xl mr-3"><span class="prompt text-black">#</span>{i+1}</h2>
+                                                        <OptionItem
+                                                            labelTop={option.labelTop}
+                                                            labelBottom={option.labelBottom}
+                                                            icon={option.icon}
+                                                            disabled={submitted}
+                                                            result={true}
+                                                            />
+                                                            <div class="block basis-full h-0"></div>
+                                                            <div class="flex flex-col items-center justify-center w-[30vw] sm:w-[6em] md:w-[7em] lg:w-[8em] mt-5 bg-yellow-500 text-white rounded-full aspect-square tooltip">
+                                                                <h5 class='text-sm md:text-lg lg:text-2xl'>
+                                                                    {`${responses[response]} votes`}
+                                                                    </h5
+                                                                    >
+                                                                    <svg role="status" class="w-16 lg:w-24 h-3 mt-1">
+                                                                        <rect x="1" y="1" class='w-24 h-3 fill-white' />
+                                                                        <rect x="1" y="1" class='h-3 fill-fuchsia-800 animate-fill' style={`--percentage: ${percent}%; --delay: ${i*.2}s`} />
+                                                                    </svg>
+                                                                    <h5 class='text-sm lg:text-xl font-light mt-2'>
+                                                                        {percent}% voters
+                                                                    </h5>
+                                                                    </div>
+                                                                    </div>
 
-                                                                {/each}
-                                                                </div>
-                                                                </div>
-                                                                
-                                                                </div>
-                                                                </div>
-                                                                </section>
+                                                                    {/each}
+                                                                    </div>
+                                                                    </div>
+
+                                                                    </div>
+                                                                    </div>
+                                                                    </section>
