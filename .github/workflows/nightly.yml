@@ -19,7 +19,6 @@ jobs:
     steps:
       - name: Checkout code on prod branch
         uses: actions/checkout@v4
-        if: ${{ github.event_name != 'pull_request' }}
         with:
             ref: production
 
