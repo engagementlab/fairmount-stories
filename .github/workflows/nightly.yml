@@ -30,7 +30,7 @@ jobs:
       - name: Install
         run: |
          npm i -g yarn dotenv 
-         yarn
+         yarn install --production=false
             
       - name: Get responses from Google Sheet
         run: node tasks/google-forms.js
