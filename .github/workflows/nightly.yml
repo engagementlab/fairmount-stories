@@ -27,13 +27,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Install
+        run: |
+         npm i -g yarn 
+         yarn
+            
       - name: Get responses from Google Sheet
         run: node tasks/google-forms.js
  
       - name: Make production build
-        run: |
-          yarn          
-          yarn build
+        run: yarn build
                
       - name: Login to Azure
         uses: azure/login@v1
