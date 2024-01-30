@@ -23,13 +23,13 @@ jobs:
             ref: production
 
       - name: Setup node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Install
         run: |
-         npm i -g yarn 
+         npm i -g yarn dotenv 
          yarn
             
       - name: Get responses from Google Sheet
@@ -39,7 +39,7 @@ jobs:
         run: yarn build
                
       - name: Login to Azure
-        uses: azure/login@v1
+        uses: azure/login@v1.6.1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
