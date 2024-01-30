@@ -8,6 +8,7 @@
 
 	$: if (dialog && showModal) {
 		dialog.showModal();
+		dialog.scrollTo(0, 0);
 	}
 </script>
 

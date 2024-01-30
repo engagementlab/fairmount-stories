@@ -17,7 +17,6 @@ import {
     Sparkles,
     Users2
 } from "lucide-svelte";
-import PromptFlResponses from "$components/helpers/PromptFLResponses.svelte";
 
 import responses from "$data/responses.json";
 
@@ -121,13 +120,6 @@ let userOptions = [{
         labelBottom: "ride",
         icon: Sparkles,
         selected: false
-    },
-    {
-        entry: "Something+else?",
-        labelTop: "something",
-        labelBottom: "else?",
-        icon: HelpCircle,
-        selected: false
     }
 ];
 
@@ -149,7 +141,7 @@ const handleSubmit = async () => {
         .join("");
     submittedResponses = selectedOptions;
     submitted = true;
-    return
+    // return
     const prefilledLink = `https://docs.google.com/forms/d/e/1FAIpQLSfTEAiFJGhld3FCTAW5CeHH0gjj5NUAoDWKACYWFzrqhpPPBA/formResponse?usp=pp_url${optionsEntries}&submit=Submit`;
     try {
         // Send as an opaque request, so google accepts;
@@ -204,7 +196,10 @@ const handleSubmit = async () => {
             <h2 class="m-auto prompt text-center z-50">
                 If you live near the Fairmount Line,<br /> how do you feel about it?
             </h2>
-            <p class="tooltip">(click the circles below!)</p>
+            <p class="tooltip" class:hidden={submitted}>
+                (click the circles below!)</p>
+            <p class="tooltip" class:hidden={!submitted}>Thank you for your vote!
+            </p>
         </div>
 
         <div
@@ -237,7 +232,7 @@ const handleSubmit = async () => {
                                 <h3 class="label text-gray-700">Submit</h3>
                             </button>
                             <a
-                                href="#after-share-prompt"
+                                href="#top-responses"
                                 class="bg-white px-4 py-2 rounded-full hover:bg-gray-200 drop-shadow-xl transition hover:scale-110 border-0"
                                 >
                                 <h3 class="label text-gray-700">{submitted ? "Next" : "Skip"}</h3>
@@ -246,31 +241,121 @@ const handleSubmit = async () => {
                     </div>
 
                     <div class:hidden={!submitted}>
-                        <h3 class="label m-auto my-2">Thank you!
-                        </h3>
+                        <h5 class='uppercase text-center'>How Many People Share Your Feelings About The Line?</h5>
                         <div
-                            class="grid grid-cols-4 row-auto z-50 gap-16 my-10"
+                            class="flex flex-row flex-wrap justify-center z-50 gap-8 gap-y-9 md:gap-y-12 xl:gap-y-16 my-10"
                             >
-                            {#each submittedResponses as option}
+                            <!-- {#each {length: 12} as _, i}
+                            {#if i % 5  === 0} <div class="basis-full hidden lg:block"></div>{/if}
+                            <div class={`flex flex-col items-center opacity-0 animate-enter`} 
+                                 style={`--delay: ${i*(.1*Math.random())}s; --nudge: ${Math.floor(Math.random() * 11) - 5}`}>
+                                <OptionItem
+                                    labelTop={userOptions[0].labelTop}
+                                    labelBottom={userOptions[0].labelBottom}
+                                    icon={userOptions[0].icon}
+                                    disabled={submitted}
+                                    submitted={true}
+                                    selected={true}
+                                    result={true}
+                                    />
+
+                                    <div class="flex flex-col items-center justify-center w-[30vw] sm:w-[6em] md:w-[7em] lg:w-[8em] mt-5 bg-fuchsia-800 text-white rounded-full aspect-square tooltip">
+                                        <h5 class='text-sm md:text-lg lg:text-2xl'>
+                                            400 votes
+                                            </h5
+                                            >
+                                            <svg role="status" class="w-16 md:w-20 lg:w-24 h-3 mt-1">
+                                                <rect x="1" y="1" class='w-full h-3 stroke-fuchsia-800 fill-white' />
+                                                <rect x="1" y="1" class='h-3 fill-yellow-500 animate-fill' style={`--percentage: ${(100*Math.random())}%; --delay: ${i*.2}s`} />
+                                            </svg>
+                                            <h5 class='text-sm lg:text-xl font-light mt-2'>
+                                                51% voters
+                                            </h5>
+
+                                            </div>
+                                            </div>
+                            {/each} -->
+                            {#each submittedResponses as option, i}
+                            {@const percent = Math.round((responses[option.entry] / allResponsesSum) * 100)}
+                            {#if i % 5  === 0} <div class="basis-full hidden lg:block"></div>{/if}
+                            <!-- <div class={`flex flex-col items-center opacity-0 ${i%2 === 0 ? 'animate-enter-bottom': 'animate-enter-top'}`} style={`--delay: ${i*(.1*Math.random())}s`}> -->
+
+                            <div class={`flex flex-col items-center opacity-0 animate-enter`} 
+                                 style={`--delay: ${i*(.1*Math.random())}s; --nudge: ${Math.floor(Math.random() * 11) - 5}`}>
                             <OptionItem
-                                labelTop={option.labelTop}
-                                labelBottom={option.labelBottom}
-                                icon={option.icon}
-                                disabled={submitted}
-                                submitted={true}
-                                bind:selected={option.selected}
-                                />
-                                
-                                {responses[option.entry]}
-                                {`${Math.round((responses[option.entry] / allResponsesSum) * 100)}%`}
-                                {/each}
-                                </div>
-                                </div>
+                                    labelTop={option.labelTop}
+                                    labelBottom={option.labelBottom}
+                                    icon={option.icon}
+                                    disabled={submitted}
+                                    submitted={true}
+                                    selected={true}
+                                    result={true}
+                                    />
 
-                                <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
-                                <PromptFlResponses />
+                                    <div class="flex flex-col items-center justify-center w-[30vw] sm:w-[6em] md:w-[7em] lg:w-[8em] mt-5 bg-fuchsia-800 text-white rounded-full aspect-square tooltip">
+                                        <h5 class='text-sm md:text-lg lg:text-2xl'>
+                                            {#if responses[option.entry] === 1}
+                                            1 vote
+                                            {:else}
+                                            {`${!responses[option.entry] ? 'No' : responses[option.entry]} votes`}
+                                            {/if}
+                                            </h5
+                                            >
+                                            {#if !isNaN(percent)}
+                                            <svg role="status" class="w-16 lg:w-24 h-3 mt-1">
+                                                <rect x="1" y="1" class='w-24 h-3 stroke-fuchsia-800 fill-white' />
+                                                <rect x="1" y="1" class='h-3 fill-yellow-500 animate-fill' style={`--percentage: ${percent}%; --delay: ${i*.2}s`} />
+                                            </svg>
+                                            <h5 class='text-sm lg:text-xl font-light mt-2'>
+                                                {percent}% voters
+                                            </h5>
+                                            {/if}
+                                            </div>
+                                            </div>
+                                            {/each}
+                                            </div>
+                                            </div>
 
-                                <ConsentInfo />
-                                </div>
-                                </div>
-                                </section>
+                                            <h3 class="label m-auto my-2 text-red-600" class:hidden={!error}>Sorry, something went wrong. Please try again.</h3>
+                                            <!-- <PromptFlResponses /> -->
+
+                                            <ConsentInfo />
+
+                                            <div id="top-responses" class="">
+                                                <h5 class='uppercase text-center mt-28'>What Do People Care Most About Overall?</h5>
+                                                <div class="flex flex-col md:flex-row md:gap-x-12 justify-center">
+                                                    {#each Object.keys(responses).slice(0 ,3) as response, i}
+                                                    {@const option =  userOptions.find(o => o.entry === response)}
+                                                    {@const percent = Math.round((responses[response] / allResponsesSum) * 100)}
+                                                    <div class="flex flex-wrap justify-center items-center">
+                                                        <h2 class="text-9xl mr-3"><span class="prompt text-black">#</span>{i+1}</h2>
+                                                        <OptionItem
+                                                            labelTop={option.labelTop}
+                                                            labelBottom={option.labelBottom}
+                                                            icon={option.icon}
+                                                            disabled={submitted}
+                                                            result={true}
+                                                            />
+                                                            <div class="block basis-full h-0"></div>
+                                                            <div class="flex flex-col items-center justify-center w-[30vw] sm:w-[6em] md:w-[7em] lg:w-[8em] mt-5 bg-yellow-500 text-white rounded-full aspect-square tooltip">
+                                                                <h5 class='text-sm md:text-lg lg:text-2xl'>
+                                                                    {`${responses[response]} votes`}
+                                                                    </h5
+                                                                    >
+                                                                    <svg role="status" class="w-16 lg:w-24 h-3 mt-1">
+                                                                        <rect x="1" y="1" class='w-24 h-3 fill-white' />
+                                                                        <rect x="1" y="1" class='h-3 fill-fuchsia-800 animate-fill' style={`--percentage: ${percent}%; --delay: ${i*.2}s`} />
+                                                                    </svg>
+                                                                    <h5 class='text-sm lg:text-xl font-light mt-2'>
+                                                                        {percent}% voters
+                                                                    </h5>
+                                                                    </div>
+                                                                    </div>
+
+                                                                    {/each}
+                                                                    </div>
+                                                                    </div>
+
+                                                                    </div>
+                                                                    </div>
+                                                                    </section>
