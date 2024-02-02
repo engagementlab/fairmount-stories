@@ -2,9 +2,8 @@ name: "Get all form responses, make and publish build."
 on: 
   pull_request:
     branches: [production]
-# TODO: Remove this comment 
-#   schedule:
-#     - cron: '0 0 * * *'
+  schedule:
+    - cron: '0 0 * * *'
 env:
   NODE_ENV: production
   API_URL: ${{ secrets.API_URL }}

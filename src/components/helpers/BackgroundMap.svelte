@@ -68,7 +68,7 @@
 
 	onMount(() => {
 		let offsetLng = lng;
-		const offsetZoom = innerWidth > 640 ? zoom + 0.9 : zoom;
+		const offsetZoom = innerWidth > 640 ? zoom + 0.88 : zoom;
 		const initialState = { lng: offsetLng, lat: lat, zoom: offsetZoom };
 		// if(innerWidth > 640) lng = 0.10 
 
