@@ -114,7 +114,7 @@
 				offsetMapPos: true
 			},
 			narration:
-				"As part of the Fairmount Indigo Transit Coalition, me and others along the line pushed for five more stops to be built.",
+				"As part of the Fairmount Indigo Transit Coalition, me and others along the line pushed for four more stops to be built.",
 			narrationImage: "assets/story/narrator-head.png",
 			imageLeft: "assets/story/history-activism-2.jpg",
 			imageRight: "assets/story/history-construction-1.jpg",
@@ -144,9 +144,9 @@
 		{
 			fixBackground: true,
 			sticky: "start",
-			year: "2022",
+			year: "2023",
 			title: "Ridership Increases",
-			body: "Today, there are significantly more riders on the line than before COVID-19. <span>Ridership is now at 130% of 2019 levels.</span>",
+			body: "In 2022, there were significantly more riders on the line than before COVID-19. <span>Ridership is now at 130% of 2019 levels.</span>",
 			citation:
 				"Source: <a href='https://www.mbta.com/news/2023-06-02/fairmount-line-ridership-reaches-new-all-time-high-fairmount-ridership-130-pre?utm_campaign=curated-content&utm_content=Fairmount+Line+Ridership+Reaches+New+All-Time+High%2C+Fairmount+Ridership+at+130%25+of+pre-COVID+levels+in+May+2023&utm_medium=sidebar&utm_source=hub&utm_term=commuter-rail' target='_blank'>MBTA</a>",
 			backgroundImages: ["assets/story/four-corners-station-people-2.jpg"],
@@ -155,9 +155,9 @@
 		{
 			sticky: "end",
 			fixBackground: true,
-			year: "2022",
+			year: "2023",
 			title: "Ridership Increases",
-			body: "Today, there are significantly more riders on the line than before COVID-19. <span>Ridership is now at 130% of 2019 levels.</span>",
+			body: "In 2022, there were significantly more riders on the line than before COVID-19. <span>Ridership is now at 130% of 2019 levels.</span>",
 			citation:
 				"Source: <a href='https://www.mbta.com/news/2023-06-02/fairmount-line-ridership-reaches-new-all-time-high-fairmount-ridership-130-pre?utm_campaign=curated-content&utm_content=Fairmount+Line+Ridership+Reaches+New+All-Time+High%2C+Fairmount+Ridership+at+130%25+of+pre-COVID+levels+in+May+2023&utm_medium=sidebar&utm_source=hub&utm_term=commuter-rail' target='_blank'>MBTA</a>",
 			backgroundImages: ["assets/story/four-corners-station-people-3.jpg"]
