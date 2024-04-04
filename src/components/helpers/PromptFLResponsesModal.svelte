@@ -1,5 +1,5 @@
 <script>
-import responses from "$data/responses.json";
+import responses from "$data/responses/PromptFLMeansToYou.json";
 
 let data;
 let error = false;

@@ -18,7 +18,7 @@ import {
     Users2
 } from "lucide-svelte";
 
-import responses from "$data/responses.json";
+import responses from "$data/responses/PromptFLMeansToYou.json";
 
 let narratorOptions = [{
         labelTop: "easy",
