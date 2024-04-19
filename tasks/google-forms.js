@@ -74,7 +74,7 @@ const FetchSpreadsheet = (id, callback) => {
 			})
 			.then((res) => {
 				if (status === 500 || status === 404) {
-					console.error(res.errors[0]);
+					console.error(res.msg.errors[0]);
 					return;
 				}
 				callback(res);
@@ -87,10 +87,10 @@ const FetchSpreadsheet = (id, callback) => {
 	}
 }
 
-// FetchSpreadsheet(
-// 	"1JOI70LGU34bC7tAVcePUH2TOEQfhcqppz9vBOpUjsyI",
-// 	PromptFLOutput
-// );
+FetchSpreadsheet(
+	"1JOI70LGU34bC7tAVcePUH2TOEQfhcqppz9vBOpUjsyI",
+	PromptFLOutput
+);
 FetchSpreadsheet(
 	"1LOyUMW0Rwwewz2l0nbc4tkxp2ZbiWfRIA_fbrtjDn10",
 	PromptEJMeanToYouOutput
