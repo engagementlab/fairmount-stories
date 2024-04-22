@@ -128,7 +128,7 @@
 			textOnTop: true,
 			sticky: "end",
 			backgroundSticky: "end",
-			body: "This means that the air quality is less healthy. <br> Curious about the impacts on the surrounding community? <span><a href='https://docs.google.com/document/d/165glMsKTi2KzDevNZabPY921dweCCRC2VsjuTxRbvHI/edit?usp=sharing' target='_blank'>Learn more at Air Partners!</a></span>",
+			body: "This means that the air quality is less healthy. <br> Curious about the impacts on the surrounding community? <span><a href='https://airpartners.org/' target='_blank'>Learn more at Air Partners!</a></span>",
 			backgroundImages: [
 				"assets/story/arial-texture-bg-sm.jpg",
 				"assets/story/arial-zoom-out-more-bg.png",
