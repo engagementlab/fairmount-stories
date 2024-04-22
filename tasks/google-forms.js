@@ -75,15 +75,17 @@ const FetchSpreadsheet = (id, callback) => {
 			.then((res) => {
 				if (status === 500 || status === 404) {
 					console.error(res.msg.errors[0]);
-					return;
+					throw new Error(e)
 				}
 				callback(res);
 			})
 			.catch((e) => {
 				console.error(e);
+				throw new Error(e)
 			});
 	} catch (e) {
 		console.error(e);
+		throw new Error(e)
 	}
 }
 

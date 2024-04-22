@@ -24,9 +24,9 @@
 			"Congrats on viewing this website! Learning about the work being done to improve the Fairmount Line is a great first step. <br><br><span>Check out resources from FICC below!</span>",
 		actionItems: [
 			{
-				title: "Attend a workshop",
+				title: "Attend a meeting",
 				description:
-					"Curious about air quality? Want to learn about cleaner methods of transit? Attend a workshop to learn more!",
+					"Curious about transit equity? Want to learn more about how climate change is related to it? Attend an upcoming meeting of advocacy groups!",
 				linkUrl: "https://community.massenergize.org/fairmount-boston/events"
 			},
 			{
